@@ -1,3 +1,3 @@
-Warning (10268): Verilog HDL information at led_panel.v(97): always construct contains both blocking and non-blocking assignments File: C:/Users/Henry/Documents/Altera/Projects/led_panel.v Line: 97
-Info (10281): Verilog HDL Declaration information at led_panel.v(38): object "clk" differs only in case from object "CLK" in the same scope File: C:/Users/Henry/Documents/Altera/Projects/led_panel.v Line: 38
-Warning (10268): Verilog HDL information at dimmer.v(50): always construct contains both blocking and non-blocking assignments File: C:/Users/Henry/Documents/Altera/Projects/dimmer.v Line: 50
+Warning (10268): Verilog HDL information at led_panel.v(96): always construct contains both blocking and non-blocking assignments File: H:/Projects/FPGA/Altera/FPGA-LED-Panel/led_panel.v Line: 96
+Info (10281): Verilog HDL Declaration information at led_panel.v(37): object "clk" differs only in case from object "CLK" in the same scope File: H:/Projects/FPGA/Altera/FPGA-LED-Panel/led_panel.v Line: 37
+Warning (10268): Verilog HDL information at dimmer.v(52): always construct contains both blocking and non-blocking assignments File: H:/Projects/FPGA/Altera/FPGA-LED-Panel/dimmer.v Line: 52

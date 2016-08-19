@@ -1,5 +1,5 @@
 Analysis & Synthesis report for De0LEDPanel
-Fri Aug 19 17:14:58 2016
+Fri Aug 19 18:34:20 2016
 Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
 
 
@@ -28,18 +28,17 @@ Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
  20. Parameter Settings for User Entity Instance: pll:pll|altpll:altpll_component
  21. Parameter Settings for User Entity Instance: ext_mem:memory|dpram:ram_hi|altsyncram:altsyncram_component
  22. Parameter Settings for User Entity Instance: ext_mem:memory|dpram:ram_lo|altsyncram:altsyncram_component
- 23. Parameter Settings for User Entity Instance: led_panel:led_panel
- 24. Parameter Settings for User Entity Instance: dimmer:dimmer
- 25. altpll Parameter Settings by Entity Instance
- 26. altsyncram Parameter Settings by Entity Instance
- 27. Port Connectivity Checks: "ext_mem:memory|dpram:ram_lo"
- 28. Port Connectivity Checks: "ext_mem:memory|dpram:ram_hi"
- 29. Port Connectivity Checks: "ext_mem:memory"
- 30. Port Connectivity Checks: "pll:pll"
- 31. Post-Synthesis Netlist Statistics for Top Partition
- 32. Elapsed Time Per Partition
- 33. Analysis & Synthesis Messages
- 34. Analysis & Synthesis Suppressed Messages
+ 23. altpll Parameter Settings by Entity Instance
+ 24. altsyncram Parameter Settings by Entity Instance
+ 25. Port Connectivity Checks: "led_panel:led_panel"
+ 26. Port Connectivity Checks: "ext_mem:memory|dpram:ram_lo"
+ 27. Port Connectivity Checks: "ext_mem:memory|dpram:ram_hi"
+ 28. Port Connectivity Checks: "ext_mem:memory"
+ 29. Port Connectivity Checks: "pll:pll"
+ 30. Post-Synthesis Netlist Statistics for Top Partition
+ 31. Elapsed Time Per Partition
+ 32. Analysis & Synthesis Messages
+ 33. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -66,15 +65,15 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Aug 19 17:14:58 2016       ;
+; Analysis & Synthesis Status        ; Successful - Fri Aug 19 18:34:20 2016       ;
 ; Quartus Prime Version              ; 16.0.0 Build 211 04/27/2016 SJ Lite Edition ;
 ; Revision Name                      ; De0LEDPanel                                 ;
 ; Top-level Entity Name              ; De0LEDPanel                                 ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 289                                         ;
-;     Total combinational functions  ; 276                                         ;
-;     Dedicated logic registers      ; 129                                         ;
-; Total registers                    ; 129                                         ;
+; Total logic elements               ; 292                                         ;
+;     Total combinational functions  ; 278                                         ;
+;     Dedicated logic registers      ; 131                                         ;
+; Total registers                    ; 131                                         ;
 ; Total pins                         ; 26                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 49,152                                      ;
@@ -192,19 +191,19 @@ agreement for further details.
 +----------------------------------+-----------------+---------------------------------------+---------------------------------------------------------------------------+---------+
 ; File Name with User-Entered Path ; Used in Netlist ; File Type                             ; File Name with Absolute Path                                              ; Library ;
 +----------------------------------+-----------------+---------------------------------------+---------------------------------------------------------------------------+---------+
-; pll.v                            ; yes             ; User Wizard-Generated File            ; C:/Users/Henry/Documents/Altera/Projects/pll.v                            ;         ;
-; led_panel.v                      ; yes             ; User Verilog HDL File                 ; C:/Users/Henry/Documents/Altera/Projects/led_panel.v                      ;         ;
-; dpram.v                          ; yes             ; User Wizard-Generated File            ; C:/Users/Henry/Documents/Altera/Projects/dpram.v                          ;         ;
-; De0LEDPanel_mem_init.hex         ; yes             ; User Hexadecimal (Intel-Format) File  ; C:/Users/Henry/Documents/Altera/Projects/De0LEDPanel_mem_init.hex         ;         ;
-; dimmer.v                         ; yes             ; User Verilog HDL File                 ; C:/Users/Henry/Documents/Altera/Projects/dimmer.v                         ;         ;
-; ext_mem.v                        ; yes             ; User Verilog HDL File                 ; C:/Users/Henry/Documents/Altera/Projects/ext_mem.v                        ;         ;
-; de0ledpanel.v                    ; yes             ; Auto-Found Verilog HDL File           ; C:/Users/Henry/Documents/Altera/Projects/de0ledpanel.v                    ;         ;
+; pll.v                            ; yes             ; User Wizard-Generated File            ; H:/Projects/FPGA/Altera/FPGA-LED-Panel/pll.v                              ;         ;
+; led_panel.v                      ; yes             ; User Verilog HDL File                 ; H:/Projects/FPGA/Altera/FPGA-LED-Panel/led_panel.v                        ;         ;
+; dpram.v                          ; yes             ; User Wizard-Generated File            ; H:/Projects/FPGA/Altera/FPGA-LED-Panel/dpram.v                            ;         ;
+; De0LEDPanel_mem_init.hex         ; yes             ; User Hexadecimal (Intel-Format) File  ; H:/Projects/FPGA/Altera/FPGA-LED-Panel/De0LEDPanel_mem_init.hex           ;         ;
+; dimmer.v                         ; yes             ; User Verilog HDL File                 ; H:/Projects/FPGA/Altera/FPGA-LED-Panel/dimmer.v                           ;         ;
+; ext_mem.v                        ; yes             ; User Verilog HDL File                 ; H:/Projects/FPGA/Altera/FPGA-LED-Panel/ext_mem.v                          ;         ;
+; de0ledpanel.v                    ; yes             ; Auto-Found Verilog HDL File           ; H:/Projects/FPGA/Altera/FPGA-LED-Panel/de0ledpanel.v                      ;         ;
 ; altpll.tdf                       ; yes             ; Megafunction                          ; c:/altera_lite/16.0/quartus/libraries/megafunctions/altpll.tdf            ;         ;
 ; aglobal160.inc                   ; yes             ; Megafunction                          ; c:/altera_lite/16.0/quartus/libraries/megafunctions/aglobal160.inc        ;         ;
 ; stratix_pll.inc                  ; yes             ; Megafunction                          ; c:/altera_lite/16.0/quartus/libraries/megafunctions/stratix_pll.inc       ;         ;
 ; stratixii_pll.inc                ; yes             ; Megafunction                          ; c:/altera_lite/16.0/quartus/libraries/megafunctions/stratixii_pll.inc     ;         ;
 ; cycloneii_pll.inc                ; yes             ; Megafunction                          ; c:/altera_lite/16.0/quartus/libraries/megafunctions/cycloneii_pll.inc     ;         ;
-; db/pll_altpll.v                  ; yes             ; Auto-Generated Megafunction           ; C:/Users/Henry/Documents/Altera/Projects/db/pll_altpll.v                  ;         ;
+; db/pll_altpll.v                  ; yes             ; Auto-Generated Megafunction           ; H:/Projects/FPGA/Altera/FPGA-LED-Panel/db/pll_altpll.v                    ;         ;
 ; altsyncram.tdf                   ; yes             ; Megafunction                          ; c:/altera_lite/16.0/quartus/libraries/megafunctions/altsyncram.tdf        ;         ;
 ; stratix_ram_block.inc            ; yes             ; Megafunction                          ; c:/altera_lite/16.0/quartus/libraries/megafunctions/stratix_ram_block.inc ;         ;
 ; lpm_mux.inc                      ; yes             ; Megafunction                          ; c:/altera_lite/16.0/quartus/libraries/megafunctions/lpm_mux.inc           ;         ;
@@ -213,7 +212,7 @@ agreement for further details.
 ; altrom.inc                       ; yes             ; Megafunction                          ; c:/altera_lite/16.0/quartus/libraries/megafunctions/altrom.inc            ;         ;
 ; altram.inc                       ; yes             ; Megafunction                          ; c:/altera_lite/16.0/quartus/libraries/megafunctions/altram.inc            ;         ;
 ; altdpram.inc                     ; yes             ; Megafunction                          ; c:/altera_lite/16.0/quartus/libraries/megafunctions/altdpram.inc          ;         ;
-; db/altsyncram_f2r1.tdf           ; yes             ; Auto-Generated Megafunction           ; C:/Users/Henry/Documents/Altera/Projects/db/altsyncram_f2r1.tdf           ;         ;
+; db/altsyncram_f2r1.tdf           ; yes             ; Auto-Generated Megafunction           ; H:/Projects/FPGA/Altera/FPGA-LED-Panel/db/altsyncram_f2r1.tdf             ;         ;
 +----------------------------------+-----------------+---------------------------------------+---------------------------------------------------------------------------+---------+
 
 
@@ -222,20 +221,20 @@ agreement for further details.
 +---------------------------------------------+----------------------------------------------------------------------------+
 ; Resource                                    ; Usage                                                                      ;
 +---------------------------------------------+----------------------------------------------------------------------------+
-; Estimated Total logic elements              ; 289                                                                        ;
+; Estimated Total logic elements              ; 292                                                                        ;
 ;                                             ;                                                                            ;
-; Total combinational functions               ; 276                                                                        ;
+; Total combinational functions               ; 278                                                                        ;
 ; Logic element usage by number of LUT inputs ;                                                                            ;
-;     -- 4 input functions                    ; 76                                                                         ;
-;     -- 3 input functions                    ; 79                                                                         ;
-;     -- <=2 input functions                  ; 121                                                                        ;
+;     -- 4 input functions                    ; 103                                                                        ;
+;     -- 3 input functions                    ; 74                                                                         ;
+;     -- <=2 input functions                  ; 101                                                                        ;
 ;                                             ;                                                                            ;
 ; Logic elements by mode                      ;                                                                            ;
-;     -- normal mode                          ; 170                                                                        ;
-;     -- arithmetic mode                      ; 106                                                                        ;
+;     -- normal mode                          ; 185                                                                        ;
+;     -- arithmetic mode                      ; 93                                                                         ;
 ;                                             ;                                                                            ;
-; Total registers                             ; 129                                                                        ;
-;     -- Dedicated logic registers            ; 129                                                                        ;
+; Total registers                             ; 131                                                                        ;
+;     -- Dedicated logic registers            ; 131                                                                        ;
 ;     -- I/O registers                        ; 0                                                                          ;
 ;                                             ;                                                                            ;
 ; I/O pins                                    ; 26                                                                         ;
@@ -247,8 +246,8 @@ agreement for further details.
 ;     -- PLLs                                 ; 1                                                                          ;
 ;                                             ;                                                                            ;
 ; Maximum fan-out node                        ; pll:pll|altpll:altpll_component|pll_altpll:auto_generated|wire_pll1_clk[0] ;
-; Maximum fan-out                             ; 178                                                                        ;
-; Total fan-out                               ; 2344                                                                       ;
+; Maximum fan-out                             ; 180                                                                        ;
+; Total fan-out                               ; 2362                                                                       ;
 ; Average fan-out                             ; 4.63                                                                       ;
 +---------------------------------------------+----------------------------------------------------------------------------+
 
@@ -258,8 +257,8 @@ agreement for further details.
 +----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------+-----------------+--------------+
 ; Compilation Hierarchy Node                   ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                     ; Entity Name     ; Library Name ;
 +----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------+-----------------+--------------+
-; |De0LEDPanel                                 ; 276 (0)           ; 129 (0)      ; 49152       ; 0            ; 0       ; 0         ; 26   ; 0            ; |De0LEDPanel                                                                                            ; De0LEDPanel     ; work         ;
-;    |dimmer:dimmer|                           ; 114 (114)         ; 56 (56)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |De0LEDPanel|dimmer:dimmer                                                                              ; dimmer          ; work         ;
+; |De0LEDPanel                                 ; 278 (0)           ; 131 (0)      ; 49152       ; 0            ; 0       ; 0         ; 26   ; 0            ; |De0LEDPanel                                                                                            ; De0LEDPanel     ; work         ;
+;    |dimmer:dimmer|                           ; 128 (128)         ; 66 (66)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |De0LEDPanel|dimmer:dimmer                                                                              ; dimmer          ; work         ;
 ;    |ext_mem:memory|                          ; 2 (2)             ; 0 (0)        ; 49152       ; 0            ; 0       ; 0         ; 0    ; 0            ; |De0LEDPanel|ext_mem:memory                                                                             ; ext_mem         ; work         ;
 ;       |dpram:ram_hi|                         ; 0 (0)             ; 0 (0)        ; 24576       ; 0            ; 0       ; 0         ; 0    ; 0            ; |De0LEDPanel|ext_mem:memory|dpram:ram_hi                                                                ; dpram           ; work         ;
 ;          |altsyncram:altsyncram_component|   ; 0 (0)             ; 0 (0)        ; 24576       ; 0            ; 0       ; 0         ; 0    ; 0            ; |De0LEDPanel|ext_mem:memory|dpram:ram_hi|altsyncram:altsyncram_component                                ; altsyncram      ; work         ;
@@ -267,7 +266,7 @@ agreement for further details.
 ;       |dpram:ram_lo|                         ; 0 (0)             ; 0 (0)        ; 24576       ; 0            ; 0       ; 0         ; 0    ; 0            ; |De0LEDPanel|ext_mem:memory|dpram:ram_lo                                                                ; dpram           ; work         ;
 ;          |altsyncram:altsyncram_component|   ; 0 (0)             ; 0 (0)        ; 24576       ; 0            ; 0       ; 0         ; 0    ; 0            ; |De0LEDPanel|ext_mem:memory|dpram:ram_lo|altsyncram:altsyncram_component                                ; altsyncram      ; work         ;
 ;             |altsyncram_f2r1:auto_generated| ; 0 (0)             ; 0 (0)        ; 24576       ; 0            ; 0       ; 0         ; 0    ; 0            ; |De0LEDPanel|ext_mem:memory|dpram:ram_lo|altsyncram:altsyncram_component|altsyncram_f2r1:auto_generated ; altsyncram_f2r1 ; work         ;
-;    |led_panel:led_panel|                     ; 160 (160)         ; 73 (73)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |De0LEDPanel|led_panel:led_panel                                                                        ; led_panel       ; work         ;
+;    |led_panel:led_panel|                     ; 148 (148)         ; 65 (65)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |De0LEDPanel|led_panel:led_panel                                                                        ; led_panel       ; work         ;
 ;    |pll:pll|                                 ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |De0LEDPanel|pll:pll                                                                                    ; pll             ; work         ;
 ;       |altpll:altpll_component|              ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |De0LEDPanel|pll:pll|altpll:altpll_component                                                            ; altpll          ; work         ;
 ;          |pll_altpll:auto_generated|         ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |De0LEDPanel|pll:pll|altpll:altpll_component|pll_altpll:auto_generated                                  ; pll_altpll      ; work         ;
@@ -323,35 +322,37 @@ Encoding Type:  One-Hot
 
 
 Encoding Type:  One-Hot
-+--------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |De0LEDPanel|led_panel:led_panel|state_q                                                                       ;
-+-----------------+---------------+--------------+-----------------+---------------+---------------+--------------+--------------+
-; Name            ; state_q.SHIFT ; state_q.READ ; state_q.UNBLANK ; state_q.LATCH ; state_q.BLANK ; state_q.WAIT ; state_q.IDLE ;
-+-----------------+---------------+--------------+-----------------+---------------+---------------+--------------+--------------+
-; state_q.IDLE    ; 0             ; 0            ; 0               ; 0             ; 0             ; 0            ; 0            ;
-; state_q.WAIT    ; 0             ; 0            ; 0               ; 0             ; 0             ; 1            ; 1            ;
-; state_q.BLANK   ; 0             ; 0            ; 0               ; 0             ; 1             ; 0            ; 1            ;
-; state_q.LATCH   ; 0             ; 0            ; 0               ; 1             ; 0             ; 0            ; 1            ;
-; state_q.UNBLANK ; 0             ; 0            ; 1               ; 0             ; 0             ; 0            ; 1            ;
-; state_q.READ    ; 0             ; 1            ; 0               ; 0             ; 0             ; 0            ; 1            ;
-; state_q.SHIFT   ; 1             ; 0            ; 0               ; 0             ; 0             ; 0            ; 1            ;
-+-----------------+---------------+--------------+-----------------+---------------+---------------+--------------+--------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |De0LEDPanel|led_panel:led_panel|state_q                                                                                           ;
++------------------+------------------+---------------+--------------+-----------------+---------------+---------------+--------------+--------------+
+; Name             ; state_q.PRE_READ ; state_q.SHIFT ; state_q.READ ; state_q.UNBLANK ; state_q.LATCH ; state_q.BLANK ; state_q.WAIT ; state_q.IDLE ;
++------------------+------------------+---------------+--------------+-----------------+---------------+---------------+--------------+--------------+
+; state_q.IDLE     ; 0                ; 0             ; 0            ; 0               ; 0             ; 0             ; 0            ; 0            ;
+; state_q.WAIT     ; 0                ; 0             ; 0            ; 0               ; 0             ; 0             ; 1            ; 1            ;
+; state_q.BLANK    ; 0                ; 0             ; 0            ; 0               ; 0             ; 1             ; 0            ; 1            ;
+; state_q.LATCH    ; 0                ; 0             ; 0            ; 0               ; 1             ; 0             ; 0            ; 1            ;
+; state_q.UNBLANK  ; 0                ; 0             ; 0            ; 1               ; 0             ; 0             ; 0            ; 1            ;
+; state_q.READ     ; 0                ; 0             ; 1            ; 0               ; 0             ; 0             ; 0            ; 1            ;
+; state_q.SHIFT    ; 0                ; 1             ; 0            ; 0               ; 0             ; 0             ; 0            ; 1            ;
+; state_q.PRE_READ ; 1                ; 0             ; 0            ; 0               ; 0             ; 0             ; 0            ; 1            ;
++------------------+------------------+---------------+--------------+-----------------+---------------+---------------+--------------+--------------+
 
 
 Encoding Type:  One-Hot
-+--------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |De0LEDPanel|led_panel:led_panel|state_d                                                                       ;
-+-----------------+---------------+--------------+-----------------+---------------+---------------+--------------+--------------+
-; Name            ; state_d.SHIFT ; state_d.READ ; state_d.UNBLANK ; state_d.LATCH ; state_d.BLANK ; state_d.WAIT ; state_d.IDLE ;
-+-----------------+---------------+--------------+-----------------+---------------+---------------+--------------+--------------+
-; state_d.IDLE    ; 0             ; 0            ; 0               ; 0             ; 0             ; 0            ; 0            ;
-; state_d.WAIT    ; 0             ; 0            ; 0               ; 0             ; 0             ; 1            ; 1            ;
-; state_d.BLANK   ; 0             ; 0            ; 0               ; 0             ; 1             ; 0            ; 1            ;
-; state_d.LATCH   ; 0             ; 0            ; 0               ; 1             ; 0             ; 0            ; 1            ;
-; state_d.UNBLANK ; 0             ; 0            ; 1               ; 0             ; 0             ; 0            ; 1            ;
-; state_d.READ    ; 0             ; 1            ; 0               ; 0             ; 0             ; 0            ; 1            ;
-; state_d.SHIFT   ; 1             ; 0            ; 0               ; 0             ; 0             ; 0            ; 1            ;
-+-----------------+---------------+--------------+-----------------+---------------+---------------+--------------+--------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |De0LEDPanel|led_panel:led_panel|state_d                                                                                           ;
++------------------+------------------+---------------+--------------+-----------------+---------------+---------------+--------------+--------------+
+; Name             ; state_d.PRE_READ ; state_d.SHIFT ; state_d.READ ; state_d.UNBLANK ; state_d.LATCH ; state_d.BLANK ; state_d.WAIT ; state_d.IDLE ;
++------------------+------------------+---------------+--------------+-----------------+---------------+---------------+--------------+--------------+
+; state_d.IDLE     ; 0                ; 0             ; 0            ; 0               ; 0             ; 0             ; 0            ; 0            ;
+; state_d.WAIT     ; 0                ; 0             ; 0            ; 0               ; 0             ; 0             ; 1            ; 1            ;
+; state_d.BLANK    ; 0                ; 0             ; 0            ; 0               ; 0             ; 1             ; 0            ; 1            ;
+; state_d.LATCH    ; 0                ; 0             ; 0            ; 0               ; 1             ; 0             ; 0            ; 1            ;
+; state_d.UNBLANK  ; 0                ; 0             ; 0            ; 1               ; 0             ; 0             ; 0            ; 1            ;
+; state_d.READ     ; 0                ; 0             ; 1            ; 0               ; 0             ; 0             ; 0            ; 1            ;
+; state_d.SHIFT    ; 0                ; 1             ; 0            ; 0               ; 0             ; 0             ; 0            ; 1            ;
+; state_d.PRE_READ ; 1                ; 0             ; 0            ; 0               ; 0             ; 0             ; 0            ; 1            ;
++------------------+------------------+---------------+--------------+-----------------+---------------+---------------+--------------+--------------+
 
 
 +-------------------------------------------------------------+
@@ -363,9 +364,9 @@ Encoding Type:  One-Hot
 ; dimmer:dimmer|state_q~3                ; Lost fanout        ;
 ; dimmer:dimmer|state_d~8                ; Lost fanout        ;
 ; dimmer:dimmer|state_d~9                ; Lost fanout        ;
-; led_panel:led_panel|state_q~10         ; Lost fanout        ;
 ; led_panel:led_panel|state_q~11         ; Lost fanout        ;
 ; led_panel:led_panel|state_q~12         ; Lost fanout        ;
+; led_panel:led_panel|state_q~13         ; Lost fanout        ;
 ; led_panel:led_panel|state_d~2          ; Lost fanout        ;
 ; led_panel:led_panel|state_d~3          ; Lost fanout        ;
 ; led_panel:led_panel|state_d~4          ; Lost fanout        ;
@@ -378,12 +379,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 129   ;
-; Number of registers using Synchronous Clear  ; 31    ;
-; Number of registers using Synchronous Load   ; 9     ;
-; Number of registers using Asynchronous Clear ; 32    ;
+; Total registers                              ; 131   ;
+; Number of registers using Synchronous Clear  ; 3     ;
+; Number of registers using Synchronous Load   ; 17    ;
+; Number of registers using Asynchronous Clear ; 42    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 95    ;
+; Number of registers using Clock Enable       ; 96    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -393,38 +394,31 @@ Encoding Type:  One-Hot
 +----------------------------------------+---------+
 ; Inverted Register                      ; Fan out ;
 +----------------------------------------+---------+
-; dimmer:dimmer|wr_red[1]                ; 4       ;
-; dimmer:dimmer|wr_blue[1]               ; 4       ;
-; dimmer:dimmer|wr_red[3]                ; 4       ;
-; dimmer:dimmer|wr_blue[3]               ; 4       ;
-; dimmer:dimmer|wr_green[1]              ; 3       ;
-; dimmer:dimmer|wr_green[3]              ; 3       ;
 ; dimmer:dimmer|color_pattern_d[1]       ; 1       ;
-; Total number of inverted registers = 7 ;         ;
+; Total number of inverted registers = 1 ;         ;
 +----------------------------------------+---------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                     ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                           ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------+
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |De0LEDPanel|led_panel:led_panel|A[0]                ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |De0LEDPanel|led_panel:led_panel|time_slice_time[12] ;
-; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |De0LEDPanel|led_panel:led_panel|BLUE[1]             ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |De0LEDPanel|dimmer:dimmer|LED[0]                    ;
-; 4:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |De0LEDPanel|led_panel:led_panel|col[1]              ;
-; 4:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |De0LEDPanel|led_panel:led_panel|row[4]              ;
-; 4:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |De0LEDPanel|led_panel:led_panel|bit_plane[15]       ;
-; 4:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |De0LEDPanel|dimmer:dimmer|wr_col[1]                 ;
-; 5:1                ; 2 bits    ; 6 LEs         ; 2 LEs                ; 4 LEs                  ; Yes        ; |De0LEDPanel|dimmer:dimmer|wr_blue[0]                ;
-; 5:1                ; 4 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |De0LEDPanel|dimmer:dimmer|wr_blue[7]                ;
-; 5:1                ; 2 bits    ; 6 LEs         ; 2 LEs                ; 4 LEs                  ; Yes        ; |De0LEDPanel|dimmer:dimmer|wr_red[0]                 ;
-; 5:1                ; 4 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |De0LEDPanel|dimmer:dimmer|wr_red[7]                 ;
-; 6:1                ; 2 bits    ; 8 LEs         ; 0 LEs                ; 8 LEs                  ; Yes        ; |De0LEDPanel|dimmer:dimmer|color_pattern_q[0]        ;
-; 3:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |De0LEDPanel|dimmer:dimmer|wr_row                    ;
-; 6:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |De0LEDPanel|dimmer:dimmer|Selector10                ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                    ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                          ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------+
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |De0LEDPanel|led_panel:led_panel|bit_plane[4]       ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |De0LEDPanel|led_panel:led_panel|time_slice_time[9] ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |De0LEDPanel|led_panel:led_panel|A[3]               ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |De0LEDPanel|led_panel:led_panel|BLUE[1]            ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |De0LEDPanel|led_panel:led_panel|col[4]             ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |De0LEDPanel|dimmer:dimmer|LED[7]                   ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |De0LEDPanel|led_panel:led_panel|row[0]             ;
+; 4:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |De0LEDPanel|dimmer:dimmer|wr_col[4]                ;
+; 5:1                ; 5 bits    ; 15 LEs        ; 5 LEs                ; 10 LEs                 ; Yes        ; |De0LEDPanel|dimmer:dimmer|wr_row[4]                ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 0 LEs                ; 8 LEs                  ; Yes        ; |De0LEDPanel|dimmer:dimmer|color_pattern_q[1]       ;
+; 8:1                ; 8 bits    ; 40 LEs        ; 16 LEs               ; 24 LEs                 ; Yes        ; |De0LEDPanel|dimmer:dimmer|wr_green[5]              ;
+; 8:1                ; 8 bits    ; 40 LEs        ; 16 LEs               ; 24 LEs                 ; Yes        ; |De0LEDPanel|dimmer:dimmer|wr_blue[4]               ;
+; 8:1                ; 8 bits    ; 40 LEs        ; 16 LEs               ; 24 LEs                 ; Yes        ; |De0LEDPanel|dimmer:dimmer|wr_red[7]                ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |De0LEDPanel|dimmer:dimmer|Selector12               ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------+
@@ -941,26 +935,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: led_panel:led_panel ;
-+----------------+-------+-----------------------------------------+
-; Parameter Name ; Value ; Type                                    ;
-+----------------+-------+-----------------------------------------+
-; COL_BITS       ; 6     ; Signed Integer                          ;
-+----------------+-------+-----------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: dimmer:dimmer ;
-+----------------+-------+-----------------------------------+
-; Parameter Name ; Value ; Type                              ;
-+----------------+-------+-----------------------------------+
-; COLS           ; 5     ; Signed Integer                    ;
-+----------------+-------+-----------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
 +-----------------------------------------------------------------+
 ; altpll Parameter Settings by Entity Instance                    ;
 +-------------------------------+---------------------------------+
@@ -1009,6 +983,15 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------------------+-------------------------------------------------------------+
 
 
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "led_panel:led_panel"                                                                                                                                                       ;
++---------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                                                                                                                 ;
++---------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; rd_addr ; Output ; Warning  ; Output or bidir port (10 bits) is smaller than the port expression (11 bits) it drives.  The 1 most-significant bit(s) in the port expression will be connected to GND. ;
++---------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "ext_mem:memory|dpram:ram_lo"                                                                                                                              ;
 +-----------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -1055,30 +1038,29 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 26                          ;
-; cycloneiii_ff         ; 129                         ;
-;     CLR               ; 4                           ;
+; cycloneiii_ff         ; 131                         ;
+;     CLR               ; 5                           ;
 ;     CLR SLD           ; 1                           ;
-;     ENA               ; 35                          ;
-;     ENA CLR           ; 27                          ;
-;     ENA SCLR          ; 27                          ;
-;     ENA SLD           ; 6                           ;
-;     SCLR              ; 4                           ;
+;     ENA               ; 46                          ;
+;     ENA CLR           ; 36                          ;
+;     ENA SLD           ; 14                          ;
+;     SCLR              ; 3                           ;
 ;     SLD               ; 2                           ;
-;     plain             ; 23                          ;
-; cycloneiii_lcell_comb ; 276                         ;
-;     arith             ; 106                         ;
-;         2 data inputs ; 63                          ;
+;     plain             ; 24                          ;
+; cycloneiii_lcell_comb ; 278                         ;
+;     arith             ; 93                          ;
+;         2 data inputs ; 50                          ;
 ;         3 data inputs ; 43                          ;
-;     normal            ; 170                         ;
-;         1 data inputs ; 19                          ;
-;         2 data inputs ; 39                          ;
-;         3 data inputs ; 36                          ;
-;         4 data inputs ; 76                          ;
+;     normal            ; 185                         ;
+;         1 data inputs ; 9                           ;
+;         2 data inputs ; 42                          ;
+;         3 data inputs ; 31                          ;
+;         4 data inputs ; 103                         ;
 ; cycloneiii_pll        ; 1                           ;
 ; cycloneiii_ram_block  ; 48                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 5.50                        ;
-; Average LUT depth     ; 2.90                        ;
+; Average LUT depth     ; 2.94                        ;
 +-----------------------+-----------------------------+
 
 
@@ -1097,27 +1079,27 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
-    Info: Processing started: Fri Aug 19 17:14:36 2016
+    Info: Processing started: Fri Aug 19 18:34:01 2016
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off De0LEDPanel -c De0LEDPanel
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20032): Parallel compilation is enabled and will use up to 2 processors
 Info (12021): Found 1 design units, including 1 entities, in source file pll.v
-    Info (12023): Found entity 1: pll File: C:/Users/Henry/Documents/Altera/Projects/pll.v Line: 40
+    Info (12023): Found entity 1: pll File: H:/Projects/FPGA/Altera/FPGA-LED-Panel/pll.v Line: 40
 Info (12021): Found 1 design units, including 1 entities, in source file led_panel.v
-    Info (12023): Found entity 1: led_panel File: C:/Users/Henry/Documents/Altera/Projects/led_panel.v Line: 3
+    Info (12023): Found entity 1: led_panel File: H:/Projects/FPGA/Altera/FPGA-LED-Panel/led_panel.v Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file dpram.v
-    Info (12023): Found entity 1: dpram File: C:/Users/Henry/Documents/Altera/Projects/dpram.v Line: 40
+    Info (12023): Found entity 1: dpram File: H:/Projects/FPGA/Altera/FPGA-LED-Panel/dpram.v Line: 40
 Info (12021): Found 1 design units, including 1 entities, in source file dimmer.v
-    Info (12023): Found entity 1: dimmer File: C:/Users/Henry/Documents/Altera/Projects/dimmer.v Line: 1
+    Info (12023): Found entity 1: dimmer File: H:/Projects/FPGA/Altera/FPGA-LED-Panel/dimmer.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file ext_mem.v
-    Info (12023): Found entity 1: ext_mem File: C:/Users/Henry/Documents/Altera/Projects/ext_mem.v Line: 1
+    Info (12023): Found entity 1: ext_mem File: H:/Projects/FPGA/Altera/FPGA-LED-Panel/ext_mem.v Line: 1
 Warning (12125): Using design file de0ledpanel.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
-    Info (12023): Found entity 1: De0LEDPanel File: C:/Users/Henry/Documents/Altera/Projects/de0ledpanel.v Line: 6
+    Info (12023): Found entity 1: De0LEDPanel File: H:/Projects/FPGA/Altera/FPGA-LED-Panel/de0ledpanel.v Line: 6
 Info (12127): Elaborating entity "De0LEDPanel" for the top level hierarchy
-Info (12128): Elaborating entity "pll" for hierarchy "pll:pll" File: C:/Users/Henry/Documents/Altera/Projects/de0ledpanel.v Line: 91
-Info (12128): Elaborating entity "altpll" for hierarchy "pll:pll|altpll:altpll_component" File: C:/Users/Henry/Documents/Altera/Projects/pll.v Line: 103
-Info (12130): Elaborated megafunction instantiation "pll:pll|altpll:altpll_component" File: C:/Users/Henry/Documents/Altera/Projects/pll.v Line: 103
-Info (12133): Instantiated megafunction "pll:pll|altpll:altpll_component" with the following parameter: File: C:/Users/Henry/Documents/Altera/Projects/pll.v Line: 103
+Info (12128): Elaborating entity "pll" for hierarchy "pll:pll" File: H:/Projects/FPGA/Altera/FPGA-LED-Panel/de0ledpanel.v Line: 91
+Info (12128): Elaborating entity "altpll" for hierarchy "pll:pll|altpll:altpll_component" File: H:/Projects/FPGA/Altera/FPGA-LED-Panel/pll.v Line: 103
+Info (12130): Elaborated megafunction instantiation "pll:pll|altpll:altpll_component" File: H:/Projects/FPGA/Altera/FPGA-LED-Panel/pll.v Line: 103
+Info (12133): Instantiated megafunction "pll:pll|altpll:altpll_component" with the following parameter: File: H:/Projects/FPGA/Altera/FPGA-LED-Panel/pll.v Line: 103
     Info (12134): Parameter "bandwidth_type" = "AUTO"
     Info (12134): Parameter "clk0_divide_by" = "1"
     Info (12134): Parameter "clk0_duty_cycle" = "50"
@@ -1185,13 +1167,13 @@ Info (12133): Instantiated megafunction "pll:pll|altpll:altpll_component" with t
     Info (12134): Parameter "port_extclk3" = "PORT_UNUSED"
     Info (12134): Parameter "width_clock" = "5"
 Info (12021): Found 1 design units, including 1 entities, in source file db/pll_altpll.v
-    Info (12023): Found entity 1: pll_altpll File: C:/Users/Henry/Documents/Altera/Projects/db/pll_altpll.v Line: 30
+    Info (12023): Found entity 1: pll_altpll File: H:/Projects/FPGA/Altera/FPGA-LED-Panel/db/pll_altpll.v Line: 30
 Info (12128): Elaborating entity "pll_altpll" for hierarchy "pll:pll|altpll:altpll_component|pll_altpll:auto_generated" File: c:/altera_lite/16.0/quartus/libraries/megafunctions/altpll.tdf Line: 898
-Info (12128): Elaborating entity "ext_mem" for hierarchy "ext_mem:memory" File: C:/Users/Henry/Documents/Altera/Projects/de0ledpanel.v Line: 103
-Info (12128): Elaborating entity "dpram" for hierarchy "ext_mem:memory|dpram:ram_hi" File: C:/Users/Henry/Documents/Altera/Projects/ext_mem.v Line: 42
-Info (12128): Elaborating entity "altsyncram" for hierarchy "ext_mem:memory|dpram:ram_hi|altsyncram:altsyncram_component" File: C:/Users/Henry/Documents/Altera/Projects/dpram.v Line: 89
-Info (12130): Elaborated megafunction instantiation "ext_mem:memory|dpram:ram_hi|altsyncram:altsyncram_component" File: C:/Users/Henry/Documents/Altera/Projects/dpram.v Line: 89
-Info (12133): Instantiated megafunction "ext_mem:memory|dpram:ram_hi|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/Henry/Documents/Altera/Projects/dpram.v Line: 89
+Info (12128): Elaborating entity "ext_mem" for hierarchy "ext_mem:memory" File: H:/Projects/FPGA/Altera/FPGA-LED-Panel/de0ledpanel.v Line: 103
+Info (12128): Elaborating entity "dpram" for hierarchy "ext_mem:memory|dpram:ram_hi" File: H:/Projects/FPGA/Altera/FPGA-LED-Panel/ext_mem.v Line: 42
+Info (12128): Elaborating entity "altsyncram" for hierarchy "ext_mem:memory|dpram:ram_hi|altsyncram:altsyncram_component" File: H:/Projects/FPGA/Altera/FPGA-LED-Panel/dpram.v Line: 89
+Info (12130): Elaborated megafunction instantiation "ext_mem:memory|dpram:ram_hi|altsyncram:altsyncram_component" File: H:/Projects/FPGA/Altera/FPGA-LED-Panel/dpram.v Line: 89
+Info (12133): Instantiated megafunction "ext_mem:memory|dpram:ram_hi|altsyncram:altsyncram_component" with the following parameter: File: H:/Projects/FPGA/Altera/FPGA-LED-Panel/dpram.v Line: 89
     Info (12134): Parameter "address_aclr_b" = "NONE"
     Info (12134): Parameter "address_reg_b" = "CLOCK0"
     Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
@@ -1213,52 +1195,53 @@ Info (12133): Instantiated megafunction "ext_mem:memory|dpram:ram_hi|altsyncram:
     Info (12134): Parameter "width_b" = "24"
     Info (12134): Parameter "width_byteena_a" = "1"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_f2r1.tdf
-    Info (12023): Found entity 1: altsyncram_f2r1 File: C:/Users/Henry/Documents/Altera/Projects/db/altsyncram_f2r1.tdf Line: 28
+    Info (12023): Found entity 1: altsyncram_f2r1 File: H:/Projects/FPGA/Altera/FPGA-LED-Panel/db/altsyncram_f2r1.tdf Line: 28
 Info (12128): Elaborating entity "altsyncram_f2r1" for hierarchy "ext_mem:memory|dpram:ram_hi|altsyncram:altsyncram_component|altsyncram_f2r1:auto_generated" File: c:/altera_lite/16.0/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
-Info (12128): Elaborating entity "led_panel" for hierarchy "led_panel:led_panel" File: C:/Users/Henry/Documents/Altera/Projects/de0ledpanel.v Line: 127
-Warning (10230): Verilog HDL assignment warning at led_panel.v(108): truncated value with size 32 to match size of target (16) File: C:/Users/Henry/Documents/Altera/Projects/led_panel.v Line: 108
-Warning (10230): Verilog HDL assignment warning at led_panel.v(115): truncated value with size 32 to match size of target (16) File: C:/Users/Henry/Documents/Altera/Projects/led_panel.v Line: 115
-Warning (10230): Verilog HDL assignment warning at led_panel.v(143): truncated value with size 32 to match size of target (16) File: C:/Users/Henry/Documents/Altera/Projects/led_panel.v Line: 143
-Warning (10230): Verilog HDL assignment warning at led_panel.v(152): truncated value with size 32 to match size of target (5) File: C:/Users/Henry/Documents/Altera/Projects/led_panel.v Line: 152
-Warning (10230): Verilog HDL assignment warning at led_panel.v(156): truncated value with size 32 to match size of target (16) File: C:/Users/Henry/Documents/Altera/Projects/led_panel.v Line: 156
-Warning (10230): Verilog HDL assignment warning at led_panel.v(173): truncated value with size 5 to match size of target (4) File: C:/Users/Henry/Documents/Altera/Projects/led_panel.v Line: 173
-Warning (10230): Verilog HDL assignment warning at led_panel.v(209): truncated value with size 32 to match size of target (6) File: C:/Users/Henry/Documents/Altera/Projects/led_panel.v Line: 209
-Info (10264): Verilog HDL Case Statement information at led_panel.v(118): all case item expressions in this case statement are onehot File: C:/Users/Henry/Documents/Altera/Projects/led_panel.v Line: 118
-Info (12128): Elaborating entity "dimmer" for hierarchy "dimmer:dimmer" File: C:/Users/Henry/Documents/Altera/Projects/de0ledpanel.v Line: 141
-Warning (10230): Verilog HDL assignment warning at dimmer.v(61): truncated value with size 32 to match size of target (2) File: C:/Users/Henry/Documents/Altera/Projects/dimmer.v Line: 61
-Warning (10230): Verilog HDL assignment warning at dimmer.v(89): truncated value with size 32 to match size of target (5) File: C:/Users/Henry/Documents/Altera/Projects/dimmer.v Line: 89
-Warning (10230): Verilog HDL assignment warning at dimmer.v(93): truncated value with size 32 to match size of target (5) File: C:/Users/Henry/Documents/Altera/Projects/dimmer.v Line: 93
-Warning (10230): Verilog HDL assignment warning at dimmer.v(109): truncated value with size 32 to match size of target (8) File: C:/Users/Henry/Documents/Altera/Projects/dimmer.v Line: 109
-Warning (10230): Verilog HDL assignment warning at dimmer.v(117): truncated value with size 32 to match size of target (8) File: C:/Users/Henry/Documents/Altera/Projects/dimmer.v Line: 117
-Warning (10230): Verilog HDL assignment warning at dimmer.v(125): truncated value with size 32 to match size of target (8) File: C:/Users/Henry/Documents/Altera/Projects/dimmer.v Line: 125
-Warning (10230): Verilog HDL assignment warning at dimmer.v(133): truncated value with size 32 to match size of target (8) File: C:/Users/Henry/Documents/Altera/Projects/dimmer.v Line: 133
-Warning (12241): 3 hierarchies have connectivity warnings - see the Connectivity Checks report folder
-Info (13000): Registers with preset signals will power-up high File: C:/Users/Henry/Documents/Altera/Projects/dimmer.v Line: 60
+Info (12128): Elaborating entity "led_panel" for hierarchy "led_panel:led_panel" File: H:/Projects/FPGA/Altera/FPGA-LED-Panel/de0ledpanel.v Line: 127
+Warning (10230): Verilog HDL assignment warning at led_panel.v(114): truncated value with size 32 to match size of target (16) File: H:/Projects/FPGA/Altera/FPGA-LED-Panel/led_panel.v Line: 114
+Warning (10230): Verilog HDL assignment warning at led_panel.v(143): truncated value with size 32 to match size of target (8) File: H:/Projects/FPGA/Altera/FPGA-LED-Panel/led_panel.v Line: 143
+Warning (10230): Verilog HDL assignment warning at led_panel.v(146): truncated value with size 32 to match size of target (4) File: H:/Projects/FPGA/Altera/FPGA-LED-Panel/led_panel.v Line: 146
+Warning (10230): Verilog HDL assignment warning at led_panel.v(207): truncated value with size 32 to match size of target (5) File: H:/Projects/FPGA/Altera/FPGA-LED-Panel/led_panel.v Line: 207
+Info (10264): Verilog HDL Case Statement information at led_panel.v(117): all case item expressions in this case statement are onehot File: H:/Projects/FPGA/Altera/FPGA-LED-Panel/led_panel.v Line: 117
+Info (12128): Elaborating entity "dimmer" for hierarchy "dimmer:dimmer" File: H:/Projects/FPGA/Altera/FPGA-LED-Panel/de0ledpanel.v Line: 141
+Warning (10230): Verilog HDL assignment warning at dimmer.v(64): truncated value with size 32 to match size of target (2) File: H:/Projects/FPGA/Altera/FPGA-LED-Panel/dimmer.v Line: 64
+Warning (10230): Verilog HDL assignment warning at dimmer.v(86): truncated value with size 32 to match size of target (5) File: H:/Projects/FPGA/Altera/FPGA-LED-Panel/dimmer.v Line: 86
+Warning (10230): Verilog HDL assignment warning at dimmer.v(89): truncated value with size 32 to match size of target (5) File: H:/Projects/FPGA/Altera/FPGA-LED-Panel/dimmer.v Line: 89
+Warning (10230): Verilog HDL assignment warning at dimmer.v(119): truncated value with size 32 to match size of target (8) File: H:/Projects/FPGA/Altera/FPGA-LED-Panel/dimmer.v Line: 119
+Warning (10230): Verilog HDL assignment warning at dimmer.v(129): truncated value with size 32 to match size of target (8) File: H:/Projects/FPGA/Altera/FPGA-LED-Panel/dimmer.v Line: 129
+Warning (10230): Verilog HDL assignment warning at dimmer.v(139): truncated value with size 32 to match size of target (8) File: H:/Projects/FPGA/Altera/FPGA-LED-Panel/dimmer.v Line: 139
+Warning (10230): Verilog HDL assignment warning at dimmer.v(150): truncated value with size 32 to match size of target (10) File: H:/Projects/FPGA/Altera/FPGA-LED-Panel/dimmer.v Line: 150
+Warning (12011): Net is missing source, defaulting to GND
+    Warning (12110): Net "rd_addr[10]" is missing source, defaulting to GND File: H:/Projects/FPGA/Altera/FPGA-LED-Panel/de0ledpanel.v Line: 78
+Warning (12011): Net is missing source, defaulting to GND
+    Warning (12110): Net "rd_addr[10]" is missing source, defaulting to GND File: H:/Projects/FPGA/Altera/FPGA-LED-Panel/de0ledpanel.v Line: 78
+Warning (12241): 4 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info (13000): Registers with preset signals will power-up high File: H:/Projects/FPGA/Altera/FPGA-LED-Panel/dimmer.v Line: 63
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Info (286030): Timing-Driven Synthesis is running
 Info (17049): 10 registers lost all their fanouts during netlist optimizations.
-Info (17036): Removed 1 MSB VCC or GND address nodes from RAM block "ext_mem:memory|dpram:ram_hi|altsyncram:altsyncram_component|altsyncram_f2r1:auto_generated|ALTSYNCRAM" File: C:/Users/Henry/Documents/Altera/Projects/db/altsyncram_f2r1.tdf Line: 34
-Info (17036): Removed 1 MSB VCC or GND address nodes from RAM block "ext_mem:memory|dpram:ram_lo|altsyncram:altsyncram_component|altsyncram_f2r1:auto_generated|ALTSYNCRAM" File: C:/Users/Henry/Documents/Altera/Projects/db/altsyncram_f2r1.tdf Line: 34
-Info (144001): Generated suppressed messages file C:/Users/Henry/Documents/Altera/Projects/De0LEDPanel.map.smsg
+Info (17036): Removed 1 MSB VCC or GND address nodes from RAM block "ext_mem:memory|dpram:ram_hi|altsyncram:altsyncram_component|altsyncram_f2r1:auto_generated|ALTSYNCRAM" File: H:/Projects/FPGA/Altera/FPGA-LED-Panel/db/altsyncram_f2r1.tdf Line: 34
+Info (17036): Removed 1 MSB VCC or GND address nodes from RAM block "ext_mem:memory|dpram:ram_lo|altsyncram:altsyncram_component|altsyncram_f2r1:auto_generated|ALTSYNCRAM" File: H:/Projects/FPGA/Altera/FPGA-LED-Panel/db/altsyncram_f2r1.tdf Line: 34
+Info (144001): Generated suppressed messages file H:/Projects/FPGA/Altera/FPGA-LED-Panel/De0LEDPanel.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 1 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
-Warning (15899): PLL "pll:pll|altpll:altpll_component|pll_altpll:auto_generated|pll1" has parameters clk2_multiply_by and clk2_divide_by specified but port CLK[2] is not connected File: C:/Users/Henry/Documents/Altera/Projects/db/pll_altpll.v Line: 44
-Info (21057): Implemented 370 device resources after synthesis - the final resource count might be different
+Warning (15899): PLL "pll:pll|altpll:altpll_component|pll_altpll:auto_generated|pll1" has parameters clk2_multiply_by and clk2_divide_by specified but port CLK[2] is not connected File: H:/Projects/FPGA/Altera/FPGA-LED-Panel/db/pll_altpll.v Line: 44
+Info (21057): Implemented 368 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 3 input pins
     Info (21059): Implemented 23 output pins
-    Info (21061): Implemented 295 logic cells
+    Info (21061): Implemented 293 logic cells
     Info (21064): Implemented 48 RAM segments
     Info (21065): Implemented 1 PLLs
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 18 warnings
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 19 warnings
     Info: Peak virtual memory: 859 megabytes
-    Info: Processing ended: Fri Aug 19 17:14:59 2016
-    Info: Elapsed time: 00:00:23
+    Info: Processing ended: Fri Aug 19 18:34:20 2016
+    Info: Elapsed time: 00:00:19
     Info: Total CPU time (on all processors): 00:00:43
 
 
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in C:/Users/Henry/Documents/Altera/Projects/De0LEDPanel.map.smsg.
+The suppressed messages can be found in H:/Projects/FPGA/Altera/FPGA-LED-Panel/De0LEDPanel.map.smsg.
 
 

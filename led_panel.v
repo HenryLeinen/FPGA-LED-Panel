@@ -1,7 +1,6 @@
 `define FRAME_TIME 250
 
-module led_panel #(parameter COL_BITS=5)
-						(
+module led_panel	(
 							clk,
 							rst,
 
@@ -50,7 +49,7 @@ module led_panel #(parameter COL_BITS=5)
 	input						selected_buffer;
 	output reg				actual_buffer;
 		
-	output wire	[COL_BITS-1+5:0]		rd_addr;
+	output wire	[9:0]		rd_addr;
 	input		  [23:0] 	rd_data_hi, rd_data_lo;
 		
 		
@@ -65,18 +64,18 @@ module led_panel #(parameter COL_BITS=5)
 					UNBLANK 	= 3'b100,			//	enable outputs oe_n to 0, increment bit plane, if all bitplanes displayed, increment row if all rows displayed
 					READ 		= 3'b101,				//	clock to 0,
 					SHIFT 	= 3'b110,			//	clock to 1, goto WAIT if all columns routed, otherwise goto SHIFT_1
-					INVALID 	= 3'b111;
+					PRE_READ	= 3'b111;
 
 	reg [2:0]	state_d = IDLE, state_q;				//	This is the state variable
 
 	//	Timing control
 	reg [15:0]	time_slice_time = 0;				//	The timer counts ticks until the next time slice becomes active
-	reg [15:0]	bit_plane = 0;						//	The counter counts the time slices (from 0 to 255)
+	reg [7:0]	bit_plane = 0;						//	The counter counts the time slices (from 0 to 255)
 	
 	
 	//	Pixel control
-	reg [COL_BITS-1:0]	col;
-	reg [4:0]	row;
+	reg [4:0]	col;
+	reg [3:0]	row;
 	
 	wire [7:0]  pixel_red_hi, pixel_red_lo;
 	wire [7:0]	pixel_green_hi, pixel_green_lo;
@@ -90,7 +89,7 @@ module led_panel #(parameter COL_BITS=5)
 	assign pixel_green_lo	= rd_data_lo[15:8];
 	assign pixel_blue_lo		= rd_data_lo[23:16];
 
-	assign		rd_addr = {actual_buffer, row[3:0], col[COL_BITS-1:0]};
+	assign		rd_addr = {actual_buffer, row[3:0], col[4:0]};
 	
 		
 	//	Procedural block
@@ -105,7 +104,7 @@ module led_panel #(parameter COL_BITS=5)
 			CLK <= 0;
 			state_d <= WAIT;
 			bit_plane <= 0;
-			time_slice_time <= 500>>(COL_BITS-5); //	500 for 32 columns, 250 for 64, 125 for 128
+			time_slice_time <= 500; //	500 for 32 columns, 250 for 64, 125 for 128
 			col <= 0;
 			row <= 0;
 			frame_start <= 0;
@@ -120,7 +119,6 @@ module led_panel #(parameter COL_BITS=5)
 				//	Wait for timeslice to elapse so that we can begin to latch the shifted values though
 				WAIT:
 					begin
-						CLK <= 0;
 						if (time_slice_time == 0) begin
 							//	Time slice elapsed, so move on to the next
 							state_d <= BLANK;
@@ -132,29 +130,29 @@ module led_panel #(parameter COL_BITS=5)
 				//	Just switch off the LEDs
 				BLANK:
 					begin
-						OE_N <= 1;
+						OE_N = 1;
 						state_d <= LATCH;
 					end
 
 				// Latch the data and advance to the next timeslice or row
 				LATCH:
 					begin
-						LE <= 1;
-						time_slice_time = 500>>(COL_BITS-5); //	500 for 32 columns, 250 for 64, 125 for 128
+						LE = 1;
+						time_slice_time = 500; //	500 for 32 columns, 250 for 64, 125 for 128
 
-						if (bit_plane == 255) begin
-							bit_plane = 0;					//	start new row
-							if (row == 15) begin
-								row <= 0;									//	Start over again
-								frame_start <= 1;
+						bit_plane = bit_plane + 1;
+						if (bit_plane == 0) begin
+							//	wrapped around --> all rows processed
+							row = row + 1;
+							if (row == 0) begin
+								//	wrapped around --> all rows processed
+								frame_start = 1;
 								actual_buffer = selected_buffer;	//	Take over new buffer request
 							end else begin
-								row <= row + 1;							// advance to next row
-								frame_start <= 0;
+								frame_start = 0;
 							end
-						end else begin
-							bit_plane = bit_plane + 1;
 						end
+						
 /*
 						if (row == 15) begin
 							row <= 0;
@@ -170,16 +168,21 @@ module led_panel #(parameter COL_BITS=5)
 							row <= row + 1;
 						end
 */
-						A <= row;
+						A = row;
 						state_d <= UNBLANK;
 					end
 					
 				UNBLANK:
 					begin
-						LE <= 0;
-						OE_N <= 0;
-						CLK <= 0;
-						col_start <= 1;
+						LE = 0;
+						OE_N = 0;
+						col_start = 1;
+						state_d <= PRE_READ;
+					end
+					
+				PRE_READ:
+					begin
+						CLK = 0;
 						state_d <= READ;
 					end
 					
@@ -187,27 +190,27 @@ module led_panel #(parameter COL_BITS=5)
 				//	Determine and set new shiftregister values
 				READ:	
 					begin
-						CLK <= 0;
-						if (pixel_red_hi 		> bit_plane) RED[0] <= 1; 	else RED[0] <= 0;
-						if (pixel_red_lo 		> bit_plane) RED[1] <= 1; 	else RED[1] <= 0;
-						if (pixel_green_hi 	> bit_plane) GREEN[0] <= 1; else GREEN[0] <= 0;
-						if (pixel_green_lo	> bit_plane) GREEN[1] <= 1; else GREEN[1] <= 0;
-						if (pixel_blue_hi		> bit_plane) BLUE[0] <= 1; else BLUE[0] <= 0;
-						if (pixel_blue_lo		> bit_plane) BLUE[1] <= 1; else BLUE[1] <= 0;
+						CLK = 0;
+						if (pixel_red_hi 		> bit_plane) RED[0] = 1; 	else RED[0] = 0;
+						if (pixel_red_lo 		> bit_plane) RED[1] = 1; 	else RED[1] = 0;
+						if (pixel_green_hi 	> bit_plane) GREEN[0] = 1; else GREEN[0] = 0;
+						if (pixel_green_lo	> bit_plane) GREEN[1] = 1; else GREEN[1] = 0;
+						if (pixel_blue_hi		> bit_plane) BLUE[0] = 1; else BLUE[0] = 0;
+						if (pixel_blue_lo		> bit_plane) BLUE[1] = 1; else BLUE[1] = 0;
 						state_d <= SHIFT;
 					end
 				
 				//	Clock the new values in and check if all values are clocked in already
 				SHIFT:
 					begin
-						CLK <= 1;
-						if (col == ((1<<(COL_BITS))-1)) begin
-							col <= 0;
-							state_d <= WAIT;
-							col_start <= 0;
-						end else begin
-							col <= col + 1;
-							state_d <= READ;
+						CLK = 1;
+						col = col + 1;
+						if (col == 0) begin
+							//	wrapped around --> all columns processed
+							state_d <= WAIT;		//	proceed to next row
+							col_start = 0;
+						end else begin	
+							state_d <= READ;		//	proceed with next column
 						end
 					end
 					

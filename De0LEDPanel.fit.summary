@@ -1,14 +1,14 @@
-Fitter Status : Successful - Fri Aug 19 17:15:08 2016
+Fitter Status : Successful - Fri Aug 19 18:34:29 2016
 Quartus Prime Version : 16.0.0 Build 211 04/27/2016 SJ Lite Edition
 Revision Name : De0LEDPanel
 Top-level Entity Name : De0LEDPanel
 Family : Cyclone IV E
 Device : EP4CE22F17C6
 Timing Models : Final
-Total logic elements : 285 / 22,320 ( 1 % )
-    Total combinational functions : 277 / 22,320 ( 1 % )
-    Dedicated logic registers : 129 / 22,320 ( < 1 % )
-Total registers : 129
+Total logic elements : 290 / 22,320 ( 1 % )
+    Total combinational functions : 279 / 22,320 ( 1 % )
+    Dedicated logic registers : 131 / 22,320 ( < 1 % )
+Total registers : 131
 Total pins : 26 / 154 ( 17 % )
 Total virtual pins : 0
 Total memory bits : 49,152 / 608,256 ( 8 % )

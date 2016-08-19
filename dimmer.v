@@ -1,4 +1,4 @@
-module dimmer #(parameter COLS=5) (
+module dimmer (
 						rst,
 						clk,
 						
@@ -20,11 +20,11 @@ module dimmer #(parameter COLS=5) (
 	
 	
 	reg [4:0]						wr_row;
-	reg [COLS-1:0]					wr_col;
+	reg [4:0]						wr_col;
 	
 	reg [7:0]						wr_red, wr_green, wr_blue;		
 
-	output  wire [5+COLS-1:0]	wr_addr = {wr_row[4:0], wr_col[COLS-1:0]};
+	output  wire [10:0]			wr_addr = {wr_row[4:0], wr_col[4:0]};
 	output  wire [23:0]			wr_data = {wr_blue[7:0], wr_green[7:0], wr_red[7:0]};
 	output 							wr_ena;
 	
@@ -46,15 +46,18 @@ module dimmer #(parameter COLS=5) (
 										BLUE = 2'b01,
 										GREEN = 2'b10,
 										SWAMP = 2'b11;
+
+	reg  [9:0]						swamp_counter;
 	
 	always @(posedge clk or negedge rst) begin
 		if (!rst) begin
 			state_d <= IDLE;
 			selected_buffer <= 0;
 			wr_ena <= 0;
-			wr_red <= 10;
-			wr_green <= 10;
-			wr_blue <= 10;
+			wr_red <= 0;
+			wr_green <= 0;
+			wr_blue <= 0;
+			swamp_counter <= 0;
 			color_pattern_d <= GREEN;
 		end else begin
 			if (!trigger) begin
@@ -65,37 +68,44 @@ module dimmer #(parameter COLS=5) (
 				IDLE:
 					begin
 						if (!trigger) begin
-							wr_row <= 0;
-							wr_col <= 0;
+							wr_row = 0;
+							wr_col = 0;
 							state_d <= FILL_START;
 						end
 					end
 					
 				FILL_START:
 					begin
-						wr_ena <= 1;
+						wr_ena = 1;
 						state_d <= FILL_N1;
 					end
 					
 				FILL_N1:
 					begin
 						wr_ena <= 0;
-						if (wr_col == ((1<<COLS)-1)) begin
-							wr_col = 0;
-							if (wr_row == 31) begin
-								wr_row = 0;
+						wr_col = wr_col + 1;
+						if (wr_col == 0) begin //	Wrapped
+							//	proceed to next row
+							wr_row = wr_row + 1;
+							if (wr_row == 0) begin 	// wrapped
 								state_d <= WAIT;
 							end else begin
-								wr_row = wr_row + 1;
 								state_d <= FILL_START;
 							end
 						end else begin
-							wr_col = wr_col + 1;
 							state_d <= FILL_START;
-						end
+						end						
+						
 						if (color_pattern_q == SWAMP) begin
-							wr_blue = wr_row << 3;
-							wr_red  = wr_col << 3;
+							if (wr_addr == swamp_counter) begin
+								wr_blue = 255;
+								wr_red = 255;
+								wr_green = 255;
+							end else begin
+								wr_blue = 0;
+								wr_red = 0;
+								wr_green = 0;
+							end
 						end
 					end
 					
@@ -106,33 +116,39 @@ module dimmer #(parameter COLS=5) (
 							case (color_pattern_q)
 								RED: 
 									begin
-										wr_red <= wr_red + 1;
-										LED <= wr_red;
+										wr_red = wr_red + 1;
+										wr_green = 0;
+										wr_blue = 0;
+										LED = wr_red;
 										if (wr_red == 0) begin
-											if (trigger) color_pattern_q <= color_pattern_d;
+											if (trigger) color_pattern_q = color_pattern_d;
 										end
 									end
 								BLUE: 
 									begin
-										wr_blue <= wr_blue + 1;
-										LED <= wr_blue;
+										wr_blue = wr_blue + 1;
+										wr_green = 0;
+										wr_red = 0;
+										LED = wr_blue;
 										if (wr_blue == 0) begin
-											if (trigger) color_pattern_q <= color_pattern_d;
+											if (trigger) color_pattern_q = color_pattern_d;
 										end
 									end
 								GREEN:	
 									begin
-										wr_green <= wr_green + 1;
-										LED <= wr_red;
+										wr_green = wr_green + 1;
+										wr_red = 0;
+										wr_blue = 0;
+										LED = wr_green;
 										if (wr_green == 0) begin
-											if (trigger) color_pattern_q <= color_pattern_d;
+											if (trigger) color_pattern_q = color_pattern_d;
 										end
 									end
 								SWAMP:
 									begin
-										wr_green = wr_green + 1;
-										if (wr_green == 0) begin
-											if (trigger) color_pattern_q <= color_pattern_d;
+										if (wr_addr == 0) begin
+											swamp_counter = swamp_counter + 1;
+											if (trigger) color_pattern_q = color_pattern_d;
 										end
 									end
 							endcase

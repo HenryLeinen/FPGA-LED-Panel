@@ -103,7 +103,7 @@ output							OE;			//	GPIO30
 	);
 	
 //	Instantiate the LED Panel driver
-	led_panel #(6)	led_panel (
+	led_panel	led_panel (
 		.clk(clk100),
 		.rst(KEY[0]),
 		.RED(RED),
@@ -131,8 +131,8 @@ output							OE;			//	GPIO30
 		.clk(clk50),
 		.rst(KEY[0]),
 		.trigger(KEY[1]),
-		.wr_addr(wr_addr[9:0]),
-		.wr_data(wr_data[23:0]),
+		.wr_addr(wr_addr),
+		.wr_data(wr_data),
 		.wr_ena(wr_ena),
 		.selected_buffer(selected_buffer),
 		.actual_buffer(actual_buffer),

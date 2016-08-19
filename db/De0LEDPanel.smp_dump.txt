@@ -14,21 +14,23 @@ state_d.FILL_N1 0 1 0 1
 state_d.WAIT 1 0 0 1 
 
 State Machine - |De0LEDPanel|led_panel:led_panel|state_q
-Name state_q.SHIFT state_q.READ state_q.UNBLANK state_q.LATCH state_q.BLANK state_q.WAIT state_q.IDLE 
-state_q.IDLE 0 0 0 0 0 0 0 
-state_q.WAIT 0 0 0 0 0 1 1 
-state_q.BLANK 0 0 0 0 1 0 1 
-state_q.LATCH 0 0 0 1 0 0 1 
-state_q.UNBLANK 0 0 1 0 0 0 1 
-state_q.READ 0 1 0 0 0 0 1 
-state_q.SHIFT 1 0 0 0 0 0 1 
+Name state_q.PRE_READ state_q.SHIFT state_q.READ state_q.UNBLANK state_q.LATCH state_q.BLANK state_q.WAIT state_q.IDLE 
+state_q.IDLE 0 0 0 0 0 0 0 0 
+state_q.WAIT 0 0 0 0 0 0 1 1 
+state_q.BLANK 0 0 0 0 0 1 0 1 
+state_q.LATCH 0 0 0 0 1 0 0 1 
+state_q.UNBLANK 0 0 0 1 0 0 0 1 
+state_q.READ 0 0 1 0 0 0 0 1 
+state_q.SHIFT 0 1 0 0 0 0 0 1 
+state_q.PRE_READ 1 0 0 0 0 0 0 1 
 
 State Machine - |De0LEDPanel|led_panel:led_panel|state_d
-Name state_d.SHIFT state_d.READ state_d.UNBLANK state_d.LATCH state_d.BLANK state_d.WAIT state_d.IDLE 
-state_d.IDLE 0 0 0 0 0 0 0 
-state_d.WAIT 0 0 0 0 0 1 1 
-state_d.BLANK 0 0 0 0 1 0 1 
-state_d.LATCH 0 0 0 1 0 0 1 
-state_d.UNBLANK 0 0 1 0 0 0 1 
-state_d.READ 0 1 0 0 0 0 1 
-state_d.SHIFT 1 0 0 0 0 0 1 
+Name state_d.PRE_READ state_d.SHIFT state_d.READ state_d.UNBLANK state_d.LATCH state_d.BLANK state_d.WAIT state_d.IDLE 
+state_d.IDLE 0 0 0 0 0 0 0 0 
+state_d.WAIT 0 0 0 0 0 0 1 1 
+state_d.BLANK 0 0 0 0 0 1 0 1 
+state_d.LATCH 0 0 0 0 1 0 0 1 
+state_d.UNBLANK 0 0 0 1 0 0 0 1 
+state_d.READ 0 0 1 0 0 0 0 1 
+state_d.SHIFT 0 1 0 0 0 0 0 1 
+state_d.PRE_READ 1 0 0 0 0 0 0 1 

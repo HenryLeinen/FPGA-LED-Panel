@@ -1,5 +1,5 @@
 EDA Netlist Writer report for De0LEDPanel
-Fri Aug 19 17:15:20 2016
+Fri Aug 19 18:34:39 2016
 Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
 
 
@@ -37,7 +37,7 @@ agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Fri Aug 19 17:15:20 2016 ;
+; EDA Netlist Writer Status ; Successful - Fri Aug 19 18:34:39 2016 ;
 ; Revision Name             ; De0LEDPanel                           ;
 ; Top-level Entity Name     ; De0LEDPanel                           ;
 ; Family                    ; Cyclone IV E                          ;
@@ -67,20 +67,20 @@ agreement for further details.
 +---------------------------------------------------------------------------------------------------+---------------------------+
 
 
-+---------------------------------------------------------------------------------------------------+
-; Simulation Generated Files                                                                        ;
-+---------------------------------------------------------------------------------------------------+
-; Generated Files                                                                                   ;
-+---------------------------------------------------------------------------------------------------+
-; C:/Users/Henry/Documents/Altera/Projects/simulation/modelsim/De0LEDPanel_6_1200mv_85c_slow.vo     ;
-; C:/Users/Henry/Documents/Altera/Projects/simulation/modelsim/De0LEDPanel_6_1200mv_0c_slow.vo      ;
-; C:/Users/Henry/Documents/Altera/Projects/simulation/modelsim/De0LEDPanel_min_1200mv_0c_fast.vo    ;
-; C:/Users/Henry/Documents/Altera/Projects/simulation/modelsim/De0LEDPanel.vo                       ;
-; C:/Users/Henry/Documents/Altera/Projects/simulation/modelsim/De0LEDPanel_6_1200mv_85c_v_slow.sdo  ;
-; C:/Users/Henry/Documents/Altera/Projects/simulation/modelsim/De0LEDPanel_6_1200mv_0c_v_slow.sdo   ;
-; C:/Users/Henry/Documents/Altera/Projects/simulation/modelsim/De0LEDPanel_min_1200mv_0c_v_fast.sdo ;
-; C:/Users/Henry/Documents/Altera/Projects/simulation/modelsim/De0LEDPanel_v.sdo                    ;
-+---------------------------------------------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------+
+; Simulation Generated Files                                                                      ;
++-------------------------------------------------------------------------------------------------+
+; Generated Files                                                                                 ;
++-------------------------------------------------------------------------------------------------+
+; H:/Projects/FPGA/Altera/FPGA-LED-Panel/simulation/modelsim/De0LEDPanel_6_1200mv_85c_slow.vo     ;
+; H:/Projects/FPGA/Altera/FPGA-LED-Panel/simulation/modelsim/De0LEDPanel_6_1200mv_0c_slow.vo      ;
+; H:/Projects/FPGA/Altera/FPGA-LED-Panel/simulation/modelsim/De0LEDPanel_min_1200mv_0c_fast.vo    ;
+; H:/Projects/FPGA/Altera/FPGA-LED-Panel/simulation/modelsim/De0LEDPanel.vo                       ;
+; H:/Projects/FPGA/Altera/FPGA-LED-Panel/simulation/modelsim/De0LEDPanel_6_1200mv_85c_v_slow.sdo  ;
+; H:/Projects/FPGA/Altera/FPGA-LED-Panel/simulation/modelsim/De0LEDPanel_6_1200mv_0c_v_slow.sdo   ;
+; H:/Projects/FPGA/Altera/FPGA-LED-Panel/simulation/modelsim/De0LEDPanel_min_1200mv_0c_v_fast.sdo ;
+; H:/Projects/FPGA/Altera/FPGA-LED-Panel/simulation/modelsim/De0LEDPanel_v.sdo                    ;
++-------------------------------------------------------------------------------------------------+
 
 
 +-----------------------------+
@@ -89,21 +89,21 @@ agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime EDA Netlist Writer
     Info: Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
-    Info: Processing started: Fri Aug 19 17:15:18 2016
+    Info: Processing started: Fri Aug 19 18:34:38 2016
 Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off De0LEDPanel -c De0LEDPanel
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (204019): Generated file De0LEDPanel_6_1200mv_85c_slow.vo in folder "C:/Users/Henry/Documents/Altera/Projects/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file De0LEDPanel_6_1200mv_0c_slow.vo in folder "C:/Users/Henry/Documents/Altera/Projects/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file De0LEDPanel_min_1200mv_0c_fast.vo in folder "C:/Users/Henry/Documents/Altera/Projects/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file De0LEDPanel.vo in folder "C:/Users/Henry/Documents/Altera/Projects/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file De0LEDPanel_6_1200mv_85c_v_slow.sdo in folder "C:/Users/Henry/Documents/Altera/Projects/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file De0LEDPanel_6_1200mv_0c_v_slow.sdo in folder "C:/Users/Henry/Documents/Altera/Projects/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file De0LEDPanel_min_1200mv_0c_v_fast.sdo in folder "C:/Users/Henry/Documents/Altera/Projects/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file De0LEDPanel_v.sdo in folder "C:/Users/Henry/Documents/Altera/Projects/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file De0LEDPanel_6_1200mv_85c_slow.vo in folder "H:/Projects/FPGA/Altera/FPGA-LED-Panel/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file De0LEDPanel_6_1200mv_0c_slow.vo in folder "H:/Projects/FPGA/Altera/FPGA-LED-Panel/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file De0LEDPanel_min_1200mv_0c_fast.vo in folder "H:/Projects/FPGA/Altera/FPGA-LED-Panel/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file De0LEDPanel.vo in folder "H:/Projects/FPGA/Altera/FPGA-LED-Panel/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file De0LEDPanel_6_1200mv_85c_v_slow.sdo in folder "H:/Projects/FPGA/Altera/FPGA-LED-Panel/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file De0LEDPanel_6_1200mv_0c_v_slow.sdo in folder "H:/Projects/FPGA/Altera/FPGA-LED-Panel/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file De0LEDPanel_min_1200mv_0c_v_fast.sdo in folder "H:/Projects/FPGA/Altera/FPGA-LED-Panel/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file De0LEDPanel_v.sdo in folder "H:/Projects/FPGA/Altera/FPGA-LED-Panel/simulation/modelsim/" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 746 megabytes
-    Info: Processing ended: Fri Aug 19 17:15:20 2016
-    Info: Elapsed time: 00:00:02
+    Info: Peak virtual memory: 745 megabytes
+    Info: Processing ended: Fri Aug 19 18:34:39 2016
+    Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:02
 
 
