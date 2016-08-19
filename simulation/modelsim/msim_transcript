@@ -1,0 +1,63 @@
+# Reading C:/altera_lite/16.0/modelsim_ase/tcl/vsim/pref.tcl
+# do De0LEDPanel_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim ALTERA vmap 10.4d Lib Mapping Utility 2015.12 Dec 30 2015
+# vmap work rtl_work 
+# Copying C:/altera_lite/16.0/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/Henry/Documents/Altera/Projects {C:/Users/Henry/Documents/Altera/Projects/pll.v}
+# Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
+# Start time: 12:11:40 on Aug 18,2016
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Henry/Documents/Altera/Projects" C:/Users/Henry/Documents/Altera/Projects/pll.v 
+# -- Compiling module pll
+# 
+# Top level modules:
+# 	pll
+# End time: 12:11:40 on Aug 18,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/Henry/Documents/Altera/Projects {C:/Users/Henry/Documents/Altera/Projects/led_panel.v}
+# Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
+# Start time: 12:11:40 on Aug 18,2016
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Henry/Documents/Altera/Projects" C:/Users/Henry/Documents/Altera/Projects/led_panel.v 
+# -- Compiling module led_panel
+# 
+# Top level modules:
+# 	led_panel
+# End time: 12:11:40 on Aug 18,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/Henry/Documents/Altera/Projects {C:/Users/Henry/Documents/Altera/Projects/dpram.v}
+# Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
+# Start time: 12:11:40 on Aug 18,2016
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Henry/Documents/Altera/Projects" C:/Users/Henry/Documents/Altera/Projects/dpram.v 
+# -- Compiling module dpram
+# 
+# Top level modules:
+# 	dpram
+# End time: 12:11:41 on Aug 18,2016, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/Henry/Documents/Altera/Projects {C:/Users/Henry/Documents/Altera/Projects/de0ledpanel.v}
+# Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
+# Start time: 12:11:41 on Aug 18,2016
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Henry/Documents/Altera/Projects" C:/Users/Henry/Documents/Altera/Projects/de0ledpanel.v 
+# -- Compiling module De0LEDPanel
+# 
+# Top level modules:
+# 	De0LEDPanel
+# End time: 12:11:41 on Aug 18,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/Henry/Documents/Altera/Projects/db {C:/Users/Henry/Documents/Altera/Projects/db/pll_altpll.v}
+# Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
+# Start time: 12:11:41 on Aug 18,2016
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Henry/Documents/Altera/Projects/db" C:/Users/Henry/Documents/Altera/Projects/db/pll_altpll.v 
+# -- Compiling module pll_altpll
+# 
+# Top level modules:
+# 	pll_altpll
+# End time: 12:11:41 on Aug 18,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 

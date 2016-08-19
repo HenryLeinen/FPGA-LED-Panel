@@ -1,0 +1,113 @@
+#============================================================
+# Build by Terasic System Builder
+#============================================================
+
+set_global_assignment -name FAMILY "Cyclone IV E"
+set_global_assignment -name DEVICE EP4CE22F17C6
+set_global_assignment -name TOP_LEVEL_ENTITY "De0LEDPanel"
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 12.0
+set_global_assignment -name LAST_QUARTUS_VERSION 16.0.0
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "10:39:48 AUGUST 17,2016"
+set_global_assignment -name DEVICE_FILTER_PACKAGE FBGA
+set_global_assignment -name DEVICE_FILTER_PIN_COUNT 256
+set_global_assignment -name DEVICE_FILTER_SPEED_GRADE 6
+set_global_assignment -name SDC_FILE De0LEDPanel.SDC
+set_global_assignment -name CYCLONEII_RESERVE_NCEO_AFTER_CONFIGURATION "USE AS REGULAR IO"
+set_global_assignment -name RESERVE_FLASH_NCE_AFTER_CONFIGURATION "USE AS REGULAR IO"
+set_global_assignment -name RESERVE_DATA0_AFTER_CONFIGURATION "USE AS REGULAR IO"
+set_global_assignment -name RESERVE_DATA1_AFTER_CONFIGURATION "USE AS REGULAR IO"
+set_global_assignment -name RESERVE_DCLK_AFTER_CONFIGURATION "USE AS REGULAR IO"
+
+#============================================================
+# CLOCK
+#============================================================
+set_location_assignment PIN_R8 -to CLOCK_50
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to CLOCK_50
+
+#============================================================
+# LED
+#============================================================
+set_location_assignment PIN_A15 -to LED[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED[0]
+set_location_assignment PIN_A13 -to LED[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED[1]
+set_location_assignment PIN_B13 -to LED[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED[2]
+set_location_assignment PIN_A11 -to LED[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED[3]
+set_location_assignment PIN_D1 -to LED[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED[4]
+set_location_assignment PIN_F3 -to LED[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED[5]
+set_location_assignment PIN_B1 -to LED[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED[6]
+set_location_assignment PIN_L3 -to LED[7]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED[7]
+
+#============================================================
+# KEY
+#============================================================
+set_location_assignment PIN_J15 -to KEY[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to KEY[0]
+set_location_assignment PIN_E1 -to KEY[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to KEY[1]
+
+#============================================================
+# EPCS
+#============================================================
+
+#============================================================
+# 2x13 GPIO Header
+#============================================================
+
+#============================================================
+# GPIO_0, GPIO_0 connect to GPIO Default
+#============================================================
+
+#============================================================
+# End of pin assignments by Terasic System Builder
+#============================================================
+
+
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name QIP_FILE pll.qip
+set_location_assignment PIN_B12 -to GREEN[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GREEN[0]
+set_location_assignment PIN_D12 -to BLUE[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to BLUE[0]
+set_location_assignment PIN_D11 -to RED[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to RED[0]
+set_location_assignment PIN_A12 -to OE
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to OE
+set_location_assignment PIN_C11 -to CLK
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to CLK
+set_location_assignment PIN_B11 -to LATCH
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LATCH
+set_location_assignment PIN_C9 -to A[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to A[0]
+set_location_assignment PIN_D9 -to A[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to A[1]
+set_location_assignment PIN_E11 -to A[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to A[2]
+set_location_assignment PIN_E10 -to A[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to A[3]
+set_location_assignment PIN_E9 -to GREEN[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GREEN[1]
+set_location_assignment PIN_F9 -to BLUE[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to BLUE[1]
+set_location_assignment PIN_F8 -to RED[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to RED[1]
+set_global_assignment -name VERILOG_FILE led_panel.v
+set_global_assignment -name QIP_FILE dpram.qip
+set_global_assignment -name HEX_FILE De0LEDPanel_mem_init.hex
+set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (Verilog)"
+set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "VERILOG HDL" -section_id eda_simulation
+set_global_assignment -name VERILOG_FILE dimmer.v
+set_global_assignment -name VERILOG_FILE ext_mem.v
+set_location_assignment PIN_D3 -to FRAME
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to FRAME
+set_location_assignment PIN_C3 -to COL
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to COL
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

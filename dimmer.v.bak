@@ -1,0 +1,56 @@
+module dimmer (
+						rst,
+						clk,
+						
+						trigger,
+						
+						wr_addr,
+						wr_data,
+						wr_ena,
+						
+						selected_buffer,
+						actual_buffer
+					);
+	
+	input				rst;
+	input				clk;
+	input				trigger;
+	
+	
+	reg [4:0]		wr_row;
+	reg [4:0]		wr_col;
+	
+	reg [7:0]		wr_red, wr_green, wr_blue;		
+
+	output  [9:0]	wr_addr = {wr_row[4:0], wr_col[4:0]};
+	output  [23:0]	wr_data = {wr_blue[7:0], wr_green[7:0], wr_red[7:0]};
+	output 			wr_ena;
+	
+	output			selected_buffer;
+	input				actual_buffer;
+	
+	
+	reg	[1:0]		state_d, state_q;
+	localparam		IDLE = 2'b00,
+						FILL_START = 2'b01;
+	
+	always @(posedge clk or negedge rst) begin
+		if (!rst) begin
+			state_d <= IDLE;
+		end else begin
+			case (state_q)
+				IDLE:
+					begin
+						if (!trigger) begin
+							state_d <= FILL;
+						end
+					end
+					
+				FILL_START:
+					begin
+					
+					end
+			endcase
+		end
+	end
+endmodule

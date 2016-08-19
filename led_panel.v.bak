@@ -1,0 +1,27 @@
+module led_panel (
+							CLOCK_50
+							rst
+							//	LED Panel wires
+							RED,
+							GREEN,
+							BLUE,
+							
+							LATCH,
+							OE_N,
+							CLK
+							
+						);
+						
+	input					CLOCK_50;
+	input					rst;
+	
+	output				RED;
+	output				GREEN;
+	output				BLUE;
+	
+	output				LATCH;
+	output				OE_N;
+	output				CLK;
+	
+endmodule
+	
