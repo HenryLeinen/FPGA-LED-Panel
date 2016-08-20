@@ -66,7 +66,7 @@ module led_panel	(
 					SHIFT 	= 3'b110,			//	clock to 1, goto WAIT if all columns routed, otherwise goto SHIFT_1
 					PRE_READ	= 3'b111;
 
-	reg [2:0]	state_d = IDLE, state_q;				//	This is the state variable
+	reg [2:0]	state;								//	This is the state variable
 
 	//	Timing control
 	reg [15:0]	time_slice_time = 0;				//	The timer counts ticks until the next time slice becomes active
@@ -93,51 +93,53 @@ module led_panel	(
 	
 		
 	//	Procedural block
-	always @(posedge clk) begin
+	always @(posedge clk or negedge rst) begin
 		if (!rst) begin
-			A <= 4'b0;
+			A = 4'b0;
 			OE_N <= 1;
 			RED = 2'b11;
 			GREEN = 2'b11;
 			BLUE = 2'b11;
-			LE <= 1;
-			CLK <= 0;
-			state_d <= WAIT;
-			bit_plane <= 0;
-			time_slice_time <= 500; //	500 for 32 columns, 250 for 64, 125 for 128
-			col <= 0;
-			row <= 0;
-			frame_start <= 0;
-			col_start <= 0;
+			LE = 1;
+			CLK = 0;
+			state = PRE_READ;
+			bit_plane = 254;			//	Just for debugging, otherwise 0
+			time_slice_time = 500; //	500 for 32 columns, 250 for 64, 125 for 128
+			col = 0;
+			row = 0;
+			frame_start = 0;
+			col_start = 0;
+			actual_buffer = 0;
 		end else begin
 			if (time_slice_time != 0) begin
 					time_slice_time = time_slice_time - 1;
 			end
 			
-			case (state_q)
+			case (state)
 			
 				//	Wait for timeslice to elapse so that we can begin to latch the shifted values though
 				WAIT:
 					begin
 						if (time_slice_time == 0) begin
 							//	Time slice elapsed, so move on to the next
-							state_d <= BLANK;
+							state = BLANK;
 						end else begin
-							state_d <= WAIT;
+							state = WAIT;
 						end
 					end
 				
 				//	Just switch off the LEDs
 				BLANK:
 					begin
-						OE_N = 1;
-						state_d <= LATCH;
+						OE_N <= 1;
+						state = LATCH;
 					end
 
 				// Latch the data and advance to the next timeslice or row
 				LATCH:
 					begin
 						LE = 1;
+						A = row;
 						time_slice_time = 500; //	500 for 32 columns, 250 for 64, 125 for 128
 
 						bit_plane = bit_plane + 1;
@@ -153,37 +155,21 @@ module led_panel	(
 							end
 						end
 						
-/*
-						if (row == 15) begin
-							row <= 0;
-							if (bit_plane == 255) begin
-								bit_plane = 0;
-								frame_start <= 1;
-								actual_buffer <= selected_buffer;
-							end else begin
-								bit_plane = bit_plane + 1;
-								frame_start <= 0;
-							end
-						end else begin
-							row <= row + 1;
-						end
-*/
-						A = row;
-						state_d <= UNBLANK;
+						state = UNBLANK;
 					end
 					
 				UNBLANK:
 					begin
 						LE = 0;
-						OE_N = 0;
+						OE_N <= 0;
 						col_start = 1;
-						state_d <= PRE_READ;
+						state = PRE_READ;
 					end
 					
 				PRE_READ:
 					begin
 						CLK = 0;
-						state_d <= READ;
+						state = READ;
 					end
 					
 				//	Transition clock to low
@@ -197,7 +183,7 @@ module led_panel	(
 						if (pixel_green_lo	> bit_plane) GREEN[1] = 1; else GREEN[1] = 0;
 						if (pixel_blue_hi		> bit_plane) BLUE[0] = 1; else BLUE[0] = 0;
 						if (pixel_blue_lo		> bit_plane) BLUE[1] = 1; else BLUE[1] = 0;
-						state_d <= SHIFT;
+						state = SHIFT;
 					end
 				
 				//	Clock the new values in and check if all values are clocked in already
@@ -207,17 +193,14 @@ module led_panel	(
 						col = col + 1;
 						if (col == 0) begin
 							//	wrapped around --> all columns processed
-							state_d <= WAIT;		//	proceed to next row
+							state = WAIT;		//	proceed to next row
 							col_start = 0;
 						end else begin	
-							state_d <= READ;		//	proceed with next column
+							state = READ;		//	proceed with next column
 						end
 					end
-					
-				default: state_d <= WAIT;
-				
+									
 			endcase
-			state_q <= state_d;
 		end
 	end
 	

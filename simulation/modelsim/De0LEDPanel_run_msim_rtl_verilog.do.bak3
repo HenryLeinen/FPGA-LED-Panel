@@ -1,0 +1,15 @@
+transcript on
+if {[file exists rtl_work]} {
+	vdel -lib rtl_work -all
+}
+vlib rtl_work
+vmap work rtl_work
+
+vlog -vlog01compat -work work +incdir+D:/Repositories/FPGA/Altera/LED\ Panel/FPGA-LED-Panel {D:/Repositories/FPGA/Altera/LED Panel/FPGA-LED-Panel/pll.v}
+vlog -vlog01compat -work work +incdir+D:/Repositories/FPGA/Altera/LED\ Panel/FPGA-LED-Panel {D:/Repositories/FPGA/Altera/LED Panel/FPGA-LED-Panel/led_panel.v}
+vlog -vlog01compat -work work +incdir+D:/Repositories/FPGA/Altera/LED\ Panel/FPGA-LED-Panel {D:/Repositories/FPGA/Altera/LED Panel/FPGA-LED-Panel/dpram.v}
+vlog -vlog01compat -work work +incdir+D:/Repositories/FPGA/Altera/LED\ Panel/FPGA-LED-Panel {D:/Repositories/FPGA/Altera/LED Panel/FPGA-LED-Panel/dimmer.v}
+vlog -vlog01compat -work work +incdir+D:/Repositories/FPGA/Altera/LED\ Panel/FPGA-LED-Panel {D:/Repositories/FPGA/Altera/LED Panel/FPGA-LED-Panel/ext_mem.v}
+vlog -vlog01compat -work work +incdir+D:/Repositories/FPGA/Altera/LED\ Panel/FPGA-LED-Panel {D:/Repositories/FPGA/Altera/LED Panel/FPGA-LED-Panel/de0ledpanel.v}
+vlog -vlog01compat -work work +incdir+D:/Repositories/FPGA/Altera/LED\ Panel/FPGA-LED-Panel/db {D:/Repositories/FPGA/Altera/LED Panel/FPGA-LED-Panel/db/pll_altpll.v}
+

@@ -1,0 +1,15 @@
+{D:/Repositories/FPGA/Altera/LED Panel/FPGA-LED-Panel/led_panel.v} {1 {vlog -work work -stats=none {D:/Repositories/FPGA/Altera/LED Panel/FPGA-LED-Panel/led_panel.v}
+Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
+-- Compiling module led_panel
+
+Top level modules:
+	led_panel
+
+} {} {}} {D:/Repositories/FPGA/Altera/LED Panel/FPGA-LED-Panel/led_panel_tb.v} {1 {vlog -work work -stats=none {D:/Repositories/FPGA/Altera/LED Panel/FPGA-LED-Panel/led_panel_tb.v}
+Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
+-- Compiling module led_panel_tb
+
+Top level modules:
+	led_panel_tb
+
+} {} {}}

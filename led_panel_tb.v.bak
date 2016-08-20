@@ -1,0 +1,6 @@
+module led_panel_tb ();
+
+	led_panel DUT (
+		.clk(clk),
+		.rst(rst),
+		

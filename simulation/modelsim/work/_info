@@ -1,0 +1,50 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/Repositories/FPGA/Altera/LED Panel/FPGA-LED-Panel/simulation/modelsim
+vled_panel
+!s110 1471695254
+!i10b 1
+!s100 _X33_O;7AT^OjGghmXBYW1
+IcjC?:DYGVa=d=TnnQ=W<=2
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1471694982
+8D:/Repositories/FPGA/Altera/LED Panel/FPGA-LED-Panel/led_panel.v
+FD:/Repositories/FPGA/Altera/LED Panel/FPGA-LED-Panel/led_panel.v
+L0 3
+Z2 OV;L;10.4d;61
+r1
+!s85 0
+31
+!s108 1471695254.000000
+!s107 D:/Repositories/FPGA/Altera/LED Panel/FPGA-LED-Panel/led_panel.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/Repositories/FPGA/Altera/LED Panel/FPGA-LED-Panel/led_panel.v|
+!i113 1
+Z3 o-work work
+vled_panel_tb
+!s110 1471678479
+!i10b 1
+!s100 Hk=8oo4U[2PPzA4He@MXm2
+IDM8D;k@79YX0?ELC4VZ2e1
+R1
+R0
+w1471677382
+8D:/Repositories/FPGA/Altera/LED Panel/FPGA-LED-Panel/led_panel_tb.v
+FD:/Repositories/FPGA/Altera/LED Panel/FPGA-LED-Panel/led_panel_tb.v
+L0 1
+R2
+r1
+!s85 0
+31
+!s108 1471678479.000000
+!s107 D:/Repositories/FPGA/Altera/LED Panel/FPGA-LED-Panel/led_panel_tb.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/Repositories/FPGA/Altera/LED Panel/FPGA-LED-Panel/led_panel_tb.v|
+!i113 1
+R3

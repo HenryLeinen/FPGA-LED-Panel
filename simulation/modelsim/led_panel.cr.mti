@@ -1,0 +1,26 @@
+{D:/Repositories/FPGA/Altera/LED Panel/FPGA-LED-Panel/led_panel.v} {1 {vlog -work work -stats=none {D:/Repositories/FPGA/Altera/LED Panel/FPGA-LED-Panel/led_panel.v}
+Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
+-- Compiling module led_panel
+
+Top level modules:
+	led_panel
+
+} {} {}} {D:/Repositories/FPGA/Altera/LED Panel/FPGA-LED-Panel/simulation/modelsim/led_panel_tb.v} {0 {vlog -work work -stats=none {D:/Repositories/FPGA/Altera/LED Panel/FPGA-LED-Panel/simulation/modelsim/led_panel_tb.v}
+Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
+-- Compiling module \led_panel_tb.v 
+** Error: (vlog-13062) D:/Repositories/FPGA/Altera/LED Panel/FPGA-LED-Panel/simulation/modelsim/led_panel_tb.v(17): near "reg": A verilog net type keyword cannot be followed by the reg keyword.
+
+** Error: (vlog-13062) D:/Repositories/FPGA/Altera/LED Panel/FPGA-LED-Panel/simulation/modelsim/led_panel_tb.v(18): near "reg": A verilog net type keyword cannot be followed by the reg keyword.
+
+** Error: (vlog-13062) D:/Repositories/FPGA/Altera/LED Panel/FPGA-LED-Panel/simulation/modelsim/led_panel_tb.v(21): near "reg": A verilog net type keyword cannot be followed by the reg keyword.
+
+** Error: (vlog-13062) D:/Repositories/FPGA/Altera/LED Panel/FPGA-LED-Panel/simulation/modelsim/led_panel_tb.v(25): near "reg": A verilog net type keyword cannot be followed by the reg keyword.
+
+** Error: (vlog-13062) D:/Repositories/FPGA/Altera/LED Panel/FPGA-LED-Panel/simulation/modelsim/led_panel_tb.v(27): near "reg": A verilog net type keyword cannot be followed by the reg keyword.
+
+** Error: (vlog-13062) D:/Repositories/FPGA/Altera/LED Panel/FPGA-LED-Panel/simulation/modelsim/led_panel_tb.v(28): near "reg": A verilog net type keyword cannot be followed by the reg keyword.
+
+** Error: (vlog-13069) D:/Repositories/FPGA/Altera/LED Panel/FPGA-LED-Panel/simulation/modelsim/led_panel_tb.v(57): near "always": syntax error, unexpected always.
+
+
+} {4.0 5.0 6.0 7.0 8.0 9.0 10.0 11.0 12.0 13.0 14.0 15.0 16.0 17.0} {}}

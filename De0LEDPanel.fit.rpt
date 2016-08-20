@@ -1,6 +1,6 @@
 Fitter report for De0LEDPanel
-Fri Aug 19 18:34:29 2016
-Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
+Sat Aug 20 14:11:24 2016
+Quartus Prime Version 16.0.2 Build 222 07/20/2016 SJ Lite Edition
 
 
 ---------------------
@@ -73,17 +73,17 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +------------------------------------+---------------------------------------------+
-; Fitter Status                      ; Successful - Fri Aug 19 18:34:29 2016       ;
-; Quartus Prime Version              ; 16.0.0 Build 211 04/27/2016 SJ Lite Edition ;
+; Fitter Status                      ; Successful - Sat Aug 20 14:11:23 2016       ;
+; Quartus Prime Version              ; 16.0.2 Build 222 07/20/2016 SJ Lite Edition ;
 ; Revision Name                      ; De0LEDPanel                                 ;
 ; Top-level Entity Name              ; De0LEDPanel                                 ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE22F17C6                                ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 290 / 22,320 ( 1 % )                        ;
-;     Total combinational functions  ; 279 / 22,320 ( 1 % )                        ;
-;     Dedicated logic registers      ; 131 / 22,320 ( < 1 % )                      ;
-; Total registers                    ; 131                                         ;
+; Total logic elements               ; 272 / 22,320 ( 1 % )                        ;
+;     Total combinational functions  ; 267 / 22,320 ( 1 % )                        ;
+;     Dedicated logic registers      ; 122 / 22,320 ( < 1 % )                      ;
+; Total registers                    ; 122                                         ;
 ; Total pins                         ; 26 / 154 ( 17 % )                           ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 49,152 / 608,256 ( 8 % )                    ;
@@ -98,6 +98,8 @@ agreement for further details.
 ; Option                                                                     ; Setting                               ; Default Value                         ;
 +----------------------------------------------------------------------------+---------------------------------------+---------------------------------------+
 ; Device                                                                     ; EP4CE22F17C6                          ;                                       ;
+; Minimum Core Junction Temperature                                          ; 0                                     ;                                       ;
+; Maximum Core Junction Temperature                                          ; 85                                    ;                                       ;
 ; Fit Attempts to Skip                                                       ; 0                                     ; 0.0                                   ;
 ; Use smart compilation                                                      ; Off                                   ; Off                                   ;
 ; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                                    ; On                                    ;
@@ -162,7 +164,7 @@ agreement for further details.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   1.5%      ;
+;     Processor 2            ;   0.9%      ;
 +----------------------------+-------------+
 
 
@@ -203,8 +205,8 @@ agreement for further details.
 ; Type                ; Total [A + B]      ; From Design Partitions [A] ; From Rapid Recompile [B] ;
 +---------------------+--------------------+----------------------------+--------------------------+
 ; Placement (by node) ;                    ;                            ;                          ;
-;     -- Requested    ; 0.00 % ( 0 / 513 ) ; 0.00 % ( 0 / 513 )         ; 0.00 % ( 0 / 513 )       ;
-;     -- Achieved     ; 0.00 % ( 0 / 513 ) ; 0.00 % ( 0 / 513 )         ; 0.00 % ( 0 / 513 )       ;
+;     -- Requested    ; 0.00 % ( 0 / 493 ) ; 0.00 % ( 0 / 493 )         ; 0.00 % ( 0 / 493 )       ;
+;     -- Achieved     ; 0.00 % ( 0 / 493 ) ; 0.00 % ( 0 / 493 )         ; 0.00 % ( 0 / 493 )       ;
 ;                     ;                    ;                            ;                          ;
 ; Routing (by net)    ;                    ;                            ;                          ;
 ;     -- Requested    ; 0.00 % ( 0 / 0 )   ; 0.00 % ( 0 / 0 )           ; 0.00 % ( 0 / 0 )         ;
@@ -227,7 +229,7 @@ agreement for further details.
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 ; Partition Name                 ; Preservation Achieved ; Preservation Level Used ; Netlist Type Used ; Preservation Method ; Notes ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
-; Top                            ; 0.00 % ( 0 / 510 )    ; N/A                     ; Source File       ; N/A                 ;       ;
+; Top                            ; 0.00 % ( 0 / 490 )    ; N/A                     ; Source File       ; N/A                 ;       ;
 ; hard_block:auto_generated_inst ; 0.00 % ( 0 / 3 )      ; N/A                     ; Source File       ; N/A                 ;       ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 
@@ -235,7 +237,7 @@ agreement for further details.
 +--------------+
 ; Pin-Out File ;
 +--------------+
-The pin-out file can be found in H:/Projects/FPGA/Altera/FPGA-LED-Panel/De0LEDPanel.pin.
+The pin-out file can be found in D:/Repositories/FPGA/Altera/LED Panel/FPGA-LED-Panel/De0LEDPanel.pin.
 
 
 +------------------------------------------------------------------------+
@@ -243,26 +245,26 @@ The pin-out file can be found in H:/Projects/FPGA/Altera/FPGA-LED-Panel/De0LEDPa
 +---------------------------------------------+--------------------------+
 ; Resource                                    ; Usage                    ;
 +---------------------------------------------+--------------------------+
-; Total logic elements                        ; 290 / 22,320 ( 1 % )     ;
-;     -- Combinational with no register       ; 159                      ;
-;     -- Register only                        ; 11                       ;
-;     -- Combinational with a register        ; 120                      ;
+; Total logic elements                        ; 272 / 22,320 ( 1 % )     ;
+;     -- Combinational with no register       ; 150                      ;
+;     -- Register only                        ; 5                        ;
+;     -- Combinational with a register        ; 117                      ;
 ;                                             ;                          ;
 ; Logic element usage by number of LUT inputs ;                          ;
-;     -- 4 input functions                    ; 103                      ;
-;     -- 3 input functions                    ; 74                       ;
-;     -- <=2 input functions                  ; 102                      ;
-;     -- Register only                        ; 11                       ;
+;     -- 4 input functions                    ; 81                       ;
+;     -- 3 input functions                    ; 88                       ;
+;     -- <=2 input functions                  ; 98                       ;
+;     -- Register only                        ; 5                        ;
 ;                                             ;                          ;
 ; Logic elements by mode                      ;                          ;
-;     -- normal mode                          ; 186                      ;
+;     -- normal mode                          ; 174                      ;
 ;     -- arithmetic mode                      ; 93                       ;
 ;                                             ;                          ;
-; Total registers*                            ; 131 / 23,018 ( < 1 % )   ;
-;     -- Dedicated logic registers            ; 131 / 22,320 ( < 1 % )   ;
+; Total registers*                            ; 122 / 23,018 ( < 1 % )   ;
+;     -- Dedicated logic registers            ; 122 / 22,320 ( < 1 % )   ;
 ;     -- I/O registers                        ; 0 / 698 ( 0 % )          ;
 ;                                             ;                          ;
-; Total LABs:  partially or completely used   ; 23 / 1,395 ( 2 % )       ;
+; Total LABs:  partially or completely used   ; 22 / 1,395 ( 2 % )       ;
 ; Virtual pins                                ; 0                        ;
 ; I/O pins                                    ; 26 / 154 ( 17 % )        ;
 ;     -- Clock pins                           ; 2 / 7 ( 29 % )           ;
@@ -280,12 +282,12 @@ The pin-out file can be found in H:/Projects/FPGA/Altera/FPGA-LED-Panel/De0LEDPa
 ; ASMI blocks                                 ; 0 / 1 ( 0 % )            ;
 ; Oscillator blocks                           ; 0 / 1 ( 0 % )            ;
 ; Impedance control blocks                    ; 0 / 4 ( 0 % )            ;
-; Average interconnect usage (total/H/V)      ; 0.6% / 0.7% / 0.5%       ;
-; Peak interconnect usage (total/H/V)         ; 3.8% / 4.3% / 3.3%       ;
-; Maximum fan-out                             ; 118                      ;
-; Highest non-global fan-out                  ; 118                      ;
-; Total fan-out                               ; 1491                     ;
-; Average fan-out                             ; 3.11                     ;
+; Average interconnect usage (total/H/V)      ; 0.6% / 0.7% / 0.6%       ;
+; Peak interconnect usage (total/H/V)         ; 5.5% / 5.7% / 5.2%       ;
+; Maximum fan-out                             ; 106                      ;
+; Highest non-global fan-out                  ; 106                      ;
+; Total fan-out                               ; 1436                     ;
+; Average fan-out                             ; 3.18                     ;
 +---------------------------------------------+--------------------------+
 *  Register count does not include registers inside RAM blocks or DSP blocks.
 
@@ -298,26 +300,26 @@ The pin-out file can be found in H:/Projects/FPGA/Altera/FPGA-LED-Panel/De0LEDPa
 +---------------------------------------------+-----------------------+--------------------------------+
 ; Difficulty Clustering Region                ; Low                   ; Low                            ;
 ;                                             ;                       ;                                ;
-; Total logic elements                        ; 290 / 22320 ( 1 % )   ; 0 / 22320 ( 0 % )              ;
-;     -- Combinational with no register       ; 159                   ; 0                              ;
-;     -- Register only                        ; 11                    ; 0                              ;
-;     -- Combinational with a register        ; 120                   ; 0                              ;
+; Total logic elements                        ; 272 / 22320 ( 1 % )   ; 0 / 22320 ( 0 % )              ;
+;     -- Combinational with no register       ; 150                   ; 0                              ;
+;     -- Register only                        ; 5                     ; 0                              ;
+;     -- Combinational with a register        ; 117                   ; 0                              ;
 ;                                             ;                       ;                                ;
 ; Logic element usage by number of LUT inputs ;                       ;                                ;
-;     -- 4 input functions                    ; 103                   ; 0                              ;
-;     -- 3 input functions                    ; 74                    ; 0                              ;
-;     -- <=2 input functions                  ; 102                   ; 0                              ;
-;     -- Register only                        ; 11                    ; 0                              ;
+;     -- 4 input functions                    ; 81                    ; 0                              ;
+;     -- 3 input functions                    ; 88                    ; 0                              ;
+;     -- <=2 input functions                  ; 98                    ; 0                              ;
+;     -- Register only                        ; 5                     ; 0                              ;
 ;                                             ;                       ;                                ;
 ; Logic elements by mode                      ;                       ;                                ;
-;     -- normal mode                          ; 186                   ; 0                              ;
+;     -- normal mode                          ; 174                   ; 0                              ;
 ;     -- arithmetic mode                      ; 93                    ; 0                              ;
 ;                                             ;                       ;                                ;
-; Total registers                             ; 131                   ; 0                              ;
-;     -- Dedicated logic registers            ; 131 / 22320 ( < 1 % ) ; 0 / 22320 ( 0 % )              ;
+; Total registers                             ; 122                   ; 0                              ;
+;     -- Dedicated logic registers            ; 122 / 22320 ( < 1 % ) ; 0 / 22320 ( 0 % )              ;
 ;     -- I/O registers                        ; 0                     ; 0                              ;
 ;                                             ;                       ;                                ;
-; Total LABs:  partially or completely used   ; 23 / 1395 ( 2 % )     ; 0 / 1395 ( 0 % )               ;
+; Total LABs:  partially or completely used   ; 22 / 1395 ( 2 % )     ; 0 / 1395 ( 0 % )               ;
 ;                                             ;                       ;                                ;
 ; Virtual pins                                ; 0                     ; 0                              ;
 ; I/O pins                                    ; 26                    ; 0                              ;
@@ -329,18 +331,18 @@ The pin-out file can be found in H:/Projects/FPGA/Altera/FPGA-LED-Panel/De0LEDPa
 ; Clock control block                         ; 0 / 24 ( 0 % )        ; 2 / 24 ( 8 % )                 ;
 ;                                             ;                       ;                                ;
 ; Connections                                 ;                       ;                                ;
-;     -- Input Connections                    ; 137                   ; 1                              ;
-;     -- Registered Input Connections         ; 137                   ; 0                              ;
-;     -- Output Connections                   ; 1                     ; 137                            ;
+;     -- Input Connections                    ; 128                   ; 1                              ;
+;     -- Registered Input Connections         ; 128                   ; 0                              ;
+;     -- Output Connections                   ; 1                     ; 128                            ;
 ;     -- Registered Output Connections        ; 0                     ; 0                              ;
 ;                                             ;                       ;                                ;
 ; Internal Connections                        ;                       ;                                ;
-;     -- Total Connections                    ; 1494                  ; 141                            ;
-;     -- Registered Connections               ; 782                   ; 0                              ;
+;     -- Total Connections                    ; 1439                  ; 132                            ;
+;     -- Registered Connections               ; 781                   ; 0                              ;
 ;                                             ;                       ;                                ;
 ; External Connections                        ;                       ;                                ;
-;     -- Top                                  ; 0                     ; 138                            ;
-;     -- hard_block:auto_generated_inst       ; 138                   ; 0                              ;
+;     -- Top                                  ; 0                     ; 129                            ;
+;     -- hard_block:auto_generated_inst       ; 129                   ; 0                              ;
 ;                                             ;                       ;                                ;
 ; Partition Interface                         ;                       ;                                ;
 ;     -- Input Ports                          ; 3                     ; 1                              ;
@@ -369,7 +371,7 @@ The pin-out file can be found in H:/Projects/FPGA/Altera/FPGA-LED-Panel/De0LEDPa
 ; Name     ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; Power Up High ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination Control Block ; Location assigned by ; Slew Rate ;
 +----------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+-----------+
 ; CLOCK_50 ; R8    ; 3        ; 27           ; 0            ; 21           ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVTTL  ; --                        ; User                 ; no        ;
-; KEY[0]   ; J15   ; 5        ; 53           ; 14           ; 0            ; 118                   ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVTTL  ; --                        ; User                 ; no        ;
+; KEY[0]   ; J15   ; 5        ; 53           ; 14           ; 0            ; 106                   ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVTTL  ; --                        ; User                 ; no        ;
 ; KEY[1]   ; E1    ; 1        ; 0            ; 16           ; 7            ; 9                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVTTL  ; --                        ; User                 ; no        ;
 +----------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+-----------+
 
@@ -767,8 +769,8 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 +----------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+---------------------------------------------------------------------------------------------------------+-----------------+--------------+
 ; Compilation Hierarchy Node                   ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M9Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name                                                                                     ; Entity Name     ; Library Name ;
 +----------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+---------------------------------------------------------------------------------------------------------+-----------------+--------------+
-; |De0LEDPanel                                 ; 290 (0)     ; 131 (0)                   ; 0 (0)         ; 49152       ; 6    ; 0            ; 0       ; 0         ; 26   ; 0            ; 159 (0)      ; 11 (0)            ; 120 (0)          ; |De0LEDPanel                                                                                            ; De0LEDPanel     ; work         ;
-;    |dimmer:dimmer|                           ; 132 (132)   ; 66 (66)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 66 (66)      ; 4 (4)             ; 62 (62)          ; |De0LEDPanel|dimmer:dimmer                                                                              ; dimmer          ; work         ;
+; |De0LEDPanel                                 ; 272 (0)     ; 122 (0)                   ; 0 (0)         ; 49152       ; 6    ; 0            ; 0       ; 0         ; 26   ; 0            ; 150 (0)      ; 5 (0)             ; 117 (0)          ; |De0LEDPanel                                                                                            ; De0LEDPanel     ; work         ;
+;    |dimmer:dimmer|                           ; 128 (128)   ; 66 (66)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 62 (62)      ; 0 (0)             ; 66 (66)          ; |De0LEDPanel|dimmer:dimmer                                                                              ; dimmer          ; work         ;
 ;    |ext_mem:memory|                          ; 2 (2)       ; 0 (0)                     ; 0 (0)         ; 49152       ; 6    ; 0            ; 0       ; 0         ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; |De0LEDPanel|ext_mem:memory                                                                             ; ext_mem         ; work         ;
 ;       |dpram:ram_hi|                         ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 24576       ; 3    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |De0LEDPanel|ext_mem:memory|dpram:ram_hi                                                                ; dpram           ; work         ;
 ;          |altsyncram:altsyncram_component|   ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 24576       ; 3    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |De0LEDPanel|ext_mem:memory|dpram:ram_hi|altsyncram:altsyncram_component                                ; altsyncram      ; work         ;
@@ -776,7 +778,7 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 ;       |dpram:ram_lo|                         ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 24576       ; 3    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |De0LEDPanel|ext_mem:memory|dpram:ram_lo                                                                ; dpram           ; work         ;
 ;          |altsyncram:altsyncram_component|   ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 24576       ; 3    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |De0LEDPanel|ext_mem:memory|dpram:ram_lo|altsyncram:altsyncram_component                                ; altsyncram      ; work         ;
 ;             |altsyncram_f2r1:auto_generated| ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 24576       ; 3    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |De0LEDPanel|ext_mem:memory|dpram:ram_lo|altsyncram:altsyncram_component|altsyncram_f2r1:auto_generated ; altsyncram_f2r1 ; work         ;
-;    |led_panel:led_panel|                     ; 156 (156)   ; 65 (65)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 91 (91)      ; 7 (7)             ; 58 (58)          ; |De0LEDPanel|led_panel:led_panel                                                                        ; led_panel       ; work         ;
+;    |led_panel:led_panel|                     ; 142 (142)   ; 56 (56)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 86 (86)      ; 5 (5)             ; 51 (51)          ; |De0LEDPanel|led_panel:led_panel                                                                        ; led_panel       ; work         ;
 ;    |pll:pll|                                 ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |De0LEDPanel|pll:pll                                                                                    ; pll             ; work         ;
 ;       |altpll:altpll_component|              ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |De0LEDPanel|pll:pll|altpll:altpll_component                                                            ; altpll          ; work         ;
 ;          |pll_altpll:auto_generated|         ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |De0LEDPanel|pll:pll|altpll:altpll_component|pll_altpll:auto_generated                                  ; pll_altpll      ; work         ;
@@ -818,161 +820,148 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------+----------+---------------+---------------+-----------------------+-----+------+
 
 
-+--------------------------------------------------------------------------------+
-; Pad To Core Delay Chain Fanout                                                 ;
-+--------------------------------------------------+-------------------+---------+
-; Source Pin / Fanout                              ; Pad To Core Index ; Setting ;
-+--------------------------------------------------+-------------------+---------+
-; KEY[0]                                           ;                   ;         ;
-;      - dimmer:dimmer|wr_blue[0]                  ; 0                 ; 6       ;
-;      - dimmer:dimmer|wr_green[0]                 ; 0                 ; 6       ;
-;      - dimmer:dimmer|wr_red[0]                   ; 0                 ; 6       ;
-;      - led_panel:led_panel|col_start             ; 0                 ; 6       ;
-;      - led_panel:led_panel|RED[0]                ; 0                 ; 6       ;
-;      - led_panel:led_panel|RED[1]                ; 0                 ; 6       ;
-;      - led_panel:led_panel|GREEN[0]              ; 0                 ; 6       ;
-;      - led_panel:led_panel|GREEN[1]              ; 0                 ; 6       ;
-;      - led_panel:led_panel|BLUE[0]               ; 0                 ; 6       ;
-;      - led_panel:led_panel|BLUE[1]               ; 0                 ; 6       ;
-;      - led_panel:led_panel|OE_N                  ; 0                 ; 6       ;
-;      - led_panel:led_panel|LE                    ; 0                 ; 6       ;
-;      - led_panel:led_panel|CLK                   ; 0                 ; 6       ;
-;      - led_panel:led_panel|state_d.READ          ; 0                 ; 6       ;
-;      - dimmer:dimmer|swamp_counter[1]            ; 0                 ; 6       ;
-;      - dimmer:dimmer|swamp_counter[2]            ; 0                 ; 6       ;
-;      - dimmer:dimmer|swamp_counter[3]            ; 0                 ; 6       ;
-;      - dimmer:dimmer|swamp_counter[4]            ; 0                 ; 6       ;
-;      - dimmer:dimmer|swamp_counter[5]            ; 0                 ; 6       ;
-;      - dimmer:dimmer|swamp_counter[6]            ; 0                 ; 6       ;
-;      - dimmer:dimmer|swamp_counter[7]            ; 0                 ; 6       ;
-;      - dimmer:dimmer|swamp_counter[8]            ; 0                 ; 6       ;
-;      - dimmer:dimmer|swamp_counter[9]            ; 0                 ; 6       ;
-;      - dimmer:dimmer|state_d.FILL_START          ; 0                 ; 6       ;
-;      - dimmer:dimmer|state_q.WAIT                ; 0                 ; 6       ;
-;      - dimmer:dimmer|selected_buffer             ; 0                 ; 6       ;
-;      - dimmer:dimmer|LED[0]~9                    ; 0                 ; 6       ;
-;      - dimmer:dimmer|wr_red[1]                   ; 0                 ; 6       ;
-;      - dimmer:dimmer|wr_blue[1]                  ; 0                 ; 6       ;
-;      - dimmer:dimmer|wr_green[1]                 ; 0                 ; 6       ;
-;      - dimmer:dimmer|wr_red[2]                   ; 0                 ; 6       ;
-;      - dimmer:dimmer|wr_blue[2]                  ; 0                 ; 6       ;
-;      - dimmer:dimmer|wr_green[2]                 ; 0                 ; 6       ;
-;      - dimmer:dimmer|wr_red[3]                   ; 0                 ; 6       ;
-;      - dimmer:dimmer|wr_blue[3]                  ; 0                 ; 6       ;
-;      - dimmer:dimmer|wr_green[3]                 ; 0                 ; 6       ;
-;      - dimmer:dimmer|wr_red[4]                   ; 0                 ; 6       ;
-;      - dimmer:dimmer|wr_blue[4]                  ; 0                 ; 6       ;
-;      - dimmer:dimmer|wr_green[4]                 ; 0                 ; 6       ;
-;      - dimmer:dimmer|wr_red[5]                   ; 0                 ; 6       ;
-;      - dimmer:dimmer|wr_blue[5]                  ; 0                 ; 6       ;
-;      - dimmer:dimmer|wr_green[5]                 ; 0                 ; 6       ;
-;      - dimmer:dimmer|wr_red[6]                   ; 0                 ; 6       ;
-;      - dimmer:dimmer|wr_blue[6]                  ; 0                 ; 6       ;
-;      - dimmer:dimmer|wr_green[6]                 ; 0                 ; 6       ;
-;      - dimmer:dimmer|wr_red[7]                   ; 0                 ; 6       ;
-;      - dimmer:dimmer|wr_blue[7]                  ; 0                 ; 6       ;
-;      - dimmer:dimmer|wr_green[7]                 ; 0                 ; 6       ;
-;      - led_panel:led_panel|actual_buffer~1       ; 0                 ; 6       ;
-;      - led_panel:led_panel|state_q.LATCH         ; 0                 ; 6       ;
-;      - led_panel:led_panel|row[0]~0              ; 0                 ; 6       ;
-;      - led_panel:led_panel|state_q.IDLE          ; 0                 ; 6       ;
-;      - led_panel:led_panel|state_q.UNBLANK       ; 0                 ; 6       ;
-;      - led_panel:led_panel|state_q.SHIFT         ; 0                 ; 6       ;
-;      - led_panel:led_panel|state_q.READ          ; 0                 ; 6       ;
-;      - led_panel:led_panel|BLUE[1]~0             ; 0                 ; 6       ;
-;      - led_panel:led_panel|A~0                   ; 0                 ; 6       ;
-;      - led_panel:led_panel|A[3]~1                ; 0                 ; 6       ;
-;      - led_panel:led_panel|A~2                   ; 0                 ; 6       ;
-;      - led_panel:led_panel|A~3                   ; 0                 ; 6       ;
-;      - led_panel:led_panel|A~4                   ; 0                 ; 6       ;
-;      - led_panel:led_panel|state_q.BLANK         ; 0                 ; 6       ;
-;      - led_panel:led_panel|state_q.PRE_READ      ; 0                 ; 6       ;
-;      - dimmer:dimmer|swamp_counter[0]            ; 0                 ; 6       ;
-;      - dimmer:dimmer|state_q.FILL_N1             ; 0                 ; 6       ;
-;      - dimmer:dimmer|color_pattern_d[0]          ; 0                 ; 6       ;
-;      - dimmer:dimmer|color_pattern_q[0]~1        ; 0                 ; 6       ;
-;      - dimmer:dimmer|color_pattern_d[1]          ; 0                 ; 6       ;
-;      - dimmer:dimmer|state_d.WAIT                ; 0                 ; 6       ;
-;      - led_panel:led_panel|row~1                 ; 0                 ; 6       ;
-;      - led_panel:led_panel|row~2                 ; 0                 ; 6       ;
-;      - led_panel:led_panel|row~3                 ; 0                 ; 6       ;
-;      - led_panel:led_panel|row~4                 ; 0                 ; 6       ;
-;      - led_panel:led_panel|bit_plane~0           ; 0                 ; 6       ;
-;      - led_panel:led_panel|time_slice_time[9]~32 ; 0                 ; 6       ;
-;      - led_panel:led_panel|bit_plane~1           ; 0                 ; 6       ;
-;      - led_panel:led_panel|bit_plane~2           ; 0                 ; 6       ;
-;      - led_panel:led_panel|bit_plane~3           ; 0                 ; 6       ;
-;      - led_panel:led_panel|bit_plane~4           ; 0                 ; 6       ;
-;      - led_panel:led_panel|bit_plane~5           ; 0                 ; 6       ;
-;      - led_panel:led_panel|bit_plane~6           ; 0                 ; 6       ;
-;      - led_panel:led_panel|bit_plane~7           ; 0                 ; 6       ;
-;      - led_panel:led_panel|col~0                 ; 0                 ; 6       ;
-;      - led_panel:led_panel|col[4]~1              ; 0                 ; 6       ;
-;      - led_panel:led_panel|col~2                 ; 0                 ; 6       ;
-;      - led_panel:led_panel|col~3                 ; 0                 ; 6       ;
-;      - led_panel:led_panel|col~4                 ; 0                 ; 6       ;
-;      - led_panel:led_panel|col~5                 ; 0                 ; 6       ;
-;      - dimmer:dimmer|wr_ena                      ; 0                 ; 6       ;
-;      - dimmer:dimmer|state_q.IDLE                ; 0                 ; 6       ;
-;      - dimmer:dimmer|state_q.FILL_START          ; 0                 ; 6       ;
-;      - dimmer:dimmer|wr_col[4]~0                 ; 0                 ; 6       ;
-;      - dimmer:dimmer|wr_row[4]~3                 ; 0                 ; 6       ;
-;      - dimmer:dimmer|state_d.FILL_N1             ; 0                 ; 6       ;
-;      - led_panel:led_panel|state_d~13            ; 0                 ; 6       ;
-;      - led_panel:led_panel|state_d~14            ; 0                 ; 6       ;
-;      - led_panel:led_panel|state_d~15            ; 0                 ; 6       ;
-;      - led_panel:led_panel|state_q.WAIT          ; 0                 ; 6       ;
-;      - led_panel:led_panel|state_d~16            ; 0                 ; 6       ;
-;      - led_panel:led_panel|state_d~17            ; 0                 ; 6       ;
-;      - dimmer:dimmer|state_d.IDLE                ; 0                 ; 6       ;
-;      - led_panel:led_panel|state_d~18            ; 0                 ; 6       ;
-;      - led_panel:led_panel|time_slice_time~33    ; 0                 ; 6       ;
-;      - led_panel:led_panel|time_slice_time~34    ; 0                 ; 6       ;
-;      - led_panel:led_panel|time_slice_time~35    ; 0                 ; 6       ;
-;      - led_panel:led_panel|time_slice_time~36    ; 0                 ; 6       ;
-;      - led_panel:led_panel|time_slice_time~37    ; 0                 ; 6       ;
-;      - led_panel:led_panel|time_slice_time~38    ; 0                 ; 6       ;
-;      - led_panel:led_panel|time_slice_time~39    ; 0                 ; 6       ;
-;      - led_panel:led_panel|time_slice_time~40    ; 0                 ; 6       ;
-;      - led_panel:led_panel|time_slice_time~41    ; 0                 ; 6       ;
-;      - led_panel:led_panel|time_slice_time~42    ; 0                 ; 6       ;
-;      - led_panel:led_panel|time_slice_time~43    ; 0                 ; 6       ;
-;      - led_panel:led_panel|time_slice_time~44    ; 0                 ; 6       ;
-;      - led_panel:led_panel|time_slice_time~45    ; 0                 ; 6       ;
-;      - led_panel:led_panel|time_slice_time~46    ; 0                 ; 6       ;
-;      - led_panel:led_panel|time_slice_time~47    ; 0                 ; 6       ;
-;      - led_panel:led_panel|time_slice_time~48    ; 0                 ; 6       ;
-; CLOCK_50                                         ;                   ;         ;
-; KEY[1]                                           ;                   ;         ;
-+--------------------------------------------------+-------------------+---------+
++------------------------------------------------------------------------------+
+; Pad To Core Delay Chain Fanout                                               ;
++------------------------------------------------+-------------------+---------+
+; Source Pin / Fanout                            ; Pad To Core Index ; Setting ;
++------------------------------------------------+-------------------+---------+
+; KEY[0]                                         ;                   ;         ;
+;      - led_panel:led_panel|col_start           ; 0                 ; 6       ;
+;      - led_panel:led_panel|frame_start         ; 0                 ; 6       ;
+;      - led_panel:led_panel|CLK                 ; 0                 ; 6       ;
+;      - led_panel:led_panel|A[0]                ; 0                 ; 6       ;
+;      - led_panel:led_panel|A[1]                ; 0                 ; 6       ;
+;      - led_panel:led_panel|A[2]                ; 0                 ; 6       ;
+;      - led_panel:led_panel|A[3]                ; 0                 ; 6       ;
+;      - dimmer:dimmer|wr_blue[0]                ; 0                 ; 6       ;
+;      - dimmer:dimmer|wr_green[0]               ; 0                 ; 6       ;
+;      - dimmer:dimmer|wr_red[0]                 ; 0                 ; 6       ;
+;      - dimmer:dimmer|swamp_counter[1]          ; 0                 ; 6       ;
+;      - dimmer:dimmer|swamp_counter[2]          ; 0                 ; 6       ;
+;      - dimmer:dimmer|swamp_counter[3]          ; 0                 ; 6       ;
+;      - dimmer:dimmer|swamp_counter[4]          ; 0                 ; 6       ;
+;      - dimmer:dimmer|swamp_counter[5]          ; 0                 ; 6       ;
+;      - dimmer:dimmer|swamp_counter[6]          ; 0                 ; 6       ;
+;      - dimmer:dimmer|swamp_counter[7]          ; 0                 ; 6       ;
+;      - dimmer:dimmer|swamp_counter[8]          ; 0                 ; 6       ;
+;      - dimmer:dimmer|swamp_counter[9]          ; 0                 ; 6       ;
+;      - dimmer:dimmer|state_d.FILL_START        ; 0                 ; 6       ;
+;      - led_panel:led_panel|RED[0]              ; 0                 ; 6       ;
+;      - led_panel:led_panel|RED[1]              ; 0                 ; 6       ;
+;      - led_panel:led_panel|GREEN[0]            ; 0                 ; 6       ;
+;      - led_panel:led_panel|GREEN[1]            ; 0                 ; 6       ;
+;      - led_panel:led_panel|BLUE[0]             ; 0                 ; 6       ;
+;      - led_panel:led_panel|BLUE[1]             ; 0                 ; 6       ;
+;      - led_panel:led_panel|OE_N                ; 0                 ; 6       ;
+;      - led_panel:led_panel|LE                  ; 0                 ; 6       ;
+;      - dimmer:dimmer|state_q.WAIT              ; 0                 ; 6       ;
+;      - led_panel:led_panel|actual_buffer       ; 0                 ; 6       ;
+;      - dimmer:dimmer|selected_buffer           ; 0                 ; 6       ;
+;      - dimmer:dimmer|LED[0]~9                  ; 0                 ; 6       ;
+;      - dimmer:dimmer|wr_red[1]                 ; 0                 ; 6       ;
+;      - dimmer:dimmer|wr_blue[1]                ; 0                 ; 6       ;
+;      - dimmer:dimmer|wr_green[1]               ; 0                 ; 6       ;
+;      - dimmer:dimmer|wr_red[2]                 ; 0                 ; 6       ;
+;      - dimmer:dimmer|wr_blue[2]                ; 0                 ; 6       ;
+;      - dimmer:dimmer|wr_green[2]               ; 0                 ; 6       ;
+;      - dimmer:dimmer|wr_red[3]                 ; 0                 ; 6       ;
+;      - dimmer:dimmer|wr_blue[3]                ; 0                 ; 6       ;
+;      - dimmer:dimmer|wr_green[3]               ; 0                 ; 6       ;
+;      - dimmer:dimmer|wr_red[4]                 ; 0                 ; 6       ;
+;      - dimmer:dimmer|wr_blue[4]                ; 0                 ; 6       ;
+;      - dimmer:dimmer|wr_green[4]               ; 0                 ; 6       ;
+;      - dimmer:dimmer|wr_red[5]                 ; 0                 ; 6       ;
+;      - dimmer:dimmer|wr_blue[5]                ; 0                 ; 6       ;
+;      - dimmer:dimmer|wr_green[5]               ; 0                 ; 6       ;
+;      - dimmer:dimmer|wr_red[6]                 ; 0                 ; 6       ;
+;      - dimmer:dimmer|wr_blue[6]                ; 0                 ; 6       ;
+;      - dimmer:dimmer|wr_green[6]               ; 0                 ; 6       ;
+;      - dimmer:dimmer|wr_red[7]                 ; 0                 ; 6       ;
+;      - dimmer:dimmer|wr_blue[7]                ; 0                 ; 6       ;
+;      - dimmer:dimmer|wr_green[7]               ; 0                 ; 6       ;
+;      - led_panel:led_panel|row[0]              ; 0                 ; 6       ;
+;      - led_panel:led_panel|row[3]              ; 0                 ; 6       ;
+;      - led_panel:led_panel|row[2]              ; 0                 ; 6       ;
+;      - led_panel:led_panel|row[1]              ; 0                 ; 6       ;
+;      - led_panel:led_panel|bit_plane[7]        ; 0                 ; 6       ;
+;      - led_panel:led_panel|bit_plane[6]        ; 0                 ; 6       ;
+;      - led_panel:led_panel|bit_plane[5]        ; 0                 ; 6       ;
+;      - led_panel:led_panel|bit_plane[4]        ; 0                 ; 6       ;
+;      - led_panel:led_panel|bit_plane[3]        ; 0                 ; 6       ;
+;      - led_panel:led_panel|bit_plane[2]        ; 0                 ; 6       ;
+;      - led_panel:led_panel|bit_plane[1]        ; 0                 ; 6       ;
+;      - led_panel:led_panel|bit_plane[0]        ; 0                 ; 6       ;
+;      - led_panel:led_panel|state.LATCH         ; 0                 ; 6       ;
+;      - led_panel:led_panel|state.UNBLANK       ; 0                 ; 6       ;
+;      - led_panel:led_panel|col[3]              ; 0                 ; 6       ;
+;      - led_panel:led_panel|col[2]              ; 0                 ; 6       ;
+;      - led_panel:led_panel|col[1]              ; 0                 ; 6       ;
+;      - led_panel:led_panel|col[0]              ; 0                 ; 6       ;
+;      - led_panel:led_panel|col[4]              ; 0                 ; 6       ;
+;      - led_panel:led_panel|state.SHIFT         ; 0                 ; 6       ;
+;      - led_panel:led_panel|state.READ          ; 0                 ; 6       ;
+;      - led_panel:led_panel|state.BLANK         ; 0                 ; 6       ;
+;      - led_panel:led_panel|state.PRE_READ      ; 0                 ; 6       ;
+;      - dimmer:dimmer|swamp_counter[0]          ; 0                 ; 6       ;
+;      - dimmer:dimmer|state_q.FILL_N1           ; 0                 ; 6       ;
+;      - dimmer:dimmer|color_pattern_d[0]        ; 0                 ; 6       ;
+;      - dimmer:dimmer|color_pattern_q[0]~1      ; 0                 ; 6       ;
+;      - dimmer:dimmer|color_pattern_d[1]        ; 0                 ; 6       ;
+;      - dimmer:dimmer|state_d.WAIT              ; 0                 ; 6       ;
+;      - dimmer:dimmer|wr_ena                    ; 0                 ; 6       ;
+;      - led_panel:led_panel|state.WAIT          ; 0                 ; 6       ;
+;      - led_panel:led_panel|time_slice_time[3]  ; 0                 ; 6       ;
+;      - led_panel:led_panel|time_slice_time[2]  ; 0                 ; 6       ;
+;      - led_panel:led_panel|time_slice_time[1]  ; 0                 ; 6       ;
+;      - led_panel:led_panel|time_slice_time[0]  ; 0                 ; 6       ;
+;      - led_panel:led_panel|time_slice_time[15] ; 0                 ; 6       ;
+;      - led_panel:led_panel|time_slice_time[14] ; 0                 ; 6       ;
+;      - led_panel:led_panel|time_slice_time[13] ; 0                 ; 6       ;
+;      - led_panel:led_panel|time_slice_time[12] ; 0                 ; 6       ;
+;      - led_panel:led_panel|time_slice_time[8]  ; 0                 ; 6       ;
+;      - led_panel:led_panel|time_slice_time[11] ; 0                 ; 6       ;
+;      - led_panel:led_panel|time_slice_time[10] ; 0                 ; 6       ;
+;      - led_panel:led_panel|time_slice_time[9]  ; 0                 ; 6       ;
+;      - led_panel:led_panel|time_slice_time[7]  ; 0                 ; 6       ;
+;      - led_panel:led_panel|time_slice_time[6]  ; 0                 ; 6       ;
+;      - led_panel:led_panel|time_slice_time[5]  ; 0                 ; 6       ;
+;      - led_panel:led_panel|time_slice_time[4]  ; 0                 ; 6       ;
+;      - dimmer:dimmer|state_q.IDLE              ; 0                 ; 6       ;
+;      - dimmer:dimmer|state_q.FILL_START        ; 0                 ; 6       ;
+;      - dimmer:dimmer|wr_col[4]~0               ; 0                 ; 6       ;
+;      - dimmer:dimmer|wr_row[4]~3               ; 0                 ; 6       ;
+;      - dimmer:dimmer|state_d.FILL_N1           ; 0                 ; 6       ;
+;      - dimmer:dimmer|state_d.IDLE              ; 0                 ; 6       ;
+; CLOCK_50                                       ;                   ;         ;
+; KEY[1]                                         ;                   ;         ;
++------------------------------------------------+-------------------+---------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Control Signals                                                                                                                                                                                                                                ;
-+----------------------------------------------------------------------------+--------------------+---------+-----------------------------------------------------+--------+----------------------+------------------+---------------------------+
-; Name                                                                       ; Location           ; Fan-Out ; Usage                                               ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
-+----------------------------------------------------------------------------+--------------------+---------+-----------------------------------------------------+--------+----------------------+------------------+---------------------------+
-; CLOCK_50                                                                   ; PIN_R8             ; 1       ; Clock                                               ; no     ; --                   ; --               ; --                        ;
-; KEY[0]                                                                     ; PIN_J15            ; 118     ; Async. clear, Clock enable, Sync. clear, Sync. load ; no     ; --                   ; --               ; --                        ;
-; KEY[1]                                                                     ; PIN_E1             ; 9       ; Clock enable                                        ; no     ; --                   ; --               ; --                        ;
-; dimmer:dimmer|LED[0]~9                                                     ; LCCOMB_X34_Y24_N20 ; 8       ; Clock enable                                        ; no     ; --                   ; --               ; --                        ;
-; dimmer:dimmer|color_pattern_q[0]~13                                        ; LCCOMB_X34_Y24_N24 ; 2       ; Clock enable                                        ; no     ; --                   ; --               ; --                        ;
-; dimmer:dimmer|color_pattern_q[1]                                           ; FF_X34_Y24_N27     ; 22      ; Sync. load                                          ; no     ; --                   ; --               ; --                        ;
-; dimmer:dimmer|state_q.WAIT                                                 ; FF_X28_Y23_N1      ; 35      ; Clock enable, Sync. load                            ; no     ; --                   ; --               ; --                        ;
-; dimmer:dimmer|swamp_counter[9]~34                                          ; LCCOMB_X31_Y23_N14 ; 9       ; Clock enable                                        ; no     ; --                   ; --               ; --                        ;
-; dimmer:dimmer|wr_col[4]~1                                                  ; LCCOMB_X29_Y23_N2  ; 5       ; Clock enable                                        ; no     ; --                   ; --               ; --                        ;
-; dimmer:dimmer|wr_red[7]~0                                                  ; LCCOMB_X34_Y24_N8  ; 24      ; Clock enable                                        ; no     ; --                   ; --               ; --                        ;
-; dimmer:dimmer|wr_row[4]~3                                                  ; LCCOMB_X31_Y23_N22 ; 5       ; Clock enable                                        ; no     ; --                   ; --               ; --                        ;
-; ext_mem:memory|we_hi                                                       ; LCCOMB_X28_Y23_N22 ; 3       ; Write enable                                        ; no     ; --                   ; --               ; --                        ;
-; ext_mem:memory|we_lo                                                       ; LCCOMB_X29_Y23_N24 ; 3       ; Write enable                                        ; no     ; --                   ; --               ; --                        ;
-; led_panel:led_panel|A[3]~1                                                 ; LCCOMB_X35_Y26_N24 ; 4       ; Clock enable                                        ; no     ; --                   ; --               ; --                        ;
-; led_panel:led_panel|BLUE[1]~0                                              ; LCCOMB_X35_Y26_N14 ; 6       ; Clock enable                                        ; no     ; --                   ; --               ; --                        ;
-; led_panel:led_panel|col[4]~1                                               ; LCCOMB_X28_Y26_N14 ; 5       ; Clock enable                                        ; no     ; --                   ; --               ; --                        ;
-; led_panel:led_panel|row[0]~0                                               ; LCCOMB_X32_Y26_N8  ; 5       ; Clock enable                                        ; no     ; --                   ; --               ; --                        ;
-; led_panel:led_panel|time_slice_time[9]~32                                  ; LCCOMB_X31_Y26_N20 ; 8       ; Clock enable                                        ; no     ; --                   ; --               ; --                        ;
-; pll:pll|altpll:altpll_component|pll_altpll:auto_generated|wire_pll1_clk[0] ; PLL_4              ; 71      ; Clock                                               ; yes    ; Global Clock         ; GCLK18           ; --                        ;
-; pll:pll|altpll:altpll_component|pll_altpll:auto_generated|wire_pll1_clk[1] ; PLL_4              ; 66      ; Clock                                               ; yes    ; Global Clock         ; GCLK19           ; --                        ;
-+----------------------------------------------------------------------------+--------------------+---------+-----------------------------------------------------+--------+----------------------+------------------+---------------------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Control Signals                                                                                                                                                                                                       ;
++----------------------------------------------------------------------------+--------------------+---------+----------------------------+--------+----------------------+------------------+---------------------------+
+; Name                                                                       ; Location           ; Fan-Out ; Usage                      ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
++----------------------------------------------------------------------------+--------------------+---------+----------------------------+--------+----------------------+------------------+---------------------------+
+; CLOCK_50                                                                   ; PIN_R8             ; 1       ; Clock                      ; no     ; --                   ; --               ; --                        ;
+; KEY[0]                                                                     ; PIN_J15            ; 106     ; Async. clear, Clock enable ; no     ; --                   ; --               ; --                        ;
+; KEY[1]                                                                     ; PIN_E1             ; 9       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; dimmer:dimmer|LED[0]~9                                                     ; LCCOMB_X28_Y23_N6  ; 8       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; dimmer:dimmer|color_pattern_q[0]~13                                        ; LCCOMB_X29_Y23_N18 ; 2       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; dimmer:dimmer|color_pattern_q[1]                                           ; FF_X27_Y22_N11     ; 22      ; Sync. load                 ; no     ; --                   ; --               ; --                        ;
+; dimmer:dimmer|state_q.WAIT                                                 ; FF_X28_Y23_N29     ; 36      ; Clock enable, Sync. load   ; no     ; --                   ; --               ; --                        ;
+; dimmer:dimmer|swamp_counter[9]~34                                          ; LCCOMB_X29_Y23_N14 ; 9       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; dimmer:dimmer|wr_col[4]~1                                                  ; LCCOMB_X29_Y23_N12 ; 5       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; dimmer:dimmer|wr_red[1]~0                                                  ; LCCOMB_X28_Y23_N24 ; 24      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; dimmer:dimmer|wr_row[4]~3                                                  ; LCCOMB_X28_Y23_N0  ; 5       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; ext_mem:memory|we_hi                                                       ; LCCOMB_X27_Y22_N16 ; 3       ; Write enable               ; no     ; --                   ; --               ; --                        ;
+; ext_mem:memory|we_lo                                                       ; LCCOMB_X27_Y22_N26 ; 3       ; Write enable               ; no     ; --                   ; --               ; --                        ;
+; led_panel:led_panel|frame_start~2                                          ; LCCOMB_X26_Y25_N30 ; 6       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; led_panel:led_panel|state.LATCH                                            ; FF_X26_Y25_N3      ; 31      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; led_panel:led_panel|state.READ                                             ; FF_X28_Y26_N7      ; 8       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; led_panel:led_panel|state.SHIFT                                            ; FF_X28_Y22_N13     ; 9       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; pll:pll|altpll:altpll_component|pll_altpll:auto_generated|wire_pll1_clk[0] ; PLL_4              ; 62      ; Clock                      ; yes    ; Global Clock         ; GCLK18           ; --                        ;
+; pll:pll|altpll:altpll_component|pll_altpll:auto_generated|wire_pll1_clk[1] ; PLL_4              ; 66      ; Clock                      ; yes    ; Global Clock         ; GCLK19           ; --                        ;
++----------------------------------------------------------------------------+--------------------+---------+----------------------------+--------+----------------------+------------------+---------------------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -980,7 +969,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------------------------------------+----------+---------+--------------------------------------+----------------------+------------------+---------------------------+
 ; Name                                                                       ; Location ; Fan-Out ; Fan-Out Using Intentional Clock Skew ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +----------------------------------------------------------------------------+----------+---------+--------------------------------------+----------------------+------------------+---------------------------+
-; pll:pll|altpll:altpll_component|pll_altpll:auto_generated|wire_pll1_clk[0] ; PLL_4    ; 71      ; 0                                    ; Global Clock         ; GCLK18           ; --                        ;
+; pll:pll|altpll:altpll_component|pll_altpll:auto_generated|wire_pll1_clk[0] ; PLL_4    ; 62      ; 0                                    ; Global Clock         ; GCLK18           ; --                        ;
 ; pll:pll|altpll:altpll_component|pll_altpll:auto_generated|wire_pll1_clk[1] ; PLL_4    ; 66      ; 0                                    ; Global Clock         ; GCLK19           ; --                        ;
 +----------------------------------------------------------------------------+----------+---------+--------------------------------------+----------------------+------------------+---------------------------+
 
@@ -990,8 +979,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+-------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+------+--------------------------+------------------------------------------------+----------------------+------------------------+------------------------+----------+------------------------+---------------+
 ; Name                                                                                                  ; Type ; Mode             ; Clock Mode   ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Port A Input Registers ; Port A Output Registers ; Port B Input Registers ; Port B Output Registers ; Size  ; Implementation Port A Depth ; Implementation Port A Width ; Implementation Port B Depth ; Implementation Port B Width ; Implementation Bits ; M9Ks ; MIF                      ; Location                                       ; Mixed Width RDW Mode ; Port A RDW Mode        ; Port B RDW Mode        ; ECC Mode ; ECC Pipeline Registers ; Fits in MLABs ;
 +-------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+-------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+------+--------------------------+------------------------------------------------+----------------------+------------------------+------------------------+----------+------------------------+---------------+
-; ext_mem:memory|dpram:ram_hi|altsyncram:altsyncram_component|altsyncram_f2r1:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; Single Clock ; 2048         ; 24           ; 2048         ; 24           ; yes                    ; no                      ; yes                    ; yes                     ; 49152 ; 1024                        ; 24                          ; 1024                        ; 24                          ; 24576               ; 3    ; De0LEDPanel_mem_init.hex ; M9K_X33_Y25_N0, M9K_X33_Y28_N0, M9K_X22_Y27_N0 ; Old data             ; New data with NBE Read ; New data with NBE Read ; Off      ; No                     ; No - Unknown  ;
-; ext_mem:memory|dpram:ram_lo|altsyncram:altsyncram_component|altsyncram_f2r1:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; Single Clock ; 2048         ; 24           ; 2048         ; 24           ; yes                    ; no                      ; yes                    ; yes                     ; 49152 ; 1024                        ; 24                          ; 1024                        ; 24                          ; 24576               ; 3    ; De0LEDPanel_mem_init.hex ; M9K_X33_Y24_N0, M9K_X33_Y27_N0, M9K_X33_Y26_N0 ; Old data             ; New data with NBE Read ; New data with NBE Read ; Off      ; No                     ; No - Unknown  ;
+; ext_mem:memory|dpram:ram_hi|altsyncram:altsyncram_component|altsyncram_f2r1:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; Single Clock ; 2048         ; 24           ; 2048         ; 24           ; yes                    ; no                      ; yes                    ; yes                     ; 49152 ; 1024                        ; 24                          ; 1024                        ; 24                          ; 24576               ; 3    ; De0LEDPanel_mem_init.hex ; M9K_X22_Y23_N0, M9K_X22_Y26_N0, M9K_X33_Y26_N0 ; Old data             ; New data with NBE Read ; New data with NBE Read ; Off      ; No                     ; No - Unknown  ;
+; ext_mem:memory|dpram:ram_lo|altsyncram:altsyncram_component|altsyncram_f2r1:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; Single Clock ; 2048         ; 24           ; 2048         ; 24           ; yes                    ; no                      ; yes                    ; yes                     ; 49152 ; 1024                        ; 24                          ; 1024                        ; 24                          ; 24576               ; 3    ; De0LEDPanel_mem_init.hex ; M9K_X22_Y24_N0, M9K_X22_Y25_N0, M9K_X33_Y25_N0 ; Old data             ; New data with NBE Read ; New data with NBE Read ; Off      ; No                     ; No - Unknown  ;
 +-------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+-------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+------+--------------------------+------------------------------------------------+----------------------+------------------------+------------------------+----------+------------------------+---------------+
 Note: Fitter may spread logical memories into multiple blocks to improve timing. The actual required RAM blocks can be found in the Fitter Resource Usage section.
 
@@ -1529,37 +1518,37 @@ RAM content values are presented in the following format: (Binary) (Octal) (Deci
 +-----------------------+------------------------+
 ; Routing Resource Type ; Usage                  ;
 +-----------------------+------------------------+
-; Block interconnects   ; 523 / 71,559 ( < 1 % ) ;
-; C16 interconnects     ; 12 / 2,597 ( < 1 % )   ;
-; C4 interconnects      ; 229 / 46,848 ( < 1 % ) ;
-; Direct links          ; 88 / 71,559 ( < 1 % )  ;
+; Block interconnects   ; 509 / 71,559 ( < 1 % ) ;
+; C16 interconnects     ; 8 / 2,597 ( < 1 % )    ;
+; C4 interconnects      ; 259 / 46,848 ( < 1 % ) ;
+; Direct links          ; 67 / 71,559 ( < 1 % )  ;
 ; Global clocks         ; 2 / 20 ( 10 % )        ;
-; Local interconnects   ; 143 / 24,624 ( < 1 % ) ;
-; R24 interconnects     ; 18 / 2,496 ( < 1 % )   ;
-; R4 interconnects      ; 387 / 62,424 ( < 1 % ) ;
+; Local interconnects   ; 126 / 24,624 ( < 1 % ) ;
+; R24 interconnects     ; 19 / 2,496 ( < 1 % )   ;
+; R4 interconnects      ; 394 / 62,424 ( < 1 % ) ;
 +-----------------------+------------------------+
 
 
 +----------------------------------------------------------------------------+
 ; LAB Logic Elements                                                         ;
 +---------------------------------------------+------------------------------+
-; Number of Logic Elements  (Average = 12.61) ; Number of LABs  (Total = 23) ;
+; Number of Logic Elements  (Average = 12.36) ; Number of LABs  (Total = 22) ;
 +---------------------------------------------+------------------------------+
-; 1                                           ; 1                            ;
-; 2                                           ; 1                            ;
+; 1                                           ; 2                            ;
+; 2                                           ; 0                            ;
 ; 3                                           ; 0                            ;
 ; 4                                           ; 0                            ;
 ; 5                                           ; 0                            ;
-; 6                                           ; 0                            ;
+; 6                                           ; 1                            ;
 ; 7                                           ; 0                            ;
 ; 8                                           ; 2                            ;
-; 9                                           ; 0                            ;
+; 9                                           ; 2                            ;
 ; 10                                          ; 0                            ;
-; 11                                          ; 3                            ;
-; 12                                          ; 4                            ;
-; 13                                          ; 0                            ;
-; 14                                          ; 1                            ;
-; 15                                          ; 0                            ;
+; 11                                          ; 1                            ;
+; 12                                          ; 0                            ;
+; 13                                          ; 1                            ;
+; 14                                          ; 0                            ;
+; 15                                          ; 2                            ;
 ; 16                                          ; 11                           ;
 +---------------------------------------------+------------------------------+
 
@@ -1567,119 +1556,119 @@ RAM content values are presented in the following format: (Binary) (Octal) (Deci
 +-------------------------------------------------------------------+
 ; LAB-wide Signals                                                  ;
 +------------------------------------+------------------------------+
-; LAB-wide Signals  (Average = 2.00) ; Number of LABs  (Total = 23) ;
+; LAB-wide Signals  (Average = 1.82) ; Number of LABs  (Total = 22) ;
 +------------------------------------+------------------------------+
-; 1 Async. clear                     ; 6                            ;
-; 1 Clock                            ; 21                           ;
-; 1 Clock enable                     ; 11                           ;
-; 1 Sync. clear                      ; 1                            ;
-; 1 Sync. load                       ; 4                            ;
-; 2 Clock enables                    ; 3                            ;
+; 1 Async. clear                     ; 14                           ;
+; 1 Clock                            ; 15                           ;
+; 1 Clock enable                     ; 5                            ;
+; 1 Sync. load                       ; 1                            ;
+; 2 Clock enables                    ; 5                            ;
 +------------------------------------+------------------------------+
 
 
 +-----------------------------------------------------------------------------+
 ; LAB Signals Sourced                                                         ;
 +----------------------------------------------+------------------------------+
-; Number of Signals Sourced  (Average = 16.35) ; Number of LABs  (Total = 23) ;
+; Number of Signals Sourced  (Average = 15.86) ; Number of LABs  (Total = 22) ;
 +----------------------------------------------+------------------------------+
 ; 0                                            ; 0                            ;
-; 1                                            ; 0                            ;
-; 2                                            ; 4                            ;
+; 1                                            ; 4                            ;
+; 2                                            ; 2                            ;
 ; 3                                            ; 0                            ;
-; 4                                            ; 2                            ;
+; 4                                            ; 0                            ;
 ; 5                                            ; 0                            ;
 ; 6                                            ; 0                            ;
 ; 7                                            ; 0                            ;
 ; 8                                            ; 0                            ;
 ; 9                                            ; 0                            ;
-; 10                                           ; 0                            ;
-; 11                                           ; 0                            ;
+; 10                                           ; 1                            ;
+; 11                                           ; 1                            ;
 ; 12                                           ; 0                            ;
 ; 13                                           ; 0                            ;
-; 14                                           ; 1                            ;
+; 14                                           ; 0                            ;
 ; 15                                           ; 0                            ;
 ; 16                                           ; 1                            ;
 ; 17                                           ; 0                            ;
 ; 18                                           ; 1                            ;
-; 19                                           ; 2                            ;
-; 20                                           ; 3                            ;
-; 21                                           ; 1                            ;
-; 22                                           ; 2                            ;
-; 23                                           ; 0                            ;
-; 24                                           ; 2                            ;
-; 25                                           ; 3                            ;
-; 26                                           ; 1                            ;
+; 19                                           ; 1                            ;
+; 20                                           ; 0                            ;
+; 21                                           ; 2                            ;
+; 22                                           ; 3                            ;
+; 23                                           ; 1                            ;
+; 24                                           ; 0                            ;
+; 25                                           ; 2                            ;
+; 26                                           ; 0                            ;
+; 27                                           ; 1                            ;
+; 28                                           ; 0                            ;
+; 29                                           ; 1                            ;
+; 30                                           ; 1                            ;
 +----------------------------------------------+------------------------------+
 
 
 +--------------------------------------------------------------------------------+
 ; LAB Signals Sourced Out                                                        ;
 +-------------------------------------------------+------------------------------+
-; Number of Signals Sourced Out  (Average = 8.61) ; Number of LABs  (Total = 23) ;
+; Number of Signals Sourced Out  (Average = 8.50) ; Number of LABs  (Total = 22) ;
 +-------------------------------------------------+------------------------------+
 ; 0                                               ; 0                            ;
-; 1                                               ; 4                            ;
-; 2                                               ; 3                            ;
+; 1                                               ; 5                            ;
+; 2                                               ; 2                            ;
 ; 3                                               ; 0                            ;
 ; 4                                               ; 0                            ;
 ; 5                                               ; 0                            ;
-; 6                                               ; 0                            ;
+; 6                                               ; 1                            ;
 ; 7                                               ; 1                            ;
-; 8                                               ; 1                            ;
-; 9                                               ; 3                            ;
-; 10                                              ; 2                            ;
-; 11                                              ; 3                            ;
-; 12                                              ; 1                            ;
-; 13                                              ; 1                            ;
-; 14                                              ; 0                            ;
-; 15                                              ; 0                            ;
-; 16                                              ; 3                            ;
-; 17                                              ; 0                            ;
-; 18                                              ; 0                            ;
-; 19                                              ; 0                            ;
-; 20                                              ; 1                            ;
+; 8                                               ; 0                            ;
+; 9                                               ; 2                            ;
+; 10                                              ; 3                            ;
+; 11                                              ; 0                            ;
+; 12                                              ; 0                            ;
+; 13                                              ; 2                            ;
+; 14                                              ; 1                            ;
+; 15                                              ; 3                            ;
+; 16                                              ; 2                            ;
 +-------------------------------------------------+------------------------------+
 
 
 +-----------------------------------------------------------------------------+
 ; LAB Distinct Inputs                                                         ;
 +----------------------------------------------+------------------------------+
-; Number of Distinct Inputs  (Average = 13.61) ; Number of LABs  (Total = 23) ;
+; Number of Distinct Inputs  (Average = 13.59) ; Number of LABs  (Total = 22) ;
 +----------------------------------------------+------------------------------+
 ; 0                                            ; 0                            ;
 ; 1                                            ; 0                            ;
 ; 2                                            ; 0                            ;
-; 3                                            ; 1                            ;
+; 3                                            ; 0                            ;
 ; 4                                            ; 2                            ;
 ; 5                                            ; 2                            ;
-; 6                                            ; 4                            ;
+; 6                                            ; 1                            ;
 ; 7                                            ; 0                            ;
-; 8                                            ; 0                            ;
-; 9                                            ; 0                            ;
+; 8                                            ; 1                            ;
+; 9                                            ; 2                            ;
 ; 10                                           ; 0                            ;
 ; 11                                           ; 0                            ;
 ; 12                                           ; 0                            ;
 ; 13                                           ; 3                            ;
 ; 14                                           ; 0                            ;
 ; 15                                           ; 3                            ;
-; 16                                           ; 1                            ;
+; 16                                           ; 3                            ;
 ; 17                                           ; 0                            ;
-; 18                                           ; 0                            ;
-; 19                                           ; 2                            ;
+; 18                                           ; 2                            ;
+; 19                                           ; 0                            ;
 ; 20                                           ; 0                            ;
-; 21                                           ; 1                            ;
+; 21                                           ; 0                            ;
 ; 22                                           ; 0                            ;
-; 23                                           ; 1                            ;
-; 24                                           ; 0                            ;
+; 23                                           ; 0                            ;
+; 24                                           ; 2                            ;
 ; 25                                           ; 0                            ;
 ; 26                                           ; 0                            ;
-; 27                                           ; 2                            ;
+; 27                                           ; 0                            ;
 ; 28                                           ; 0                            ;
 ; 29                                           ; 0                            ;
 ; 30                                           ; 0                            ;
 ; 31                                           ; 0                            ;
-; 32                                           ; 1                            ;
+; 32                                           ; 0                            ;
+; 33                                           ; 1                            ;
 +----------------------------------------------+------------------------------+
 
 
@@ -1813,63 +1802,56 @@ RAM content values are presented in the following format: (Binary) (Octal) (Deci
 +-------------------------------------------------+-------------------------------------------------+-------------------+
 ; Source Clock(s)                                 ; Destination Clock(s)                            ; Delay Added in ns ;
 +-------------------------------------------------+-------------------------------------------------+-------------------+
-; pll|altpll_component|auto_generated|pll1|clk[1] ; pll|altpll_component|auto_generated|pll1|clk[0] ; 10.1              ;
+; pll|altpll_component|auto_generated|pll1|clk[1] ; pll|altpll_component|auto_generated|pll1|clk[0] ; 7.3               ;
 +-------------------------------------------------+-------------------------------------------------+-------------------+
 Note: For more information on problematic transfers, consider running the Fitter again with the Optimize hold timing option (Settings Menu) turned off.
 This will disable optimization of problematic paths and expose them for further analysis using the TimeQuest Timing Analyzer.
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Estimated Delay Added for Hold Timing Details                                                                                                                              ;
-+---------------------------+----------------------------------------------------------------------------------------------------------------------------+-------------------+
-; Source Register           ; Destination Register                                                                                                       ; Delay Added in ns ;
-+---------------------------+----------------------------------------------------------------------------------------------------------------------------+-------------------+
-; dimmer:dimmer|wr_red[1]   ; ext_mem:memory|dpram:ram_lo|altsyncram:altsyncram_component|altsyncram_f2r1:auto_generated|ram_block1a1~porta_datain_reg0  ; 0.566             ;
-; dimmer:dimmer|wr_red[6]   ; ext_mem:memory|dpram:ram_lo|altsyncram:altsyncram_component|altsyncram_f2r1:auto_generated|ram_block1a6~porta_datain_reg0  ; 0.556             ;
-; dimmer:dimmer|wr_red[5]   ; ext_mem:memory|dpram:ram_lo|altsyncram:altsyncram_component|altsyncram_f2r1:auto_generated|ram_block1a5~porta_datain_reg0  ; 0.556             ;
-; dimmer:dimmer|wr_red[4]   ; ext_mem:memory|dpram:ram_lo|altsyncram:altsyncram_component|altsyncram_f2r1:auto_generated|ram_block1a4~porta_datain_reg0  ; 0.556             ;
-; dimmer:dimmer|wr_red[3]   ; ext_mem:memory|dpram:ram_lo|altsyncram:altsyncram_component|altsyncram_f2r1:auto_generated|ram_block1a3~porta_datain_reg0  ; 0.556             ;
-; dimmer:dimmer|wr_red[2]   ; ext_mem:memory|dpram:ram_lo|altsyncram:altsyncram_component|altsyncram_f2r1:auto_generated|ram_block1a2~porta_datain_reg0  ; 0.556             ;
-; dimmer:dimmer|wr_red[0]   ; ext_mem:memory|dpram:ram_lo|altsyncram:altsyncram_component|altsyncram_f2r1:auto_generated|ram_block1a0~porta_datain_reg0  ; 0.556             ;
-; dimmer:dimmer|wr_red[7]   ; ext_mem:memory|dpram:ram_lo|altsyncram:altsyncram_component|altsyncram_f2r1:auto_generated|ram_block1a7~porta_datain_reg0  ; 0.333             ;
-; dimmer:dimmer|wr_green[7] ; ext_mem:memory|dpram:ram_lo|altsyncram:altsyncram_component|altsyncram_f2r1:auto_generated|ram_block1a15~porta_datain_reg0 ; 0.292             ;
-; dimmer:dimmer|wr_col[1]   ; ext_mem:memory|dpram:ram_lo|altsyncram:altsyncram_component|altsyncram_f2r1:auto_generated|ram_block1a0~porta_address_reg0 ; 0.289             ;
-; dimmer:dimmer|wr_green[6] ; ext_mem:memory|dpram:ram_lo|altsyncram:altsyncram_component|altsyncram_f2r1:auto_generated|ram_block1a14~porta_datain_reg0 ; 0.284             ;
-; dimmer:dimmer|wr_green[5] ; ext_mem:memory|dpram:ram_lo|altsyncram:altsyncram_component|altsyncram_f2r1:auto_generated|ram_block1a13~porta_datain_reg0 ; 0.284             ;
-; dimmer:dimmer|wr_green[3] ; ext_mem:memory|dpram:ram_lo|altsyncram:altsyncram_component|altsyncram_f2r1:auto_generated|ram_block1a11~porta_datain_reg0 ; 0.284             ;
-; dimmer:dimmer|wr_green[2] ; ext_mem:memory|dpram:ram_lo|altsyncram:altsyncram_component|altsyncram_f2r1:auto_generated|ram_block1a10~porta_datain_reg0 ; 0.284             ;
-; dimmer:dimmer|wr_green[1] ; ext_mem:memory|dpram:ram_lo|altsyncram:altsyncram_component|altsyncram_f2r1:auto_generated|ram_block1a9~porta_datain_reg0  ; 0.284             ;
-; dimmer:dimmer|wr_green[4] ; ext_mem:memory|dpram:ram_lo|altsyncram:altsyncram_component|altsyncram_f2r1:auto_generated|ram_block1a12~porta_datain_reg0 ; 0.282             ;
-; dimmer:dimmer|wr_green[0] ; ext_mem:memory|dpram:ram_lo|altsyncram:altsyncram_component|altsyncram_f2r1:auto_generated|ram_block1a8~porta_datain_reg0  ; 0.280             ;
-; dimmer:dimmer|wr_row[3]   ; ext_mem:memory|dpram:ram_lo|altsyncram:altsyncram_component|altsyncram_f2r1:auto_generated|ram_block1a0~porta_address_reg0 ; 0.113             ;
-; dimmer:dimmer|wr_col[4]   ; ext_mem:memory|dpram:ram_lo|altsyncram:altsyncram_component|altsyncram_f2r1:auto_generated|ram_block1a0~porta_address_reg0 ; 0.113             ;
-; dimmer:dimmer|wr_blue[6]  ; ext_mem:memory|dpram:ram_lo|altsyncram:altsyncram_component|altsyncram_f2r1:auto_generated|ram_block1a22~porta_datain_reg0 ; 0.072             ;
-; dimmer:dimmer|wr_blue[7]  ; ext_mem:memory|dpram:ram_hi|altsyncram:altsyncram_component|altsyncram_f2r1:auto_generated|ram_block1a23~porta_datain_reg0 ; 0.071             ;
-; dimmer:dimmer|wr_blue[5]  ; ext_mem:memory|dpram:ram_lo|altsyncram:altsyncram_component|altsyncram_f2r1:auto_generated|ram_block1a21~porta_datain_reg0 ; 0.026             ;
-; dimmer:dimmer|wr_blue[4]  ; ext_mem:memory|dpram:ram_lo|altsyncram:altsyncram_component|altsyncram_f2r1:auto_generated|ram_block1a20~porta_datain_reg0 ; 0.026             ;
-; dimmer:dimmer|wr_blue[1]  ; ext_mem:memory|dpram:ram_lo|altsyncram:altsyncram_component|altsyncram_f2r1:auto_generated|ram_block1a17~porta_datain_reg0 ; 0.026             ;
-; dimmer:dimmer|wr_blue[0]  ; ext_mem:memory|dpram:ram_lo|altsyncram:altsyncram_component|altsyncram_f2r1:auto_generated|ram_block1a16~porta_datain_reg0 ; 0.026             ;
-; dimmer:dimmer|wr_col[0]   ; ext_mem:memory|dpram:ram_lo|altsyncram:altsyncram_component|altsyncram_f2r1:auto_generated|ram_block1a0~porta_address_reg0 ; 0.019             ;
-; dimmer:dimmer|wr_blue[3]  ; ext_mem:memory|dpram:ram_lo|altsyncram:altsyncram_component|altsyncram_f2r1:auto_generated|ram_block1a19~porta_datain_reg0 ; 0.018             ;
-; dimmer:dimmer|wr_row[2]   ; ext_mem:memory|dpram:ram_hi|altsyncram:altsyncram_component|altsyncram_f2r1:auto_generated|ram_block1a0~porta_address_reg0 ; 0.015             ;
-; dimmer:dimmer|wr_col[3]   ; ext_mem:memory|dpram:ram_hi|altsyncram:altsyncram_component|altsyncram_f2r1:auto_generated|ram_block1a0~porta_address_reg0 ; 0.015             ;
-; dimmer:dimmer|wr_row[0]   ; ext_mem:memory|dpram:ram_lo|altsyncram:altsyncram_component|altsyncram_f2r1:auto_generated|ram_block1a0~porta_address_reg0 ; 0.015             ;
-; dimmer:dimmer|wr_blue[2]  ; ext_mem:memory|dpram:ram_lo|altsyncram:altsyncram_component|altsyncram_f2r1:auto_generated|ram_block1a18~porta_datain_reg0 ; 0.015             ;
-+---------------------------+----------------------------------------------------------------------------------------------------------------------------+-------------------+
-Note: This table only shows the top 31 path(s) that have the largest delay added for hold.
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Estimated Delay Added for Hold Timing Details                                                                                                                               ;
++---------------------------+-----------------------------------------------------------------------------------------------------------------------------+-------------------+
+; Source Register           ; Destination Register                                                                                                        ; Delay Added in ns ;
++---------------------------+-----------------------------------------------------------------------------------------------------------------------------+-------------------+
+; dimmer:dimmer|wr_red[6]   ; ext_mem:memory|dpram:ram_lo|altsyncram:altsyncram_component|altsyncram_f2r1:auto_generated|ram_block1a6~porta_datain_reg0   ; 0.556             ;
+; dimmer:dimmer|wr_red[5]   ; ext_mem:memory|dpram:ram_lo|altsyncram:altsyncram_component|altsyncram_f2r1:auto_generated|ram_block1a5~porta_datain_reg0   ; 0.556             ;
+; dimmer:dimmer|wr_red[4]   ; ext_mem:memory|dpram:ram_lo|altsyncram:altsyncram_component|altsyncram_f2r1:auto_generated|ram_block1a4~porta_datain_reg0   ; 0.556             ;
+; dimmer:dimmer|wr_red[2]   ; ext_mem:memory|dpram:ram_lo|altsyncram:altsyncram_component|altsyncram_f2r1:auto_generated|ram_block1a2~porta_datain_reg0   ; 0.556             ;
+; dimmer:dimmer|wr_red[1]   ; ext_mem:memory|dpram:ram_lo|altsyncram:altsyncram_component|altsyncram_f2r1:auto_generated|ram_block1a1~porta_datain_reg0   ; 0.556             ;
+; dimmer:dimmer|wr_red[0]   ; ext_mem:memory|dpram:ram_lo|altsyncram:altsyncram_component|altsyncram_f2r1:auto_generated|ram_block1a0~porta_datain_reg0   ; 0.556             ;
+; dimmer:dimmer|wr_green[7] ; ext_mem:memory|dpram:ram_hi|altsyncram:altsyncram_component|altsyncram_f2r1:auto_generated|ram_block1a15~porta_datain_reg0  ; 0.303             ;
+; dimmer:dimmer|wr_red[7]   ; ext_mem:memory|dpram:ram_hi|altsyncram:altsyncram_component|altsyncram_f2r1:auto_generated|ram_block1a7~porta_datain_reg0   ; 0.300             ;
+; dimmer:dimmer|wr_red[3]   ; ext_mem:memory|dpram:ram_lo|altsyncram:altsyncram_component|altsyncram_f2r1:auto_generated|ram_block1a3~porta_datain_reg0   ; 0.298             ;
+; dimmer:dimmer|wr_row[3]   ; ext_mem:memory|dpram:ram_hi|altsyncram:altsyncram_component|altsyncram_f2r1:auto_generated|ram_block1a7~porta_address_reg0  ; 0.089             ;
+; dimmer:dimmer|wr_col[4]   ; ext_mem:memory|dpram:ram_hi|altsyncram:altsyncram_component|altsyncram_f2r1:auto_generated|ram_block1a7~porta_address_reg0  ; 0.089             ;
+; dimmer:dimmer|wr_col[1]   ; ext_mem:memory|dpram:ram_lo|altsyncram:altsyncram_component|altsyncram_f2r1:auto_generated|ram_block1a21~porta_address_reg0 ; 0.070             ;
+; dimmer:dimmer|wr_green[5] ; ext_mem:memory|dpram:ram_lo|altsyncram:altsyncram_component|altsyncram_f2r1:auto_generated|ram_block1a13~porta_datain_reg0  ; 0.021             ;
+; dimmer:dimmer|wr_green[6] ; ext_mem:memory|dpram:ram_hi|altsyncram:altsyncram_component|altsyncram_f2r1:auto_generated|ram_block1a14~porta_datain_reg0  ; 0.019             ;
+; dimmer:dimmer|wr_green[4] ; ext_mem:memory|dpram:ram_hi|altsyncram:altsyncram_component|altsyncram_f2r1:auto_generated|ram_block1a12~porta_datain_reg0  ; 0.019             ;
+; dimmer:dimmer|wr_green[3] ; ext_mem:memory|dpram:ram_lo|altsyncram:altsyncram_component|altsyncram_f2r1:auto_generated|ram_block1a11~porta_datain_reg0  ; 0.018             ;
+; dimmer:dimmer|wr_green[1] ; ext_mem:memory|dpram:ram_lo|altsyncram:altsyncram_component|altsyncram_f2r1:auto_generated|ram_block1a9~porta_datain_reg0   ; 0.017             ;
+; dimmer:dimmer|wr_green[0] ; ext_mem:memory|dpram:ram_lo|altsyncram:altsyncram_component|altsyncram_f2r1:auto_generated|ram_block1a8~porta_datain_reg0   ; 0.017             ;
+; dimmer:dimmer|wr_green[2] ; ext_mem:memory|dpram:ram_lo|altsyncram:altsyncram_component|altsyncram_f2r1:auto_generated|ram_block1a10~porta_datain_reg0  ; 0.017             ;
+; dimmer:dimmer|wr_blue[6]  ; ext_mem:memory|dpram:ram_lo|altsyncram:altsyncram_component|altsyncram_f2r1:auto_generated|ram_block1a22~porta_datain_reg0  ; 0.017             ;
+; dimmer:dimmer|wr_col[0]   ; ext_mem:memory|dpram:ram_lo|altsyncram:altsyncram_component|altsyncram_f2r1:auto_generated|ram_block1a21~porta_address_reg0 ; 0.013             ;
+; dimmer:dimmer|wr_row[0]   ; ext_mem:memory|dpram:ram_lo|altsyncram:altsyncram_component|altsyncram_f2r1:auto_generated|ram_block1a21~porta_address_reg0 ; 0.011             ;
+; dimmer:dimmer|wr_row[1]   ; ext_mem:memory|dpram:ram_lo|altsyncram:altsyncram_component|altsyncram_f2r1:auto_generated|ram_block1a21~porta_address_reg0 ; 0.011             ;
+; dimmer:dimmer|wr_col[2]   ; ext_mem:memory|dpram:ram_lo|altsyncram:altsyncram_component|altsyncram_f2r1:auto_generated|ram_block1a21~porta_address_reg0 ; 0.011             ;
++---------------------------+-----------------------------------------------------------------------------------------------------------------------------+-------------------+
+Note: This table only shows the top 24 path(s) that have the largest delay added for hold.
 
 
 +-----------------+
 ; Fitter Messages ;
 +-----------------+
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20032): Parallel compilation is enabled and will use up to 2 processors
+Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info (119006): Selected device EP4CE22F17C6 for design "De0LEDPanel"
-Info (21076): High junction temperature operating condition is not set. Assuming a default value of '85'.
-Info (21076): Low junction temperature operating condition is not set. Assuming a default value of '0'.
-Info (15535): Implemented PLL "pll:pll|altpll:altpll_component|pll_altpll:auto_generated|pll1" as Cyclone IV E PLL type File: H:/Projects/FPGA/Altera/FPGA-LED-Panel/db/pll_altpll.v Line: 44
-    Info (15099): Implementing clock multiplication of 2, clock division of 1, and phase shift of 0 degrees (0 ps) for pll:pll|altpll:altpll_component|pll_altpll:auto_generated|wire_pll1_clk[0] port File: H:/Projects/FPGA/Altera/FPGA-LED-Panel/db/pll_altpll.v Line: 44
-    Info (15099): Implementing clock multiplication of 1, clock division of 1, and phase shift of 0 degrees (0 ps) for pll:pll|altpll:altpll_component|pll_altpll:auto_generated|wire_pll1_clk[1] port File: H:/Projects/FPGA/Altera/FPGA-LED-Panel/db/pll_altpll.v Line: 44
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Info (15535): Implemented PLL "pll:pll|altpll:altpll_component|pll_altpll:auto_generated|pll1" as Cyclone IV E PLL type File: D:/Repositories/FPGA/Altera/LED Panel/FPGA-LED-Panel/db/pll_altpll.v Line: 44
+    Info (15099): Implementing clock multiplication of 2, clock division of 1, and phase shift of 0 degrees (0 ps) for pll:pll|altpll:altpll_component|pll_altpll:auto_generated|wire_pll1_clk[0] port File: D:/Repositories/FPGA/Altera/LED Panel/FPGA-LED-Panel/db/pll_altpll.v Line: 44
+    Info (15099): Implementing clock multiplication of 1, clock division of 1, and phase shift of 0 degrees (0 ps) for pll:pll|altpll:altpll_component|pll_altpll:auto_generated|wire_pll1_clk[1] port File: D:/Repositories/FPGA/Altera/LED Panel/FPGA-LED-Panel/db/pll_altpll.v Line: 44
 Info (171003): Fitter is performing an Auto Fit compilation, which may decrease Fitter effort to reduce compilation time
 Warning (292013): Feature LogicLock is only available with a valid subscription license. You can purchase a software subscription to gain full access to this feature.
 Info (176444): Device migration not selected. If you intend to use device migration later, you may need to change the pin assignments as they may be incompatible with other devices
@@ -1895,9 +1877,9 @@ Info (332111): Found 3 clocks
     Info (332111):   20.000     CLOCK_50
     Info (332111):   10.000 pll|altpll_component|auto_generated|pll1|clk[0]
     Info (332111):   20.000 pll|altpll_component|auto_generated|pll1|clk[1]
-Info (176353): Automatically promoted node pll:pll|altpll:altpll_component|pll_altpll:auto_generated|wire_pll1_clk[0] (placed in counter C0 of PLL_4) File: H:/Projects/FPGA/Altera/FPGA-LED-Panel/db/pll_altpll.v Line: 78
+Info (176353): Automatically promoted node pll:pll|altpll:altpll_component|pll_altpll:auto_generated|wire_pll1_clk[0] (placed in counter C0 of PLL_4) File: D:/Repositories/FPGA/Altera/LED Panel/FPGA-LED-Panel/db/pll_altpll.v Line: 78
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock CLKCTRL_G18
-Info (176353): Automatically promoted node pll:pll|altpll:altpll_component|pll_altpll:auto_generated|wire_pll1_clk[1] (placed in counter C1 of PLL_4) File: H:/Projects/FPGA/Altera/FPGA-LED-Panel/db/pll_altpll.v Line: 78
+Info (176353): Automatically promoted node pll:pll|altpll:altpll_component|pll_altpll:auto_generated|wire_pll1_clk[1] (placed in counter C1 of PLL_4) File: D:/Repositories/FPGA/Altera/LED Panel/FPGA-LED-Panel/db/pll_altpll.v Line: 78
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock CLKCTRL_G19
 Info (176233): Starting register packing
 Info (176235): Finished register packing
@@ -1911,32 +1893,32 @@ Info (170137): Fitter placement was successful
 Info (170192): Fitter placement operations ending: elapsed time is 00:00:00
 Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 0% of the available device resources
-    Info (170196): Router estimated peak interconnect usage is 3% of the available device resources in the region that extends from location X32_Y23 to location X42_Y34
+    Info (170196): Router estimated peak interconnect usage is 5% of the available device resources in the region that extends from location X21_Y23 to location X31_Y34
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
     Info (170200): Optimizations that may affect the design's timing were skipped
-Info (170194): Fitter routing operations ending: elapsed time is 00:00:00
-Info (11888): Total time spent on timing analysis during the Fitter is 0.30 seconds.
+Info (170194): Fitter routing operations ending: elapsed time is 00:00:01
+Info (11888): Total time spent on timing analysis during the Fitter is 0.31 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:02
+Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
 Warning (169177): 3 pins must meet Altera requirements for 3.3-, 3.0-, and 2.5-V interfaces. For more information, refer to AN 447: Interfacing Cyclone IV E Devices with 3.3/3.0/2.5-V LVTTL/LVCMOS I/O Systems.
-    Info (169178): Pin KEY[0] uses I/O standard 3.3-V LVTTL at J15 File: H:/Projects/FPGA/Altera/FPGA-LED-Panel/de0ledpanel.v Line: 47
-    Info (169178): Pin CLOCK_50 uses I/O standard 3.3-V LVTTL at R8 File: H:/Projects/FPGA/Altera/FPGA-LED-Panel/de0ledpanel.v Line: 41
-    Info (169178): Pin KEY[1] uses I/O standard 3.3-V LVTTL at E1 File: H:/Projects/FPGA/Altera/FPGA-LED-Panel/de0ledpanel.v Line: 47
-Info (144001): Generated suppressed messages file H:/Projects/FPGA/Altera/FPGA-LED-Panel/De0LEDPanel.fit.smsg
+    Info (169178): Pin KEY[0] uses I/O standard 3.3-V LVTTL at J15 File: D:/Repositories/FPGA/Altera/LED Panel/FPGA-LED-Panel/de0ledpanel.v Line: 47
+    Info (169178): Pin CLOCK_50 uses I/O standard 3.3-V LVTTL at R8 File: D:/Repositories/FPGA/Altera/LED Panel/FPGA-LED-Panel/de0ledpanel.v Line: 41
+    Info (169178): Pin KEY[1] uses I/O standard 3.3-V LVTTL at E1 File: D:/Repositories/FPGA/Altera/LED Panel/FPGA-LED-Panel/de0ledpanel.v Line: 47
+Info (144001): Generated suppressed messages file D:/Repositories/FPGA/Altera/LED Panel/FPGA-LED-Panel/De0LEDPanel.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 1410 megabytes
-    Info: Processing ended: Fri Aug 19 18:34:30 2016
-    Info: Elapsed time: 00:00:09
+    Info: Peak virtual memory: 1406 megabytes
+    Info: Processing ended: Sat Aug 20 14:11:26 2016
+    Info: Elapsed time: 00:00:11
     Info: Total CPU time (on all processors): 00:00:10
 
 
 +----------------------------+
 ; Fitter Suppressed Messages ;
 +----------------------------+
-The suppressed messages can be found in H:/Projects/FPGA/Altera/FPGA-LED-Panel/De0LEDPanel.fit.smsg.
+The suppressed messages can be found in D:/Repositories/FPGA/Altera/LED Panel/FPGA-LED-Panel/De0LEDPanel.fit.smsg.
 
 
