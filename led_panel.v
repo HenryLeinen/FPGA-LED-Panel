@@ -96,15 +96,15 @@ module led_panel	(
 	always @(posedge clk or negedge rst) begin
 		if (!rst) begin
 			A = 4'b0;
-			OE_N <= 1;
+			OE_N = 1;
 			RED = 2'b11;
 			GREEN = 2'b11;
 			BLUE = 2'b11;
 			LE = 1;
 			CLK = 0;
 			state = PRE_READ;
-			bit_plane = 254;			//	Just for debugging, otherwise 0
-			time_slice_time = 500; //	500 for 32 columns, 250 for 64, 125 for 128
+			bit_plane = 0;			//	Just for debugging, otherwise 0
+			time_slice_time = 250; //	500 for 32 columns, 250 for 64, 125 for 128
 			col = 0;
 			row = 0;
 			frame_start = 0;
@@ -120,6 +120,7 @@ module led_panel	(
 				//	Wait for timeslice to elapse so that we can begin to latch the shifted values though
 				WAIT:
 					begin
+						CLK = 0;
 						if (time_slice_time == 0) begin
 							//	Time slice elapsed, so move on to the next
 							state = BLANK;
@@ -131,7 +132,7 @@ module led_panel	(
 				//	Just switch off the LEDs
 				BLANK:
 					begin
-						OE_N <= 1;
+						OE_N = 1;
 						state = LATCH;
 					end
 
@@ -140,7 +141,8 @@ module led_panel	(
 					begin
 						LE = 1;
 						A = row;
-						time_slice_time = 500; //	500 for 32 columns, 250 for 64, 125 for 128
+						time_slice_time = 125; //	250 for framerate of 100Hz at clock of 100MHz
+														//	125 for framerate of 100Hz at clock of 50MHz
 
 						bit_plane = bit_plane + 1;
 						if (bit_plane == 0) begin
@@ -161,13 +163,13 @@ module led_panel	(
 				UNBLANK:
 					begin
 						LE = 0;
-						OE_N <= 0;
 						col_start = 1;
 						state = PRE_READ;
 					end
 					
 				PRE_READ:
 					begin
+						OE_N = 0;
 						CLK = 0;
 						state = READ;
 					end

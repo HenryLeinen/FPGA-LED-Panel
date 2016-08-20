@@ -36,7 +36,7 @@ module dimmer (
 	reg								selected_buffer;
 	reg								wr_ena;
 	
-	reg	[1:0]						state_d, state_q;
+	reg	[1:0]						state;
 	localparam						IDLE = 2'b00,
 										FILL_START = 2'b01,
 										FILL_N1 = 2'b10,
@@ -51,7 +51,7 @@ module dimmer (
 	
 	always @(posedge clk or negedge rst) begin
 		if (!rst) begin
-			state_d <= IDLE;
+			state <= IDLE;
 			selected_buffer <= 0;
 			wr_ena <= 0;
 			wr_red <= 0;
@@ -64,36 +64,36 @@ module dimmer (
 				color_pattern_d = color_pattern_q + 1;
 			end
 			
-			case (state_q)
+			case (state)
 				IDLE:
 					begin
 						if (!trigger) begin
 							wr_row = 0;
 							wr_col = 0;
-							state_d <= FILL_START;
+							state = FILL_START;
 						end
 					end
 					
 				FILL_START:
 					begin
 						wr_ena = 1;
-						state_d <= FILL_N1;
+						state = FILL_N1;
 					end
 					
 				FILL_N1:
 					begin
-						wr_ena <= 0;
+						wr_ena = 0;
 						wr_col = wr_col + 1;
 						if (wr_col == 0) begin //	Wrapped
 							//	proceed to next row
 							wr_row = wr_row + 1;
 							if (wr_row == 0) begin 	// wrapped
-								state_d <= WAIT;
+								state = WAIT;
 							end else begin
-								state_d <= FILL_START;
+								state = FILL_START;
 							end
 						end else begin
-							state_d <= FILL_START;
+							state = FILL_START;
 						end						
 						
 						if (color_pattern_q == SWAMP) begin
@@ -152,13 +152,12 @@ module dimmer (
 										end
 									end
 							endcase
-							state_d <= FILL_START;
+							state = FILL_START;
 						end else begin
-							state_d <= WAIT;
+							state = WAIT;
 						end
 					end
 			endcase
-			state_q <= state_d;
 		end
 	end
 endmodule

@@ -1,12 +1,12 @@
-Analysis & Synthesis Status : Successful - Sat Aug 20 14:11:14 2016
-Quartus Prime Version : 16.0.2 Build 222 07/20/2016 SJ Lite Edition
+Analysis & Synthesis Status : Successful - Sat Aug 20 15:10:39 2016
+Quartus Prime Version : 16.0.0 Build 211 04/27/2016 SJ Lite Edition
 Revision Name : De0LEDPanel
 Top-level Entity Name : De0LEDPanel
 Family : Cyclone IV E
-Total logic elements : 279
-    Total combinational functions : 267
-    Dedicated logic registers : 122
-Total registers : 122
+Total logic elements : 266
+    Total combinational functions : 257
+    Dedicated logic registers : 118
+Total registers : 118
 Total pins : 26
 Total virtual pins : 0
 Total memory bits : 49,152
