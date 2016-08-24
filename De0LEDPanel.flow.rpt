@@ -1,5 +1,5 @@
 Flow report for De0LEDPanel
-Sat Aug 20 15:11:00 2016
+Mon Aug 22 21:58:24 2016
 Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
 
 
@@ -41,21 +41,21 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Sat Aug 20 15:11:00 2016       ;
+; Flow Status                        ; Successful - Mon Aug 22 21:58:16 2016       ;
 ; Quartus Prime Version              ; 16.0.0 Build 211 04/27/2016 SJ Lite Edition ;
 ; Revision Name                      ; De0LEDPanel                                 ;
 ; Top-level Entity Name              ; De0LEDPanel                                 ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE22F17C6                                ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 263 / 22,320 ( 1 % )                        ;
-;     Total combinational functions  ; 257 / 22,320 ( 1 % )                        ;
-;     Dedicated logic registers      ; 118 / 22,320 ( < 1 % )                      ;
-; Total registers                    ; 118                                         ;
+; Total logic elements               ; 3,681 / 22,320 ( 16 % )                     ;
+;     Total combinational functions  ; 3,303 / 22,320 ( 15 % )                     ;
+;     Dedicated logic registers      ; 2,181 / 22,320 ( 10 % )                     ;
+; Total registers                    ; 2181                                        ;
 ; Total pins                         ; 26 / 154 ( 17 % )                           ;
 ; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 49,152 / 608,256 ( 8 % )                    ;
-; Embedded Multiplier 9-bit elements ; 0 / 132 ( 0 % )                             ;
+; Total memory bits                  ; 325,504 / 608,256 ( 54 % )                  ;
+; Embedded Multiplier 9-bit elements ; 4 / 132 ( 3 % )                             ;
 ; Total PLLs                         ; 1 / 4 ( 25 % )                              ;
 +------------------------------------+---------------------------------------------+
 
@@ -65,40 +65,46 @@ agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 08/20/2016 15:10:21 ;
+; Start date & time ; 08/22/2016 21:56:31 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; De0LEDPanel         ;
 +-------------------+---------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                            ;
-+--------------------------------------+---------------------------------------+---------------+-------------+----------------+
-; Assignment Name                      ; Value                                 ; Default Value ; Entity Name ; Section Id     ;
-+--------------------------------------+---------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID                ; 115129180079057.147169862113240       ; --            ; --          ; --             ;
-; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --            ; --          ; led_panel_tb   ;
-; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; led_panel_tb                          ; --            ; --          ; eda_simulation ;
-; EDA_OUTPUT_DATA_FORMAT               ; Verilog Hdl                           ; --            ; --          ; eda_simulation ;
-; EDA_SIMULATION_TOOL                  ; ModelSim-Altera (Verilog)             ; <None>        ; --          ; --             ;
-; EDA_TEST_BENCH_ENABLE_STATUS         ; TEST_BENCH_MODE                       ; --            ; --          ; eda_simulation ;
-; EDA_TEST_BENCH_FILE                  ; simulation/modelsim/led_panel_tb.v    ; --            ; --          ; led_panel_tb   ;
-; EDA_TEST_BENCH_MODULE_NAME           ; led_panel_tb                          ; --            ; --          ; led_panel_tb   ;
-; EDA_TEST_BENCH_NAME                  ; led_panel_tb                          ; --            ; --          ; eda_simulation ;
-; EDA_TIME_SCALE                       ; 1 ns                                  ; --            ; --          ; eda_simulation ;
-; MAX_CORE_JUNCTION_TEMP               ; 85                                    ; --            ; --          ; --             ;
-; MIN_CORE_JUNCTION_TEMP               ; 0                                     ; --            ; --          ; --             ;
-; MISC_FILE                            ; pll.bsf                               ; --            ; --          ; --             ;
-; MISC_FILE                            ; pll_bb.v                              ; --            ; --          ; --             ;
-; MISC_FILE                            ; pll.ppf                               ; --            ; --          ; --             ;
-; MISC_FILE                            ; dpram.bsf                             ; --            ; --          ; --             ;
-; MISC_FILE                            ; dpram_bb.v                            ; --            ; --          ; --             ;
-; PARTITION_COLOR                      ; 16764057                              ; --            ; --          ; Top            ;
-; PARTITION_FITTER_PRESERVATION_LEVEL  ; PLACEMENT_AND_ROUTING                 ; --            ; --          ; Top            ;
-; PARTITION_NETLIST_TYPE               ; SOURCE                                ; --            ; --          ; Top            ;
-; POWER_BOARD_THERMAL_MODEL            ; None (CONSERVATIVE)                   ; --            ; --          ; --             ;
-; POWER_PRESET_COOLING_SOLUTION        ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW ; --            ; --          ; --             ;
-+--------------------------------------+---------------------------------------+---------------+-------------+----------------+
++---------------------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                            ;
++--------------------------------------+-------------------------------------------------------+---------------+-------------+----------------+
+; Assignment Name                      ; Value                                                 ; Default Value ; Entity Name ; Section Id     ;
++--------------------------------------+-------------------------------------------------------+---------------+-------------+----------------+
+; COMPILER_SIGNATURE_ID                ; 115129180079057.147189579001880                       ; --            ; --          ; --             ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                                    ; --            ; --          ; led_panel_tb   ;
+; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; led_panel_tb                                          ; --            ; --          ; eda_simulation ;
+; EDA_OUTPUT_DATA_FORMAT               ; None                                                  ; --            ; --          ; eda_simulation ;
+; EDA_TEST_BENCH_ENABLE_STATUS         ; TEST_BENCH_MODE                                       ; --            ; --          ; eda_simulation ;
+; EDA_TEST_BENCH_FILE                  ; simulation/modelsim/led_panel_tb.v                    ; --            ; --          ; led_panel_tb   ;
+; EDA_TEST_BENCH_MODULE_NAME           ; led_panel_tb                                          ; --            ; --          ; led_panel_tb   ;
+; EDA_TEST_BENCH_NAME                  ; led_panel_tb                                          ; --            ; --          ; eda_simulation ;
+; EDA_TIME_SCALE                       ; 1 ns                                                  ; --            ; --          ; eda_simulation ;
+; MAX_CORE_JUNCTION_TEMP               ; 85                                                    ; --            ; --          ; --             ;
+; MIN_CORE_JUNCTION_TEMP               ; 0                                                     ; --            ; --          ; --             ;
+; MISC_FILE                            ; cpu/synthesis/../cpu.cmp                              ; --            ; --          ; --             ;
+; MISC_FILE                            ; cpu/synthesis/../../cpu.qsys                          ; --            ; --          ; --             ;
+; MISC_FILE                            ; pll.bsf                                               ; --            ; --          ; --             ;
+; MISC_FILE                            ; pll_bb.v                                              ; --            ; --          ; --             ;
+; MISC_FILE                            ; pll.ppf                                               ; --            ; --          ; --             ;
+; MISC_FILE                            ; dpram.bsf                                             ; --            ; --          ; --             ;
+; MISC_FILE                            ; dpram_bb.v                                            ; --            ; --          ; --             ;
+; PARTITION_COLOR                      ; 16764057                                              ; --            ; --          ; Top            ;
+; PARTITION_FITTER_PRESERVATION_LEVEL  ; PLACEMENT_AND_ROUTING                                 ; --            ; --          ; Top            ;
+; PARTITION_NETLIST_TYPE               ; SOURCE                                                ; --            ; --          ; Top            ;
+; POWER_BOARD_THERMAL_MODEL            ; None (CONSERVATIVE)                                   ; --            ; --          ; --             ;
+; POWER_PRESET_COOLING_SOLUTION        ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW                 ; --            ; --          ; --             ;
+; SLD_FILE                             ; cpu/synthesis/cpu.regmap                              ; --            ; --          ; --             ;
+; SLD_FILE                             ; cpu/synthesis/cpu.debuginfo                           ; --            ; --          ; --             ;
+; SLD_INFO                             ; QSYS_NAME cpu HAS_SOPCINFO 1 GENERATION_ID 1471895750 ; --            ; cpu         ; --             ;
+; SOPCINFO_FILE                        ; cpu/synthesis/../../cpu.sopcinfo                      ; --            ; --          ; --             ;
+; SYNTHESIS_ONLY_QIP                   ; On                                                    ; --            ; --          ; --             ;
++--------------------------------------+-------------------------------------------------------+---------------+-------------+----------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------+
@@ -106,12 +112,11 @@ agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:19     ; 1.0                     ; 853 MB              ; 00:00:42                           ;
-; Fitter                    ; 00:00:08     ; 1.0                     ; 1400 MB             ; 00:00:10                           ;
-; Assembler                 ; 00:00:02     ; 1.0                     ; 773 MB              ; 00:00:02                           ;
-; TimeQuest Timing Analyzer ; 00:00:03     ; 1.0                     ; 883 MB              ; 00:00:03                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 745 MB              ; 00:00:02                           ;
-; Total                     ; 00:00:33     ; --                      ; --                  ; 00:00:59                           ;
+; Analysis & Synthesis      ; 00:01:07     ; 1.0                     ; 1031 MB             ; 00:01:53                           ;
+; Fitter                    ; 00:00:27     ; 1.1                     ; 1474 MB             ; 00:00:33                           ;
+; Assembler                 ; 00:00:03     ; 1.0                     ; 789 MB              ; 00:00:03                           ;
+; TimeQuest Timing Analyzer ; 00:00:06     ; 1.2                     ; 934 MB              ; 00:00:07                           ;
+; Total                     ; 00:01:43     ; --                      ; --                  ; 00:02:36                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -124,7 +129,6 @@ agreement for further details.
 ; Fitter                    ; HACKBRETT        ; Windows 8 ; 6.2        ; x86_64         ;
 ; Assembler                 ; HACKBRETT        ; Windows 8 ; 6.2        ; x86_64         ;
 ; TimeQuest Timing Analyzer ; HACKBRETT        ; Windows 8 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer        ; HACKBRETT        ; Windows 8 ; 6.2        ; x86_64         ;
 +---------------------------+------------------+-----------+------------+----------------+
 
 
@@ -135,7 +139,6 @@ quartus_map --read_settings_files=on --write_settings_files=off De0LEDPanel -c D
 quartus_fit --read_settings_files=off --write_settings_files=off De0LEDPanel -c De0LEDPanel
 quartus_asm --read_settings_files=off --write_settings_files=off De0LEDPanel -c De0LEDPanel
 quartus_sta De0LEDPanel -c De0LEDPanel
-quartus_eda --read_settings_files=off --write_settings_files=off De0LEDPanel -c De0LEDPanel
 
 
 

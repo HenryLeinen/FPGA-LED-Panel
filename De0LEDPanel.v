@@ -126,6 +126,12 @@ output							OE;			//	GPIO30
 		.col_start(COL)
 	);
 	
+	cpu cpu(
+		.clk_clk(clk50),                            //                         clk.clk
+		.pio_led_external_connection_export(LED), // pio_led_external_connection.export
+		.reset_reset_n(KEY[0])                       //                       reset.reset_n
+	);
+
 //	Instantiate the automatic dimmer module
 	dimmer	dimmer(
 		.clk(clk50),
@@ -135,8 +141,6 @@ output							OE;			//	GPIO30
 		.wr_data(wr_data),
 		.wr_ena(wr_ena),
 		.selected_buffer(selected_buffer),
-		.actual_buffer(actual_buffer),
-		.LED(LED)
-
+		.actual_buffer(actual_buffer)
 	);
 endmodule

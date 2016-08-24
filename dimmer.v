@@ -9,9 +9,7 @@ module dimmer (
 						wr_ena,
 						
 						selected_buffer,
-						actual_buffer,
-						
-						LED
+						actual_buffer
 					);
 	
 	input								rst;
@@ -20,18 +18,16 @@ module dimmer (
 	
 	
 	reg [4:0]						wr_row;
-	reg [4:0]						wr_col;
+	reg [5:0]						wr_col;
 	
 	reg [7:0]						wr_red, wr_green, wr_blue;		
 
-	output  wire [10:0]			wr_addr = {wr_row[4:0], wr_col[4:0]};
+	output  wire [10:0]			wr_addr = {wr_row[4:0], wr_col[5:0]};
 	output  wire [23:0]			wr_data = {wr_blue[7:0], wr_green[7:0], wr_red[7:0]};
 	output 							wr_ena;
 	
 	output							selected_buffer;
 	input								actual_buffer;
-	
-	output reg [7:0]				LED;
 	
 	reg								selected_buffer;
 	reg								wr_ena;
@@ -47,7 +43,7 @@ module dimmer (
 										GREEN = 2'b10,
 										SWAMP = 2'b11;
 
-	reg  [9:0]						swamp_counter;
+	reg  [10:0]						swamp_counter;
 	
 	always @(posedge clk or negedge rst) begin
 		if (!rst) begin
@@ -99,8 +95,8 @@ module dimmer (
 						if (color_pattern_q == SWAMP) begin
 							if (wr_addr == swamp_counter) begin
 								wr_blue = 255;
-								wr_red = 255;
-								wr_green = 255;
+								wr_red  = 255;
+								wr_green= 255;
 							end else begin
 								wr_blue = 0;
 								wr_red = 0;
@@ -119,7 +115,6 @@ module dimmer (
 										wr_red = wr_red + 1;
 										wr_green = 0;
 										wr_blue = 0;
-										LED = wr_red;
 										if (wr_red == 0) begin
 											if (trigger) color_pattern_q = color_pattern_d;
 										end
@@ -129,7 +124,6 @@ module dimmer (
 										wr_blue = wr_blue + 1;
 										wr_green = 0;
 										wr_red = 0;
-										LED = wr_blue;
 										if (wr_blue == 0) begin
 											if (trigger) color_pattern_q = color_pattern_d;
 										end
@@ -139,7 +133,6 @@ module dimmer (
 										wr_green = wr_green + 1;
 										wr_red = 0;
 										wr_blue = 0;
-										LED = wr_green;
 										if (wr_green == 0) begin
 											if (trigger) color_pattern_q = color_pattern_d;
 										end

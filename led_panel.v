@@ -49,7 +49,7 @@ module led_panel	(
 	input						selected_buffer;
 	output reg				actual_buffer;
 		
-	output wire	[9:0]		rd_addr;
+	output wire[10:0]		rd_addr;
 	input		  [23:0] 	rd_data_hi, rd_data_lo;
 		
 		
@@ -74,7 +74,7 @@ module led_panel	(
 	
 	
 	//	Pixel control
-	reg [4:0]	col;
+	reg [5:0]	col;
 	reg [3:0]	row;
 	
 	wire [7:0]  pixel_red_hi, pixel_red_lo;
@@ -89,7 +89,7 @@ module led_panel	(
 	assign pixel_green_lo	= rd_data_lo[15:8];
 	assign pixel_blue_lo		= rd_data_lo[23:16];
 
-	assign		rd_addr = {actual_buffer, row[3:0], col[4:0]};
+	assign		rd_addr = {actual_buffer, row[3:0], col[5:0]};
 	
 		
 	//	Procedural block
@@ -104,7 +104,7 @@ module led_panel	(
 			CLK = 0;
 			state = PRE_READ;
 			bit_plane = 0;			//	Just for debugging, otherwise 0
-			time_slice_time = 250; //	500 for 32 columns, 250 for 64, 125 for 128
+			time_slice_time = 125; 
 			col = 0;
 			row = 0;
 			frame_start = 0;
