@@ -2,8 +2,8 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>hal</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>Aug 22, 2016 9:59:13 PM</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1471895953863</BspGeneratedUnixTimeStamp>
+        <BspGeneratedTimeStamp>25.08.2016 07:49:07</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1472104147651</BspGeneratedUnixTimeStamp>
         <BspGeneratedLocation>H:\Projects\FPGA\Altera\FPGA-LED-Panel\software\LEDPanelApp_bsp</BspGeneratedLocation>
         <BspSettingsFile>settings.bsp</BspSettingsFile>
         <SopcDesignFile>..\..\cpu.sopcinfo</SopcDesignFile>
@@ -266,7 +266,7 @@
                 <SettingName>hal.make.bsp_cflags_defined_symbols</SettingName>
                 <Identifier>BSP_CFLAGS_DEFINED_SYMBOLS</Identifier>
                 <Type>UnquotedString</Type>
-                <Value>none</Value>
+                <Value>LED_PIO_BASE</Value>
                 <DefaultValue>none</DefaultValue>
                 <DestinationFile>makefile_variable</DestinationFile>
                 <Description>Preprocessor macros to define. A macro definition in this setting has the same effect as a "#define" in source code. Adding "-DALT_DEBUG" to this setting has the same effect as "#define ALT_DEBUG" in a souce file. Adding "-DFOO=1" to this setting is equivalent to the macro "#define FOO 1" in a source file. Macros defined with this setting are applied to all .S, .c, and C++ files in the BSP. This setting defines the value of BSP_CFLAGS_DEFINED_SYMBOLS in the BSP Makefile.</Description>

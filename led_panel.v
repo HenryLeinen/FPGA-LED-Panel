@@ -81,13 +81,42 @@ module led_panel	(
 	wire [7:0]	pixel_green_hi, pixel_green_lo;
 	wire [7:0]	pixel_blue_hi, pixel_blue_lo;
 	
+	wire [7:0]	pixel_gamma_red_hi, pixel_gamme_red_lo;
+	wire [7:0]  pixel_gamma_green_hi, pixel_gamma_green_lo;
+	wire [7:0]  pixel_gamma_blue_hi, pixel_gamma_blue_lo;
+	
+	gamma_LUT  gammared_hi(
+		rd_data_hi[7:0],
+		pixel_red_hi[7:0]
+	);
+	gamma_LUT  gammared_lo(
+		rd_data_lo[7:0],
+		pixel_red_lo[7:0]
+	);
+	gamma_LUT  gammablue_hi(
+		rd_data_hi[23:16],
+		pixel_blue_hi[7:0]
+	);
+	gamma_LUT  gammablue_lo(
+		rd_data_lo[23:16],
+		pixel_blue_lo[7:0]
+	);
+	gamma_LUT  gammagreen_hi(
+		rd_data_hi[15:8],
+		pixel_green_hi[7:0]
+	);
+	gamma_LUT  gammagreen_lo(
+		rd_data_lo[15:8],
+		pixel_green_lo[7:0]
+	);
+	
 	//	Pixel RGB logic, direct addressing reading
-	assign pixel_red_hi 		= rd_data_hi[7:0];
-	assign pixel_green_hi	= rd_data_hi[15:8];
-	assign pixel_blue_hi		= rd_data_hi[23:16];
-	assign pixel_red_lo 		= rd_data_lo[7:0];
-	assign pixel_green_lo	= rd_data_lo[15:8];
-	assign pixel_blue_lo		= rd_data_lo[23:16];
+//	assign pixel_red_hi 		= rd_data_hi[7:0];
+//	assign pixel_green_hi	= rd_data_hi[15:8];
+//	assign pixel_blue_hi		= rd_data_hi[23:16];
+//	assign pixel_red_lo 		= rd_data_lo[7:0];
+//	assign pixel_green_lo	= rd_data_lo[15:8];
+//	assign pixel_blue_lo		= rd_data_lo[23:16];
 
 	assign		rd_addr = {actual_buffer, row[3:0], col[5:0]};
 	
@@ -120,7 +149,6 @@ module led_panel	(
 				//	Wait for timeslice to elapse so that we can begin to latch the shifted values though
 				WAIT:
 					begin
-						CLK = 0;
 						if (time_slice_time == 0) begin
 							//	Time slice elapsed, so move on to the next
 							state = BLANK;
@@ -170,7 +198,12 @@ module led_panel	(
 				PRE_READ:
 					begin
 						OE_N = 0;
-						CLK = 0;
+						if (pixel_red_hi 		> bit_plane) RED[0] = 1; 	else RED[0] = 0;
+						if (pixel_red_lo 		> bit_plane) RED[1] = 1; 	else RED[1] = 0;
+						if (pixel_green_hi 	> bit_plane) GREEN[0] = 1; else GREEN[0] = 0;
+						if (pixel_green_lo	> bit_plane) GREEN[1] = 1; else GREEN[1] = 0;
+						if (pixel_blue_hi		> bit_plane) BLUE[0] = 1; else BLUE[0] = 0;
+						if (pixel_blue_lo		> bit_plane) BLUE[1] = 1; else BLUE[1] = 0;
 						state = READ;
 					end
 					
@@ -179,12 +212,6 @@ module led_panel	(
 				READ:	
 					begin
 						CLK = 0;
-						if (pixel_red_hi 		> bit_plane) RED[0] = 1; 	else RED[0] = 0;
-						if (pixel_red_lo 		> bit_plane) RED[1] = 1; 	else RED[1] = 0;
-						if (pixel_green_hi 	> bit_plane) GREEN[0] = 1; else GREEN[0] = 0;
-						if (pixel_green_lo	> bit_plane) GREEN[1] = 1; else GREEN[1] = 0;
-						if (pixel_blue_hi		> bit_plane) BLUE[0] = 1; else BLUE[0] = 0;
-						if (pixel_blue_lo		> bit_plane) BLUE[1] = 1; else BLUE[1] = 0;
 						state = SHIFT;
 					end
 				
@@ -193,6 +220,12 @@ module led_panel	(
 					begin
 						CLK = 1;
 						col = col + 1;
+						if (pixel_red_hi 		> bit_plane) RED[0] = 1; 	else RED[0] = 0;
+						if (pixel_red_lo 		> bit_plane) RED[1] = 1; 	else RED[1] = 0;
+						if (pixel_green_hi 	> bit_plane) GREEN[0] = 1; else GREEN[0] = 0;
+						if (pixel_green_lo	> bit_plane) GREEN[1] = 1; else GREEN[1] = 0;
+						if (pixel_blue_hi		> bit_plane) BLUE[0] = 1; else BLUE[0] = 0;
+						if (pixel_blue_lo		> bit_plane) BLUE[1] = 1; else BLUE[1] = 0;
 						if (col == 0) begin
 							//	wrapped around --> all columns processed
 							state = WAIT;		//	proceed to next row

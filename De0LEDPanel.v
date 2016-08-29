@@ -69,7 +69,7 @@ output							OE;			//	GPIO30
 									clk25,
 									clk10;
 
-	wire							actual_buffer, selected_buffer;
+	wire							actual_front_buffer, requested_front_buffer;
 
 	wire			[23:0]		wr_data;
 	wire			[10:0]		wr_addr;
@@ -99,7 +99,7 @@ output							OE;			//	GPIO30
 		.rd_addr(rd_addr),
 		.rd_data_hi(rd_data_hi),
 		.rd_data_lo(rd_data_lo),
-		.actual_buffer(actual_buffer)
+		.actual_buffer(!actual_front_buffer)	//	DO not update on front buffer, only on back buffer
 	);
 	
 //	Instantiate the LED Panel driver
@@ -114,8 +114,8 @@ output							OE;			//	GPIO30
 		.OE_N(OE),
 		.CLK(CLK),
 		
-		.selected_buffer(selected_buffer),
-		.actual_buffer(actual_buffer),
+		.selected_buffer(requested_front_buffer),			//	Use this signal to request the new front buffer
+		.actual_buffer(actual_front_buffer),		//	THis is the actual front buffer
 		
 		.rd_addr(rd_addr),
 		.rd_data_hi(rd_data_hi),
@@ -129,11 +129,15 @@ output							OE;			//	GPIO30
 	cpu cpu(
 		.clk_clk(clk50),                            //                         clk.clk
 		.pio_led_external_connection_export(LED), // pio_led_external_connection.export
-		.reset_reset_n(KEY[0])                       //                       reset.reset_n
+		.reset_reset_n(KEY[0]),                       //                       reset.reset_n
+		.pio_wr_addr_connection_export(wr_addr),
+		.pio_wr_data_connection_export(wr_data),
+		.pio_wr_in_flags_export( {actual_front_buffer, 7'b0}),
+		.pio_wr_out_flags_export({wr_ena, requested_front_buffer,6'b0})
 	);
 
 //	Instantiate the automatic dimmer module
-	dimmer	dimmer(
+/*	dimmer	dimmer(
 		.clk(clk50),
 		.rst(KEY[0]),
 		.trigger(KEY[1]),
@@ -142,5 +146,5 @@ output							OE;			//	GPIO30
 		.wr_ena(wr_ena),
 		.selected_buffer(selected_buffer),
 		.actual_buffer(actual_buffer)
-	);
+	);*/
 endmodule

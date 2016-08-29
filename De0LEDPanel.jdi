@@ -1,6 +1,6 @@
 <sld_project_info>
   <project>
-    <hash md5_digest_80b="6d6e474373826d236ff1"/>
+    <hash md5_digest_80b="cd9205472832fd64b3af"/>
   </project>
   <file_info>
     <file device="EP4CE22F17C6" path="De0LEDPanel_time_limited.sof" usercode="0xFFFFFFFF"/>
@@ -100,7 +100,7 @@
     </sld_info>
     <sld_info hpath="cpu:cpu" name="cpu">
       <assignment_values>
-        <assignment_value text="QSYS_NAME cpu HAS_SOPCINFO 1 GENERATION_ID 1471895750"/>
+        <assignment_value text="QSYS_NAME cpu HAS_SOPCINFO 1 GENERATION_ID 1472390774"/>
       </assignment_values>
       <parameters/>
     </sld_info>

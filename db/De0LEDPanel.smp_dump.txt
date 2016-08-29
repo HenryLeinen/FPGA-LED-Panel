@@ -1,11 +1,4 @@
 
-State Machine - |De0LEDPanel|dimmer:dimmer|state
-Name state.WAIT state.FILL_N1 state.FILL_START state.IDLE 
-state.IDLE 0 0 0 0 
-state.FILL_START 0 0 1 1 
-state.FILL_N1 0 1 0 1 
-state.WAIT 1 0 0 1 
-
 State Machine - |De0LEDPanel|led_panel:led_panel|state
 Name state.WAIT state.SHIFT state.READ state.UNBLANK state.LATCH state.BLANK state.PRE_READ 
 state.PRE_READ 0 0 0 0 0 0 0 

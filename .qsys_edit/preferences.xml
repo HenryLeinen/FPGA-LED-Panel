@@ -4,10 +4,11 @@
  <systemtable filter="All Interfaces">
   <columns>
    <connections preferredWidth="143" />
-   <irq preferredWidth="34" />
+   <irq preferredWidth="79" />
   </columns>
  </systemtable>
- <library expandedCategories="Project,Library" />
- <window width="1616" height="876" x="-8" y="-8" />
- <generation simulation="NONE" />
+ <library
+   expandedCategories="Library/Basic Functions/Configuration and Programming,Library,Library/University Program,Library/Memory Interfaces and Controllers,Project,Library/University Program/Memory,Library/Basic Functions/On Chip Memory,Library/Memory Interfaces and Controllers/Flash,Library/Basic Functions" />
+ <window width="1600" height="860" x="0" y="0" />
+ <generation simulation="NONE" block_symbol_file="1" />
 </preferences>

@@ -1,0 +1,69 @@
+/*
+ * "Hello World" example.
+ *
+ * This example prints 'Hello from Nios II' to the STDOUT stream. It runs on
+ * the Nios II 'standard', 'full_featured', 'fast', and 'low_cost' example
+ * designs. It runs with or without the MicroC/OS-II RTOS and requires a STDOUT
+ * device in your system's hardware.
+ * The memory footprint of this hosted application is ~69 kbytes by default
+ * using the standard reference design.
+ *
+ * For a reduced footprint version of this template, and an explanation of how
+ * to reduce the memory footprint for a given application, see the
+ * "small_hello_world" template.
+ *
+ */
+
+#include <stdio.h>
+#include "system.h"
+#include "altera_avalon_pio_regs.h"
+
+volatile unsigned char outflags = 0;
+
+#define RGB(r, g, b)		((unsigned long)(r) | ((g) << 8) | ((b) << 16))
+
+void setMemory(int addr, long data) {
+	IOWR_ALTERA_AVALON_PIO_DATA(WR_ADDR_PIO_BASE, addr);
+	IOWR_ALTERA_AVALON_PIO_DATA(WR_DATA_PIO_BASE, data);
+	outflags |= 0x80;
+	IOWR_ALTERA_AVALON_PIO_DATA(WR_OUT_FLAGS_BASE, outflags);
+	outflags &= 0x7f;
+	IOWR_ALTERA_AVALON_PIO_DATA(WR_OUT_FLAGS_BASE, outflags);
+}
+
+void fillBuffer(char buffer, char r, char g, char b) {
+	outflags = outflags & 0xCF;
+	outflags |= (buffer == 1) ? 0x40 : 0;
+	IOWR_ALTERA_AVALON_PIO_DATA(WR_OUT_FLAGS_BASE, outflags);
+
+	for (int row = 0 ; row < 32 ; row ++) {
+		for (int col = 0 ; col < 64 ; col ++) {
+			setMemory(col + row * 64, RGB(r, g, b));
+		}
+	}
+}
+
+int main()
+{
+	  int count = 0;
+	  printf("Hello from Nios II!\n");
+	  unsigned char inflags = 0;
+
+	  fillBuffer(inflags,10, 20, 40);
+
+	  while(1) {
+		  IOWR_ALTERA_AVALON_PIO_DATA(LED_PIO_BASE, count);
+
+		  fillBuffer(inflags>>7, 10,20,40);
+		  setMemory(count, RGB(255,255,255));
+
+		  do {
+			  inflags = IORD_ALTERA_AVALON_PIO_DATA(WR_IN_FLAGS_BASE);
+		  }
+		  while( (inflags>>7) != (count&1)) ;
+
+		  count++;
+	  }
+
+	  return 0;
+}

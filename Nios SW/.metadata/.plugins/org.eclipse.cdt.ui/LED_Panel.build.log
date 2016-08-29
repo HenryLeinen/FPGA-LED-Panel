@@ -1,0 +1,9 @@
+16:11:31 **** Incremental Build of configuration Nios II for project LED_Panel ****
+make all 
+Info: Building ../LED_Panel_bsp/
+C:/altera_lite/16.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../LED_Panel_bsp/
+[BSP build complete]
+[LED_Panel build complete]
+
+16:11:32 Build Finished (took 927ms)
+

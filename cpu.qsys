@@ -9,7 +9,7 @@
    categories="System" />
  <parameter name="bonusData"><![CDATA[bonusData 
 {
-   element clk_50
+   element clk_100
    {
       datum _sortIndex
       {
@@ -45,7 +45,7 @@
    {
       datum baseAddress
       {
-         value = "69688";
+         value = "69768";
          type = "String";
       }
    }
@@ -61,7 +61,7 @@
    {
       datum baseAddress
       {
-         value = "69664";
+         value = "69744";
          type = "String";
       }
    }
@@ -93,7 +93,7 @@
    {
       datum baseAddress
       {
-         value = "69680";
+         value = "69760";
          type = "String";
       }
    }
@@ -106,6 +106,70 @@
       }
    }
    element timer.s1
+   {
+      datum baseAddress
+      {
+         value = "69664";
+         type = "String";
+      }
+   }
+   element wr_addr_pio
+   {
+      datum _sortIndex
+      {
+         value = "8";
+         type = "int";
+      }
+   }
+   element wr_addr_pio.s1
+   {
+      datum baseAddress
+      {
+         value = "69712";
+         type = "String";
+      }
+   }
+   element wr_data_pio
+   {
+      datum _sortIndex
+      {
+         value = "7";
+         type = "int";
+      }
+   }
+   element wr_data_pio.s1
+   {
+      datum baseAddress
+      {
+         value = "69728";
+         type = "String";
+      }
+   }
+   element wr_in_flags
+   {
+      datum _sortIndex
+      {
+         value = "10";
+         type = "int";
+      }
+   }
+   element wr_in_flags.s1
+   {
+      datum baseAddress
+      {
+         value = "69696";
+         type = "String";
+      }
+   }
+   element wr_out_flags
+   {
+      datum _sortIndex
+      {
+         value = "9";
+         type = "int";
+      }
+   }
+   element wr_out_flags.s1
    {
       datum baseAddress
       {
@@ -134,15 +198,35 @@
  <parameter name="timeStamp" value="0" />
  <parameter name="useTestBenchNamingPattern" value="false" />
  <instanceScript></instanceScript>
- <interface name="clk" internal="clk_50.clk_in" type="clock" dir="end" />
+ <interface name="clk" internal="clk_100.clk_in" type="clock" dir="end" />
  <interface
    name="pio_led_external_connection"
    internal="led_pio.external_connection"
    type="conduit"
    dir="end" />
- <interface name="reset" internal="clk_50.clk_in_reset" type="reset" dir="end" />
- <module name="clk_50" kind="clock_source" version="16.0" enabled="1">
-  <parameter name="clockFrequency" value="50000000" />
+ <interface
+   name="pio_wr_addr_connection"
+   internal="wr_addr_pio.external_connection"
+   type="conduit"
+   dir="end" />
+ <interface
+   name="pio_wr_data_connection"
+   internal="wr_data_pio.external_connection"
+   type="conduit"
+   dir="end" />
+ <interface
+   name="pio_wr_in_flags"
+   internal="wr_in_flags.external_connection"
+   type="conduit"
+   dir="end" />
+ <interface
+   name="pio_wr_out_flags"
+   internal="wr_out_flags.external_connection"
+   type="conduit"
+   dir="end" />
+ <interface name="reset" internal="clk_100.clk_in_reset" type="reset" dir="end" />
+ <module name="clk_100" kind="clock_source" version="16.0" enabled="1">
+  <parameter name="clockFrequency" value="100000000" />
   <parameter name="clockFrequencyKnown" value="true" />
   <parameter name="inputClockFrequency" value="0" />
   <parameter name="resetSynchronousEdges" value="NONE" />
@@ -151,13 +235,13 @@
   <parameter name="bht_ramBlockType" value="Automatic" />
   <parameter name="breakOffset" value="32" />
   <parameter name="breakSlave">cpu.jtag_debug_module</parameter>
-  <parameter name="clockFrequency" value="50000000" />
+  <parameter name="clockFrequency" value="100000000" />
   <parameter name="cpuID" value="0" />
   <parameter name="cpuID_stored" value="0" />
   <parameter name="cpuReset" value="false" />
   <parameter name="customInstSlavesSystemInfo" value="&lt;info/&gt;" />
   <parameter name="dataAddrWidth" value="17" />
-  <parameter name="dataSlaveMapParam"><![CDATA[<address-map><slave name='onchip_memory2_0.s1' start='0x8000' end='0xD000' /><slave name='cpu.jtag_debug_module' start='0x10800' end='0x11000' /><slave name='timer.s1' start='0x11000' end='0x11020' /><slave name='led_pio.s1' start='0x11020' end='0x11030' /><slave name='sysid.control_slave' start='0x11030' end='0x11038' /><slave name='jtag_uart.avalon_jtag_slave' start='0x11038' end='0x11040' /></address-map>]]></parameter>
+  <parameter name="dataSlaveMapParam"><![CDATA[<address-map><slave name='onchip_memory2_0.s1' start='0x8000' end='0xD000' /><slave name='cpu.jtag_debug_module' start='0x10800' end='0x11000' /><slave name='wr_out_flags.s1' start='0x11000' end='0x11020' /><slave name='timer.s1' start='0x11020' end='0x11040' /><slave name='wr_in_flags.s1' start='0x11040' end='0x11050' /><slave name='wr_addr_pio.s1' start='0x11050' end='0x11060' /><slave name='wr_data_pio.s1' start='0x11060' end='0x11070' /><slave name='led_pio.s1' start='0x11070' end='0x11080' /><slave name='sysid.control_slave' start='0x11080' end='0x11088' /><slave name='jtag_uart.avalon_jtag_slave' start='0x11088' end='0x11090' /></address-map>]]></parameter>
   <parameter name="dcache_bursts" value="false" />
   <parameter name="dcache_lineSize" value="32" />
   <parameter name="dcache_numTCDM" value="0" />
@@ -182,7 +266,7 @@
   <parameter name="icache_ramBlockType" value="Automatic" />
   <parameter name="icache_size" value="4096" />
   <parameter name="icache_tagramBlockType" value="Automatic" />
-  <parameter name="impl" value="Fast" />
+  <parameter name="impl" value="Small" />
   <parameter name="instAddrWidth" value="17" />
   <parameter name="instSlaveMapParam"><![CDATA[<address-map><slave name='onchip_memory2_0.s1' start='0x8000' end='0xD000' /><slave name='cpu.jtag_debug_module' start='0x10800' end='0x11000' /></address-map>]]></parameter>
   <parameter name="internalIrqMaskSystemInfo" value="3" />
@@ -281,7 +365,7 @@
    enabled="1">
   <parameter name="allowMultipleConnections" value="false" />
   <parameter name="avalonSpec" value="2.0" />
-  <parameter name="clkFreq" value="50000000" />
+  <parameter name="clkFreq" value="100000000" />
   <parameter name="hubInstanceID" value="0" />
   <parameter name="readBufferDepth" value="64" />
   <parameter name="readIRQThreshold" value="8" />
@@ -297,7 +381,7 @@
   <parameter name="bitClearingEdgeCapReg" value="false" />
   <parameter name="bitModifyingOutReg" value="false" />
   <parameter name="captureEdge" value="false" />
-  <parameter name="clockRate" value="50000000" />
+  <parameter name="clockRate" value="100000000" />
   <parameter name="direction" value="Output" />
   <parameter name="edgeType" value="RISING" />
   <parameter name="generateIRQ" value="false" />
@@ -353,9 +437,81 @@
   <parameter name="periodUnits" value="USEC" />
   <parameter name="resetOutput" value="false" />
   <parameter name="snapshot" value="true" />
-  <parameter name="systemFrequency" value="50000000" />
+  <parameter name="systemFrequency" value="100000000" />
   <parameter name="timeoutPulseOutput" value="false" />
   <parameter name="watchdogPulse" value="2" />
+ </module>
+ <module
+   name="wr_addr_pio"
+   kind="altera_avalon_pio"
+   version="16.0"
+   enabled="1">
+  <parameter name="bitClearingEdgeCapReg" value="false" />
+  <parameter name="bitModifyingOutReg" value="false" />
+  <parameter name="captureEdge" value="false" />
+  <parameter name="clockRate" value="100000000" />
+  <parameter name="direction" value="Output" />
+  <parameter name="edgeType" value="RISING" />
+  <parameter name="generateIRQ" value="false" />
+  <parameter name="irqType" value="LEVEL" />
+  <parameter name="resetValue" value="0" />
+  <parameter name="simDoTestBenchWiring" value="false" />
+  <parameter name="simDrivenValue" value="0" />
+  <parameter name="width" value="12" />
+ </module>
+ <module
+   name="wr_data_pio"
+   kind="altera_avalon_pio"
+   version="16.0"
+   enabled="1">
+  <parameter name="bitClearingEdgeCapReg" value="false" />
+  <parameter name="bitModifyingOutReg" value="false" />
+  <parameter name="captureEdge" value="false" />
+  <parameter name="clockRate" value="100000000" />
+  <parameter name="direction" value="Output" />
+  <parameter name="edgeType" value="RISING" />
+  <parameter name="generateIRQ" value="false" />
+  <parameter name="irqType" value="LEVEL" />
+  <parameter name="resetValue" value="0" />
+  <parameter name="simDoTestBenchWiring" value="false" />
+  <parameter name="simDrivenValue" value="0" />
+  <parameter name="width" value="24" />
+ </module>
+ <module
+   name="wr_in_flags"
+   kind="altera_avalon_pio"
+   version="16.0"
+   enabled="1">
+  <parameter name="bitClearingEdgeCapReg" value="false" />
+  <parameter name="bitModifyingOutReg" value="false" />
+  <parameter name="captureEdge" value="false" />
+  <parameter name="clockRate" value="100000000" />
+  <parameter name="direction" value="Input" />
+  <parameter name="edgeType" value="RISING" />
+  <parameter name="generateIRQ" value="false" />
+  <parameter name="irqType" value="LEVEL" />
+  <parameter name="resetValue" value="0" />
+  <parameter name="simDoTestBenchWiring" value="false" />
+  <parameter name="simDrivenValue" value="0" />
+  <parameter name="width" value="8" />
+ </module>
+ <module
+   name="wr_out_flags"
+   kind="altera_avalon_pio"
+   version="16.0"
+   enabled="1">
+  <parameter name="bitClearingEdgeCapReg" value="false" />
+  <parameter name="bitModifyingOutReg" value="true" />
+  <parameter name="captureEdge" value="false" />
+  <parameter name="clockRate" value="100000000" />
+  <parameter name="direction" value="Output" />
+  <parameter name="edgeType" value="RISING" />
+  <parameter name="generateIRQ" value="false" />
+  <parameter name="irqType" value="LEVEL" />
+  <parameter name="resetValue" value="0" />
+  <parameter name="simDoTestBenchWiring" value="false" />
+  <parameter name="simDrivenValue" value="0" />
+  <parameter name="width" value="8" />
  </module>
  <connection
    kind="avalon"
@@ -363,7 +519,7 @@
    start="cpu.data_master"
    end="jtag_uart.avalon_jtag_slave">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x00011038" />
+  <parameter name="baseAddress" value="0x00011088" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
@@ -372,7 +528,7 @@
    start="cpu.data_master"
    end="sysid.control_slave">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x00011030" />
+  <parameter name="baseAddress" value="0x00011080" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
@@ -395,12 +551,48 @@
  </connection>
  <connection kind="avalon" version="16.0" start="cpu.data_master" end="led_pio.s1">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x00011020" />
+  <parameter name="baseAddress" value="0x00011070" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection kind="avalon" version="16.0" start="cpu.data_master" end="timer.s1">
   <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x00011020" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="16.0"
+   start="cpu.data_master"
+   end="wr_data_pio.s1">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x00011060" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="16.0"
+   start="cpu.data_master"
+   end="wr_addr_pio.s1">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x00011050" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="16.0"
+   start="cpu.data_master"
+   end="wr_out_flags.s1">
+  <parameter name="arbitrationPriority" value="1" />
   <parameter name="baseAddress" value="0x00011000" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="16.0"
+   start="cpu.data_master"
+   end="wr_in_flags.s1">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x00011040" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
@@ -421,15 +613,23 @@
   <parameter name="baseAddress" value="0x8000" />
   <parameter name="defaultConnection" value="false" />
  </connection>
- <connection kind="clock" version="16.0" start="clk_50.clk" end="jtag_uart.clk" />
- <connection kind="clock" version="16.0" start="clk_50.clk" end="timer.clk" />
- <connection kind="clock" version="16.0" start="clk_50.clk" end="sysid.clk" />
- <connection kind="clock" version="16.0" start="clk_50.clk" end="led_pio.clk" />
- <connection kind="clock" version="16.0" start="clk_50.clk" end="cpu.clk" />
+ <connection kind="clock" version="16.0" start="clk_100.clk" end="jtag_uart.clk" />
+ <connection kind="clock" version="16.0" start="clk_100.clk" end="timer.clk" />
+ <connection kind="clock" version="16.0" start="clk_100.clk" end="sysid.clk" />
+ <connection kind="clock" version="16.0" start="clk_100.clk" end="led_pio.clk" />
+ <connection kind="clock" version="16.0" start="clk_100.clk" end="cpu.clk" />
+ <connection kind="clock" version="16.0" start="clk_100.clk" end="wr_data_pio.clk" />
+ <connection kind="clock" version="16.0" start="clk_100.clk" end="wr_addr_pio.clk" />
  <connection
    kind="clock"
    version="16.0"
-   start="clk_50.clk"
+   start="clk_100.clk"
+   end="wr_out_flags.clk" />
+ <connection kind="clock" version="16.0" start="clk_100.clk" end="wr_in_flags.clk" />
+ <connection
+   kind="clock"
+   version="16.0"
+   start="clk_100.clk"
    end="onchip_memory2_0.clk1" />
  <connection kind="interrupt" version="16.0" start="cpu.d_irq" end="timer.irq">
   <parameter name="irqNumber" value="0" />
@@ -440,32 +640,52 @@
  <connection
    kind="reset"
    version="16.0"
-   start="clk_50.clk_reset"
+   start="clk_100.clk_reset"
    end="jtag_uart.reset" />
  <connection
    kind="reset"
    version="16.0"
-   start="clk_50.clk_reset"
+   start="clk_100.clk_reset"
    end="timer.reset" />
  <connection
    kind="reset"
    version="16.0"
-   start="clk_50.clk_reset"
+   start="clk_100.clk_reset"
    end="sysid.reset" />
  <connection
    kind="reset"
    version="16.0"
-   start="clk_50.clk_reset"
+   start="clk_100.clk_reset"
    end="led_pio.reset" />
  <connection
    kind="reset"
    version="16.0"
-   start="clk_50.clk_reset"
+   start="clk_100.clk_reset"
+   end="wr_data_pio.reset" />
+ <connection
+   kind="reset"
+   version="16.0"
+   start="clk_100.clk_reset"
+   end="wr_addr_pio.reset" />
+ <connection
+   kind="reset"
+   version="16.0"
+   start="clk_100.clk_reset"
+   end="wr_out_flags.reset" />
+ <connection
+   kind="reset"
+   version="16.0"
+   start="clk_100.clk_reset"
+   end="wr_in_flags.reset" />
+ <connection
+   kind="reset"
+   version="16.0"
+   start="clk_100.clk_reset"
    end="onchip_memory2_0.reset1" />
  <connection
    kind="reset"
    version="16.0"
-   start="clk_50.clk_reset"
+   start="clk_100.clk_reset"
    end="cpu.reset_n" />
  <interconnectRequirement for="$system" name="qsys_mm.clockCrossingAdapter" value="HANDSHAKE" />
  <interconnectRequirement for="$system" name="qsys_mm.enableEccProtection" value="FALSE" />

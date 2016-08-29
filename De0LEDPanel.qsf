@@ -123,4 +123,5 @@ set_global_assignment -name HEX_FILE De0LEDPanel_mem_init.hex
 set_global_assignment -name VERILOG_FILE dimmer.v
 set_global_assignment -name VERILOG_FILE ext_mem.v
 set_global_assignment -name VERILOG_FILE de0ledpanel.v
+set_global_assignment -name VERILOG_FILE gamma_LUT.v
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

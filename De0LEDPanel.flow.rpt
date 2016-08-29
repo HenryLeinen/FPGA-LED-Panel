@@ -1,5 +1,5 @@
 Flow report for De0LEDPanel
-Mon Aug 22 21:58:24 2016
+Sun Aug 28 15:29:04 2016
 Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
 
 
@@ -41,20 +41,20 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Mon Aug 22 21:58:16 2016       ;
+; Flow Status                        ; Successful - Sun Aug 28 15:28:57 2016       ;
 ; Quartus Prime Version              ; 16.0.0 Build 211 04/27/2016 SJ Lite Edition ;
 ; Revision Name                      ; De0LEDPanel                                 ;
 ; Top-level Entity Name              ; De0LEDPanel                                 ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE22F17C6                                ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 3,681 / 22,320 ( 16 % )                     ;
-;     Total combinational functions  ; 3,303 / 22,320 ( 15 % )                     ;
-;     Dedicated logic registers      ; 2,181 / 22,320 ( 10 % )                     ;
-; Total registers                    ; 2181                                        ;
+; Total logic elements               ; 3,695 / 22,320 ( 17 % )                     ;
+;     Total combinational functions  ; 3,410 / 22,320 ( 15 % )                     ;
+;     Dedicated logic registers      ; 1,782 / 22,320 ( 8 % )                      ;
+; Total registers                    ; 1782                                        ;
 ; Total pins                         ; 26 / 154 ( 17 % )                           ;
 ; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 325,504 / 608,256 ( 54 % )                  ;
+; Total memory bits                  ; 307,840 / 608,256 ( 51 % )                  ;
 ; Embedded Multiplier 9-bit elements ; 4 / 132 ( 3 % )                             ;
 ; Total PLLs                         ; 1 / 4 ( 25 % )                              ;
 +------------------------------------+---------------------------------------------+
@@ -65,7 +65,7 @@ agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 08/22/2016 21:56:31 ;
+; Start date & time ; 08/28/2016 15:26:57 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; De0LEDPanel         ;
 +-------------------+---------------------+
@@ -76,7 +76,7 @@ agreement for further details.
 +--------------------------------------+-------------------------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                      ; Value                                                 ; Default Value ; Entity Name ; Section Id     ;
 +--------------------------------------+-------------------------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID                ; 115129180079057.147189579001880                       ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID                ; 115129180079057.147239081710888                       ; --            ; --          ; --             ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                                    ; --            ; --          ; led_panel_tb   ;
 ; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; led_panel_tb                                          ; --            ; --          ; eda_simulation ;
 ; EDA_OUTPUT_DATA_FORMAT               ; None                                                  ; --            ; --          ; eda_simulation ;
@@ -101,7 +101,7 @@ agreement for further details.
 ; POWER_PRESET_COOLING_SOLUTION        ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW                 ; --            ; --          ; --             ;
 ; SLD_FILE                             ; cpu/synthesis/cpu.regmap                              ; --            ; --          ; --             ;
 ; SLD_FILE                             ; cpu/synthesis/cpu.debuginfo                           ; --            ; --          ; --             ;
-; SLD_INFO                             ; QSYS_NAME cpu HAS_SOPCINFO 1 GENERATION_ID 1471895750 ; --            ; cpu         ; --             ;
+; SLD_INFO                             ; QSYS_NAME cpu HAS_SOPCINFO 1 GENERATION_ID 1472390774 ; --            ; cpu         ; --             ;
 ; SOPCINFO_FILE                        ; cpu/synthesis/../../cpu.sopcinfo                      ; --            ; --          ; --             ;
 ; SYNTHESIS_ONLY_QIP                   ; On                                                    ; --            ; --          ; --             ;
 +--------------------------------------+-------------------------------------------------------+---------------+-------------+----------------+
@@ -112,11 +112,11 @@ agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:01:07     ; 1.0                     ; 1031 MB             ; 00:01:53                           ;
-; Fitter                    ; 00:00:27     ; 1.1                     ; 1474 MB             ; 00:00:33                           ;
-; Assembler                 ; 00:00:03     ; 1.0                     ; 789 MB              ; 00:00:03                           ;
-; TimeQuest Timing Analyzer ; 00:00:06     ; 1.2                     ; 934 MB              ; 00:00:07                           ;
-; Total                     ; 00:01:43     ; --                      ; --                  ; 00:02:36                           ;
+; Analysis & Synthesis      ; 00:01:23     ; 1.0                     ; 1040 MB             ; 00:02:11                           ;
+; Fitter                    ; 00:00:26     ; 1.1                     ; 1469 MB             ; 00:00:32                           ;
+; Assembler                 ; 00:00:03     ; 1.0                     ; 788 MB              ; 00:00:03                           ;
+; TimeQuest Timing Analyzer ; 00:00:06     ; 1.2                     ; 931 MB              ; 00:00:07                           ;
+; Total                     ; 00:01:58     ; --                      ; --                  ; 00:02:53                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
